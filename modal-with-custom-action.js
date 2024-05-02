@@ -116,9 +116,24 @@ const showReg = (title, yesBtnLabel = 'Register', noBtnLabel = 'Cancel') => {
               <label class="form-label"  for="username3">First Name</label>
               <input type="email" id="username3" class="form-control" required />
             </div>
+
             <div data-mdb-input-init class="form-outline mb-4">
               <label class="form-label" for="password3">Last Name</label>
-              <input type="password" id="password3" class="form-control" required />
+              <input type="email" id="password3" class="form-control" required />
+              <label class="form-label" for="password3">Email</label>
+              <input type="email" id="password3" class="form-control" required />
+              <label class="form-label" for="password3">Email</label>
+              <input type="email" id="password3" class="form-control" required />
+              <label class="form-label" for="password3">Contact Number</label>
+              <input type="email" id="password3" class="form-control" required />
+              <label class="form-label" for="password3">Password</label>
+              <input type="email" id="password3" class="form-control" required />
+              <label class="form-label" for="password3">Address</label>
+              <input type="email" id="password3" class="form-control" required />
+              <label class="form-label" for="password3">Area</label>
+              <input type="email" id="password3" class="form-control" required />
+              <label class="form-label" for="password3">Governorate</label>
+              <input type="email" id="password3" class="form-control" required />
             </div>
           
             <div class="btn-group">
