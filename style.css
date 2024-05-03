@@ -48,7 +48,9 @@ a:hover {
   color: var(--accent-color);
   text-decoration: none;
 }
-
+.ahmed{
+  text-align: center;
+}
 /* Image Hover Effects
 ------------------------------------------------------------- */
 .zoom-effect {
