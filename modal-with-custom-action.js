@@ -100,12 +100,6 @@ const showReg = (title, yesBtnLabel = 'Register', noBtnLabel = 'Cancel') => {
     modalWrap1.remove();
   }
 
-  var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
-    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-        return new bootstrap.Dropdown(dropdownToggleEl)
-    })
-  
-
   modalWrap1 = document.createElement('div');
   modalWrap1.innerHTML = `
     <div class="modal fade" tabindex="-1">
@@ -129,111 +123,114 @@ const showReg = (title, yesBtnLabel = 'Register', noBtnLabel = 'Cancel') => {
             </div>
           
             <div class="dropdown mb-4">
-  <label for="gender">Gender:</label>
-  <select name="gender" id="gender" class="form-select">
-    <option value="male">Male</option>
-    <option value="female">Female</option>
-  </select>
-</div>
+              <label for="gender">Gender</label>
+              <select name="gender" id="gender" class="form-select" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
 
-<div class="dropdown mb-4">
-  <label for="occupation">Occupation:</label>
-  <select name="occupation" id="occupation" class="form-select" onchange="navigate()">
-    <option value="regular_donor">Regular Donor</option>
-    <option value="doctor">Doctor</option>
-    <option value="teacher">Teacher</option>
-  </select>
-</div>
-<!-- Hidden File Input -->
-<div id="documentUpload" class="d-none">
-  <label for="document">Upload Document:</label>
-  <input type="file" id="document" name="document" accept=".pdf,.doc,.docx">
-</div>
+            <div class="dropdown mb-4">
+              <label for="occupation">Occupation</label>
+              <select name="occupation" id="occupation" class="form-select" onchange="navigate()">
+                <option value="organization">Organization</option>
+                <option value="regular_donor">Regular Donor</option>
+                <option value="doctor">Doctor</option>
+                <option value="teacher">Teacher</option>
+              </select>
+            </div>
+            <!-- Hidden File Input -->
+            <div id="documentUpload" class="d-none mb-4">
+              <label for="document">Upload Document</label>
+              <input type="file" id="document" name="document" accept=".pdf,.doc,.docx">
+            </div>
 
-<script>
-  function navigate() {
-    var selectElement = document.getElementById("occupation");
-    var selectedOption = selectElement.value;
+            <script>
+              function navigate() {
+                var selectElement = document.getElementById("occupation");
+                var selectedOption = selectElement.value;
 
-    if (selectedOption === "regular_donor") {
-      window.location.href = "regular_donor.html";
-    } else if (selectedOption === "doctor") {
-      window.location.href = "doctor.html";
-    } else if (selectedOption === "teacher") {
-      window.location.href = "teacher.html";
-    }
-  }
-</script>
+                if (selectedOption === "organization") {
+                  window.location.href = "organization.html";
+                } else if (selectedOption === "regular_donor") {
+                  window.location.href = "regular_donor.html";
+                } else if (selectedOption === "doctor") {
+                  window.location.href = "doctor.html";
+                } else if (selectedOption === "teacher") {
+                  window.location.href = "teacher.html";
+                }
+              }
+            </script>
 
-<div class="form-outline mb-4">
-  <label class="form-label" for="email">Email</label>
-  <input type="email" id="email" class="form-control" required />
-</div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" id="email" class="form-control" required />
+            </div>
 
-<div class="form-outline mb-4">
-  <label class="form-label" for="contact">Contact Number</label>
-  <input type="text" id="contact" class="form-control" required />
-</div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="contact">Contact Number</label>
+              <input type="text" id="contact" class="form-control" required />
+            </div>
 
-<div class="form-outline mb-4">
-  <label class="form-label" for="password">Password</label>
-  <input type="password" id="password" class="form-control" required />
-</div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="password">Password</label>
+              <input type="password" id="password" class="form-control" required />
+            </div>
 
-<div class="form-outline mb-4">
-  <label class="form-label" for="address">Address</label>
-  <input type="text" id="address" class="form-control" required />
-</div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="address">Address</label>
+              <input type="text" id="address" class="form-control" required />
+            </div>
 
-<div class="form-outline mb-4">
-  <label class="form-label" for="area">Area</label>
-  <input type="text" id="area" class="form-control" required />
-</div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="area">Area</label>
+              <input type="text" id="area" class="form-control" required />
+            </div>
 
-<div class="form-outline mb-4">
-  <label class="form-label" for="governorate">Governorate</label>
-  <input type="text" id="governorate" class="form-control" required />
-</div>
-<div id="teacherFields" class="d-none">
- <div class="form-group">
-    <label for="subjects">Subjects:</label>
-    <select class="form-control" id="subjects" multiple>
-      <option value="math">Math</option>
-      <option value="science">Science</option>
-      <option value="history">History</option>
-      <!-- Add more subjects as needed -->
-    </select>
- </div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="governorate">Governorate</label>
+              <input type="text" id="governorate" class="form-control" required />
+            </div>
+            <div id="teacherFields" class="d-none">
+            <div class="form-group">
+                <label for="subjects">Subjects</label>
+                <select class="form-control" id="subjects" multiple>
+                  <option value="math">Math</option>
+                  <option value="science">Science</option>
+                  <option value="history">History</option>
+                  <!-- Add more subjects as needed -->
+                </select>
+            </div>
 
- <div class="form-group">
-    <label for="proBonoClasses">Number of Pro-Bono Classes:</label>
-    <input type="number" class="form-control" id="proBonoClasses" min="0">
- </div>
+            <div class="form-group">
+                <label for="proBonoClasses">Number of Pro-Bono Classes</label>
+                <input type="number" class="form-control" id="proBonoClasses" min="0">
+            </div>
 
- <div class="form-group">
-    <label for="privateTutoring">Number of Private Tutoring Sessions:</label>
-    <input type="number" class="form-control" id="privateTutoring" min="0">
- </div>
-</div>
-<div id="doctorFields" class="d-none">
-  <div class="form-group">
-    <label for="clinicLocation">Clinic Location:</label>
-    <input type="text" id="governorate" class="form-control" required />
-  </div>
+            <div class="form-group">
+                <label for="privateTutoring">Number of Private Tutoring Sessions</label>
+                <input type="number" class="form-control" id="privateTutoring" min="0">
+            </div>
+            </div>
+            <div id="doctorFields" class="d-none">
+              <div class="form-group mb-4">
+                <label for="clinicLocation">Clinic Location</label>
+                <input type="text" id="governorate" class="form-control" required />
+              </div>
 
-  <div class="form-group">
-    <label for="specialty">Specialty:</label>
-    <select class="form-control" id="specialty">
-      <option value="">Select Specialty</option>
-      <option value="cardiology">Cardiology</option>
-      <option value="orthopedics">Orthopedics</option>
-      <!-- Add more specialties as needed -->
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="proBonoCases">Number of Pro-Bono Cases:</label>
-    <input type="number" class="form-control" id="proBonoCases" min="0">
-  </div>
+            <div class="form-group mb-4">
+              <label for="specialty">Specialty</label>
+              <select class="form-control" id="specialty">
+                <option value="">Select Specialty</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="orthopedics">Orthopedics</option>
+                <!-- Add more specialties as needed -->
+              </select>
+            </div>
+            <div class="form-group mb-4">
+              <label for="proBonoCases">Number of Pro-Bono Cases</label>
+              <input type="number" class="form-control" id="proBonoCases" min="0">
+            </div>  
           </form>
           </div>
           <div class="modal-footer bg-light">
