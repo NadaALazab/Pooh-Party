@@ -6,7 +6,6 @@
 
 
 
-
 function login(usern,password){
   
   let username = usern.toLowerCase();  
@@ -20,7 +19,7 @@ function login(usern,password){
  }
  else
    if(username.slice(-12) =='organization'){
-     alert(username+" Successfully logined");
+     alert(username+" Successfully logged in");
    window.location.assign("organization.html");
    }
  else{
