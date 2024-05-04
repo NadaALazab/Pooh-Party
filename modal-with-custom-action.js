@@ -91,3 +91,4 @@ const showModal = (title, yesBtnLabel = 'Login', noBtnLabel = 'Cancel') => {
   var modal = new bootstrap.Modal(modalWrap.querySelector('.modal'));
   modal.show();
 }
+
