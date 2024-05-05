@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Register</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="author" content="TemplatesJungle" />
+    <meta name="keywords" content="Free HTML CSS Website Template for Non-profit Organizations" />
+    <meta name="description" content="Free HTML CSS Website Template for Non-profit Organizations" />
+    <link rel="shortcut icon" type="x-icon" href="images/logo2.png" />
+    <link rel="stylesheet" type="text/css" href="css/vendor.css" />
+    <link href="plugins/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- script
+	================================================== -->
+    <!-- <script src="js/modernizr.js"></script> -->
+</head>
+
+<body>
+    <div id="overlayer">
+        <span class="loader">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+        </span>
+    </div>
+    <header class="py-1 text-white bg-dark">
+        <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="main.html"><img src="images/logo4.png" class="logo" width="90"
+                        height="90" /></a>
+
+                <h1 class="text-White fs-3 mr-4">Register Form</h1>
+            </div>
+        </nav>
+    </header>
+    <section class="form-control padding-mid m-4 w-75 mx-auto">
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="inputOrganizationName" class="form-label">Organization Name</label>
+                <input type="text" class="form-control" id="inputOrganizationName" required />
+            </div>
+            <div class="col-md-6">
+                <label for="inputFirstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="inputFirstName" required />
+            </div>
+            <div class="col-md-6">
+                <label for="inputLastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="inputLastName" required />
+            </div>
+            <div class="col-md-6">
+                <label for="inputGender" class="form-label">Gender</label>
+                <select id="inputGender" class="form-select" required>
+                    <option selected>Choose...</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="col-md-12">
+                <label for="inputLastName" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputLastName" required />
+            </div>
+            <div class="col-md-12">
+                <label for="inputLastName" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputLastName" required />
+            </div>
+            <div class="col-md-12">
+                <label for="inputContactNumber" class="form-label">Contact Number</label>
+                <input type="text" class="form-control" id="inputContactNumber" required />
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputOrganizationType" class="form-label">Organization Type</label>
+                <input type="text" class="form-control" id="inputOrganizationType" required />
+            </div>
+            <div class="col-6">
+                <label for="inputOrganizationAddress" class="form-label">Organization Address</label>
+                <input type="text" class="form-control" id="inputOrganizationAddress" placeholder="1234 Main St"
+                    required />
+            </div>
+            <div class="col-6">
+                <label for="inputOrganizationArea" class="form-label">Organization Area</label>
+                <input type="text" class="form-control" id="inputOrganizationArea" required />
+            </div>
+            <div class="col-md-6">
+                <label for="inputOrganizationGovernorate" class="form-label">Organization Governorate</label>
+                <input type="text" class="form-control" id="inputOrganizationGovernorate" required />
+            </div>
+            <div class="col-12">
+                <label for="inputGoogleMapLocation" class="form-label">Google Map Location</label>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319"
+                    width="100%" height="200" frameborder="0" style="border: 0"></iframe>
+            </div>
+
+            <div class="col-12">
+                <label for="inputDocumentUpload" class="form-label">Document Upload for Organization
+                    Verification</label>
+                <input type="file" class="form-control" id="inputDocumentUpload" required />
+            </div>
+            <div class="col-12">
+                <div class="addmore col-12"></div>
+                <button type="button" onclick="addNew()" class="mt-2">
+                    Add New One
+                </button>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" required />
+                    <label class="form-check-label" for="gridCheck">
+                        Check me out
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="button" class="btn btn-primary" onclick="redirectToMain()">Register</button>
+            </div>
+        </form>
+    </section>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="plugins/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script>
+        (function ($) {
+            var initJarallax = function () {
+                jarallax(document.querySelectorAll(".jarallax"));
+
+                jarallax(document.querySelectorAll(".jarallax-keep-img"), {
+                    keepImg: true,
+                });
+            };
+            $(document).ready(function () {
+                // preloader
+                $(window).load(function () {
+                    $("#overlayer").fadeOut("slow");
+                    $("body").addClass("loaded");
+                });
+
+                initJarallax();
+
+                // Animate on Scroll
+                AOS.init({
+                    duration: 600,
+                    once: true,
+                });
+            });
+        })(jQuery);
+        function addNew() {
+            // Create a new file input element
+            var newInput = document.createElement("input");
+            newInput.type = "file";
+            newInput.className = "form-control";
+            newInput.required = true;
+
+            // Create a new div to contain the file input
+            var newDiv = document.createElement("div");
+
+            // Check if the container already has elements
+            var container = document.querySelector(".addmore");
+            if (container.children.length > 0) {
+                newDiv.className = "col-12 mt-3"; // Add margin-top if container already has elements
+            } else {
+                newDiv.className = "col-12"; // Otherwise, keep it without margin-top
+            }
+
+            newDiv.appendChild(newInput);
+
+            // Append the new div to the parent container
+            container.appendChild(newDiv);
+        }
+        function redirectToMain() {
+            window.location.href = "./main.html";
+        }
+    </script>
+</body>
+
+</html>

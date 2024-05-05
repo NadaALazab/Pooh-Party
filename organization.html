@@ -116,7 +116,7 @@
 												<p>Chose to fulfill clothes donation</p>
 											</div>
 											<div class="mt-4 ">
-												<a href="#" style="text-decoration: underline;">Coordinate pickup</a>
+												<a href="pickup.html" style="text-decoration: underline;">Coordinate pickup</a>
 											</div>
 											
 
@@ -129,7 +129,7 @@
 												<p>Chose to fulfill seafood donation</p>
 											</div>
 											<div class="mt-4">
-												<a href="#" style="text-decoration: underline;">Coordinate pickup</a>
+												<a href="pickup.html" style="text-decoration: underline;">Coordinate pickup</a>
 											</div>
 
 										</div>
@@ -199,7 +199,7 @@
 
 	<section id="post" class="padding-large ">
 		<div class="container">
-		  <h2>Manage Donation Posts</h2>
+		  <h2>Submit Donation Posts</h2>
 		  <form id="donationForm">
 			<div class="form-group"></div>
 			<div id="donations">
@@ -214,53 +214,45 @@
 
 	<section id="mission" class="padding-large no-padding-top">
 		<div class="container">
-			<div class="row mt-5">
-				<div class="col-md-3">
-					<div class="chart-box d-flex flex-wrap text-start" data-aos="fade-zoom-in" data-aos-delay="0">
-						<div class="chart" style="max-width: 180px;margin-bottom: 30px;">
-							<canvas id="orphans" width="180" height="180"></canvas>
-						</div>
-						<div>
-							<h3>Orphans</h3>
-							<p>An estimated 153 million children worldwide are orphans (UNICEF)</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="chart-box d-flex flex-wrap text-start" data-aos="fade-zoom-in" data-aos-delay="300">
-						<div class="chart" style="max-width: 180px;margin-bottom: 30px;">
-							<canvas id="labor" width="180" height="180"></canvas>
-						</div>
-						<div>
-							<h3>Child Labor</h3>
-							<p>Worldwide, there are 168 million child laborers, accounting for almost 11% of children
-								(ILO)</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="chart-box d-flex flex-wrap text-start" data-aos="fade-zoom-in" data-aos-delay="600">
-						<div class="chart" style="max-width: 180px;margin-bottom: 30px;">
-							<canvas id="education" width="180" height="180"></canvas>
-						</div>
-						<div>
-							<h3>Education </h3>
-							<p>263 million children and youth are out of school (UNESCO)</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="chart-box d-flex flex-wrap text-start" data-aos="fade-zoom-in" data-aos-delay="900">
-						<div class="chart" style="max-width: 180px;margin-bottom: 30px;">
-							<canvas id="health" width="180" height="180"></canvas>
-						</div>
-						<div>
-							<h3>Health</h3>
-							<p>In 2017, 75% of malnourished children lived in less developed regions (WHO)</p>
-						</div>
-					</div>
+			<h2>Manage Donation Posts</h2>
+			<div class="btn-group mt-4"  style="display: flex; justify-content: flex-end ;">
+			
+				<div style="display: flex; align-items: center; margin-right: 10px;">
+					<span class="bg-success rounded-circle d-inline-block mr-4" style="width: 20px; height: 20px;"></span>
+					<span style="margin-left: 5px;">Approved</span>
+				</div>    
+				<div style="display: flex; align-items: center;">
+					<span class="bg-danger rounded-circle d-inline-block mr-4" style="width: 20px; height: 20px;"></span>
+					<span style="margin-left: 5px;">Fulfilled</span>
 				</div>
 			</div>
+			
+			
+			<div class="card mt-4 bg-danger">
+				<div class="card-header text-light">
+					Food
+				</div>
+				<div class="card-body">
+					<h5 class="card-title text-dark">Donation details</h5>
+					<p class="card-text text-dark">DEtailssssssss are hereeeeee</p>
+					<a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
+				</div>
+			</div>
+			
+			<div class="card mt-4 bg-success">
+				<div class="card-header text-light">
+					Clothes
+				</div>
+				<div class="card-body">
+					<h5 class="card-title text-dark">Donation details</h5>
+					<p class="card-text text-dark">DEtailssssssss are hereeeeee</p>
+					<a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
+				</div>
+			</div>
+			
+			
+			
+			
 		</div>
 	</section>
 
@@ -421,6 +413,42 @@
 		<img src="images/banner.jpg" class="jarallax-img" />
 	</section>
 
+	<!-- <section id="pickup" class="padding-large no-padding-top">
+		<div class="container">
+			<h2>Coordinate Donation Pickup</h2>
+			<div class="card mt-4 bg-secondary">
+				<div class="card-header">
+				  Toys
+				</div>
+				<div class="card-body">
+				  <h5 class="card-title">Donation details</h5>
+				  <p class="card-text">DEtailssssssss are hereeeeee</p>
+				  <a href="#" class="btn btn-primary">Delete Post</a>
+				</div>
+			</div>
+			<div class="card mt-4 bg-red">
+				<div class="card-header">
+				  Food
+				</div>
+				<div class="card-body">
+				  <h5 class="card-title">Donation details</h5>
+				  <p class="card-text">DEtailssssssss are hereeeeee</p>
+				  <a href="#" class="btn btn-primary">Delete Post</a>
+				</div>
+			</div>
+			<div class="card mt-4 bg-green">
+				<div class="card-header">
+				  Clothes
+				</div>
+				<div class="card-body">
+				  <h5 class="card-title">Donation details</h5>
+				  <p class="card-text">DEtailssssssss are hereeeeee</p>
+				  <a href="#" class="btn btn-primary">Delete Post</a>
+				</div>
+			</div>
+		</div>
+	</section> -->
+
 	<footer class="padding-large text-white bg-dark">
 		<div class="container">
 			<div class="row">
@@ -490,80 +518,223 @@
 
 </body>
 <script>
-	function addDonation() {
-	  var donationsDiv = document.getElementById("donations");
+	var donationDetails = "";
+var selectedCategory = "";
+function addDonation() {
+    var donationsDiv = document.getElementById("donations");
 
-	  var card = document.createElement("div");
-	  card.classList.add("card", "mb-3");
+    var card = document.createElement("div");
+    card.classList.add("card", "mb-3");
 
-	  var cardBody = document.createElement("div");
-	  cardBody.classList.add("card-body");
+    var cardBody = document.createElement("div");
+    cardBody.classList.add("card-body");
 
-	  var selectCategory = document.createElement("select");
-	  selectCategory.classList.add("form-control", "mb-2");
-	  selectCategory.innerHTML = `
-  <option value="">Select Category</option>
-  <option value="clothing">Clothes</option>
-  <option value="food">Food</option>        
-  <option value="toys">Toys</option>
-  <option value="medical">Medical Supplies</option>
-  <option value="school">School Supplies</option>
-  <option value="blood">Blood Donations</option>
+    var selectCategory = document.createElement("select");
+    selectCategory.classList.add("form-control", "mb-2");
+    selectCategory.innerHTML = `
+	<option value="">Select Category</option>
+        <option value="Clothes">Clothes</option>
+        <option value="Food">Food</option>        
+        <option value="Toys">Toys</option>
+        <option value="Medical Supplies">Medical Supplies</option>
+        <option value="School Supplies">School Supplies</option>
+        <option value="Blood Donations">Blood Donations</option>
+    `;
+
+
+    cardBody.appendChild(selectCategory);
+
+    var input = document.createElement("input");
+    input.type = "text";
+    input.classList.add("form-control", "mb-2");
+    input.placeholder = "Enter donation details";
+    cardBody.appendChild(input);
+
+    var submitButton = document.createElement("button");
+    submitButton.type = "button";
+    submitButton.classList.add("btn", "btn-primary", "mr-2");
+    submitButton.textContent = "Submit";
+    submitButton.onclick = function () {
+        window.alert("Post is submitted and waiting for approval");
+        input.setAttribute("readonly", "readonly");
+        selectCategory.setAttribute("readonly", "readonly");
+		donationDetails = input.value;
+        selectedCategory = selectCategory.value;
+        submitButton.style.display = "none";
+        editButton.style.display = "inline-block";
+        deleteButton.style.display = "inline-block";
+
+        // Transforming the card
+		console.log(card.classList)
+        card.classList.remove("mb-3");
+        card.classList.add("mt-4");
+        card.classList.add("card");
+		
+
+        cardBody.innerHTML = `
+    <div class="card-header">
+        ${selectedCategory}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title text-dark">Donation details</h5>
+        <p class="card-text text-dark">${donationDetails}</p>
+        <div style="display: flex; justify-content: space-between;">
+            <div>
+                <a href="#post" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
+                <a href="#post" class="btn btn-primary" onclick="editPost(selectedCategory, donationDetails)">Edit Post</a>
+            </div>
+            <div>
+                <p class="text-muted">Pending</p>
+            </div>
+        </div>
+    </div>
 `;
 
-	  cardBody.appendChild(selectCategory);
+    };
 
-	  var input = document.createElement("input");
-	  input.type = "text";
-	  input.classList.add("form-control", "mb-2");
-	  input.placeholder = "Enter donation details";
-	  cardBody.appendChild(input);
+	
+    cardBody.appendChild(submitButton);
 
-	  var submitButton = document.createElement("button");
-	  submitButton.type = "button";
-	  submitButton.classList.add("btn", "btn-primary", "mr-2");
-	  submitButton.textContent = "Submit";
-	  submitButton.onclick = function () {
-		window.alert("Post is submitted and waiting for approval");
-		input.setAttribute("readonly","readonly");
-		selectCategory.setAttribute("readonly","readonly");
+    var editButton = document.createElement("button");
+    editButton.type = "button";
+    editButton.classList.add("btn", "btn-primary", "mr-2");
+    editButton.textContent = "Edit";
+    editButton.style.display = "none";
+    editButton.onclick = function () {
+        input.removeAttribute("readonly");
+        selectCategory.removeAttribute("readonly")
+        input.focus();
+        submitButton.style.display = "inline-block";
+        editButton.style.display = "none";
+        deleteButton.style.display = "none";
+    };
+    cardBody.appendChild(editButton);
 
-		submitButton.style.display = "none";
-		editButton.style.display = "inline-block";
-		deleteButton.style.display = "inline-block";
-	  };
-	  cardBody.appendChild(submitButton);
+    var deleteButton = document.createElement("button");
+    deleteButton.type = "button";
+    deleteButton.classList.add("btn", "btn-danger", "m-2");
+    deleteButton.textContent = "Delete";
+    deleteButton.style.display = "none";
+    deleteButton.onclick = function () {
+        card.parentNode.removeChild(card);
+        window.alert("Post is deleted");
+    };
 
-	  var editButton = document.createElement("button");
-	  editButton.type = "button";
-	  editButton.classList.add("btn", "btn-primary", "mr-2");
-	  editButton.textContent = "Edit";
-	  editButton.style.display = "none";
-	  editButton.onclick = function () {
-		input.removeAttribute("readonly");
-		selectCategory.removeAttribute("readonly")
-		input.focus();
-		submitButton.style.display = "inline-block";
-		editButton.style.display = "none";
-		deleteButton.style.display = "none";
-	  };
-	  cardBody.appendChild(editButton);
+    cardBody.appendChild(deleteButton);
 
-	  var deleteButton = document.createElement("button");
-	  deleteButton.type = "button";
-	  deleteButton.classList.add("btn", "btn-danger", "m-2");
-	  deleteButton.textContent = "Delete";
-	  deleteButton.style.display = "none";
-	  deleteButton.onclick = function () {
-		card.parentNode.removeChild(card);
-		window.alert("Post is deleted");
+    card.appendChild(cardBody);
+    donationsDiv.appendChild(card);
+}
 
-	  };
-	  
-	  cardBody.appendChild(deleteButton);
+function editPost(selectedCategory, donationDetails) {
+    var card = event.target.closest('.card');
+    var cardBody = card.querySelector('.card-body');
+	cardBody.innerHTML="";
+    var selectCategory = document.createElement("select");
+    selectCategory.classList.add("form-control", "mb-2");
+    selectCategory.innerHTML = `
+        <option value="">Select Category</option>
+        <option value="Clothes">Clothes</option>
+        <option value="Food">Food</option>        
+        <option value="Toys">Toys</option>
+        <option value="Medical Supplies">Medical Supplies</option>
+        <option value="School Supplies">School Supplies</option>
+        <option value="Blood Donations">Blood Donations</option>
+		
+    `;
+    selectCategory.value = selectedCategory;
+    cardBody.appendChild(selectCategory);
 
-	  card.appendChild(cardBody);
-	  donationsDiv.appendChild(card);
-	}
+    var input = document.createElement("input");
+    input.type = "text";
+    input.classList.add("form-control", "mb-2");
+    input.placeholder = "Enter donation details";
+    input.value = donationDetails;
+    cardBody.appendChild(input);
+
+	var submitButton = document.createElement("button");
+    submitButton.type = "button";
+    submitButton.classList.add("btn", "btn-primary", "mr-2");
+    submitButton.textContent = "Submit";
+    submitButton.onclick = function () {
+        window.alert("Post is submitted and waiting for approval");
+        input.setAttribute("readonly", "readonly");
+        selectCategory.setAttribute("readonly", "readonly");
+		donationDetails = input.value;
+        selectedCategory = selectCategory.value;
+        submitButton.style.display = "none";
+        editButton.style.display = "inline-block";
+        deleteButton.style.display = "inline-block";
+
+        // Transforming the card
+		console.log(card.classList)
+        card.classList.remove("mb-3");
+        card.classList.add("mt-4");
+        card.classList.add("card");
+		
+		cardBody.innerHTML = `
+    <div class="card-header">
+        ${selectedCategory}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title text-dark">Donation details</h5>
+        <p class="card-text text-dark">${donationDetails}</p>
+        <div style="display: flex; justify-content: space-between;">
+            <div>
+                <a href="#post" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
+                <a href="#post" class="btn btn-primary" onclick="editPost(selectedCategory, donationDetails)">Edit Post</a>
+            </div>
+            <div>
+                <p class="text-muted">Pending</p>
+            </div>
+        </div>
+    </div>
+`;
+
+    };
+
+	
+    cardBody.appendChild(submitButton);
+
+    var editButton = document.createElement("button");
+    editButton.type = "button";
+    editButton.classList.add("btn", "btn-primary", "mr-2");
+    editButton.textContent = "Edit";
+    editButton.style.display = "none";
+    editButton.onclick = function () {
+        input.removeAttribute("readonly");
+        selectCategory.removeAttribute("readonly")
+        input.focus();
+        submitButton.style.display = "inline-block";
+        editButton.style.display = "none";
+        deleteButton.style.display = "none";
+    };
+    cardBody.appendChild(editButton);
+
+    var deleteButton = document.createElement("button");
+    deleteButton.type = "button";
+    deleteButton.classList.add("btn", "btn-danger", "m-2");
+    deleteButton.textContent = "Delete";
+    deleteButton.style.display = "none";
+    deleteButton.onclick = function () {
+        card.parentNode.removeChild(card);
+        window.alert("Post is deleted");
+    };
+
+    cardBody.appendChild(deleteButton);
+
+    card.appendChild(cardBody);
+    donationsDiv.appendChild(card);
+}
+
+	function deletePost() {
+    var card = event.target.closest('.card');
+
+    if (card) {
+        card.remove();
+        window.alert("Post is deleted");
+    }
+}
+
   </script>
 </html>
