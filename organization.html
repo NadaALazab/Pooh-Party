@@ -644,6 +644,7 @@
     <option value="school">School Supplies</option>
     <option value="blood">Blood Donations</option>
   `;
+  
         cardBody.appendChild(selectCategory);
 
         var input = document.createElement("input");
@@ -657,7 +658,8 @@
         submitButton.classList.add("btn", "btn-primary", "mr-2");
         submitButton.textContent = "Submit";
         submitButton.onclick = function () {
-          
+          window.alert("Post is submitted and waiting for approval");
+
 
           submitButton.style.display = "none";
           editButton.style.display = "inline-block";
@@ -686,7 +688,10 @@
         deleteButton.style.display = "none";
         deleteButton.onclick = function () {
           card.parentNode.removeChild(card);
+          window.alert("Post is deleted");
+
         };
+        
         cardBody.appendChild(deleteButton);
 
         card.appendChild(cardBody);
