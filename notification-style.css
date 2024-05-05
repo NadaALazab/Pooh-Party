@@ -10,18 +10,25 @@
   height: 0px;
   opacity: 0;
   position: absolute;
-  top: 63px;
-  left: 62px;
-  border-radius: 5px 0px 5px 5px;
+  top: 40px;
+  left: 53px;
+  border-radius: 10px;
+  /* border: 5px solid #F4BE37; */
   background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+  box-shadow: 0 4px 8px 0 #999, 0 6px 20px 0 #999
 }
 
 .notifications h2 {
+  background-color:rgba(9, 32, 53, 0.9);
   font-size: 14px;
   padding: 10px;
+  border-radius: 10px 10px 0px 0px;
   border-bottom: 1px solid #eee;
-  color: #999
+  margin: 0px;
+  /* color: rgba(9, 32, 53, 0.9) */
+  cursor: default;
+
 }
 
 .notifications h2 span {
@@ -33,7 +40,7 @@
   border-bottom: 1px solid #eee;
   padding: 6px 9px;
   margin-bottom: 0px;
-  cursor: pointer
+  border-radius: 10px;
 }
 
 .notifications-item:hover {
@@ -65,12 +72,13 @@
 
 
 .notification-box {
-  position: fixed;
+  position:absolute;
   z-index: 99;
   top: 40px;
   left: 125px;
   width: 50px;
   height: 50px;
+  border-radius: 50%;
   text-align: center;
 }
 

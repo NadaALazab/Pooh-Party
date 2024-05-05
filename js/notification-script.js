@@ -12,11 +12,14 @@ $(document).ready(function () {
 
             $('#box').css('height', '0px');
             $('#box').css('opacity', '0');
+            $('#item').css('cursor', 'default');
             down = false;
+
         } else {
 
             $('#box').css('height', 'auto');
             $('#box').css('opacity', '1');
+            $('#item').css('cursor', 'pointer');
             down = true;
 
         }
