@@ -11,7 +11,7 @@
   opacity: 0;
   position: absolute;
   top: 63px;
-  right: 62px;
+  left: 62px;
   border-radius: 5px 0px 5px 5px;
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
@@ -68,14 +68,14 @@
   position: fixed;
   z-index: 99;
   top: 40px;
-  right: 15px;
+  left: 125px;
   width: 50px;
   height: 50px;
   text-align: center;
 }
 
 .notification-bell {
-  animation: bell 1s 1s both infinite;
+  animation: bell 1s 1s both 1;
 }
 
 .notification-bell * {
@@ -131,7 +131,7 @@
   height: 4px;
   margin-top: 2px;
   border-radius: 0 0 4px 4px;
-  animation: rad 1s 2s both infinite;
+  animation: rad 1s 1s both 1;
 }
 
 .notification-count {
@@ -146,7 +146,7 @@
   border-radius: 50%;
   background-color: #ff4927;
   color: #fff;
-  animation: zoom 3s 3s both infinite;
+  animation: zoom 3s 3s both 1;
 }
 
 @keyframes bell {
@@ -217,20 +217,15 @@
   }
 
   51% {
-    opacity: 0;
+    opacity: 1;
   }
 
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
-@keyframes moon-moving {
-  0% {
-    transform: translate(-200%, 600%);
-  }
-
-  100% {
-    transform: translate(800%, -200%);
-  }
+.clickable {
+    cursor: pointer;
 }
+
