@@ -203,9 +203,8 @@
 		  <form id="donationForm">
 			<div class="form-group"></div>
 			<div id="donations">
-			  <!-- Donations will be dynamically added here -->
 			</div>
-			<button type="button" class="btn btn-primary" onclick="addDonation()">
+			<button type="button" class="btn btn-primary mt-2" onclick="addDonation()">
 			  Add Donation
 			</button>
 		  </form>
@@ -524,7 +523,7 @@ function addDonation() {
     var donationsDiv = document.getElementById("donations");
 
     var card = document.createElement("div");
-    card.classList.add("card", "mb-3");
+    card.classList.add("card", "mb-4");
 
     var cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
