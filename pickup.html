@@ -38,7 +38,7 @@
             <div class="dot dot-3"></div>
         </span>
     </div>
-    
+
     <header class="py-1 text-white" style="background-color: #092035">
         <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
             <div class="container-fluid">
@@ -53,13 +53,13 @@
                             <span class="bell-middle"></span>
                             <span class="bell-bottom"></span>
                             <span class="bell-rad"></span>
-            
+
                         </div>
                     </div>
-                    <div class="notifications" id="box">
+                    <div class="notifications" style="display: none;" id="box">
                         <h2>Notifications - 2</h2>
                         <div id="item">
-                            <div class="notifications-item"> <img
+                            <div class="notifications-item" onclick="scrollToTarget('Sponge')"> <img
                                     src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c82dd5b3-b0d8-44e8-b11d-a50e55b7b9de/df88w1u-28c92797-9336-4acc-bc3e-ade5a7c0d290.png/v1/fit/w_828,h_1104/spongebob_png_vector_by_carlosoof10_df88w1u-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTUzNiIsInBhdGgiOiJcL2ZcL2M4MmRkNWIzLWIwZDgtNDRlOC1iMTFkLWE1MGU1NWI3YjlkZVwvZGY4OHcxdS0yOGM5Mjc5Ny05MzM2LTRhY2MtYmMzZS1hZGU1YTdjMGQyOTAucG5nIiwid2lkdGgiOiI8PTExNTEifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.RbNAWRFJen8H8-BsMNetSzlKmqMbGusdF5Q_Fum9js0"
                                     alt="img">
                                 <div class="text">
@@ -69,8 +69,8 @@
                                 <div class="mt-4 ">
                                     <a href="pickup.html" style="text-decoration: underline;">Coordinate pickup</a>
                                 </div>
-            
-            
+
+
                             </div>
                             <div class="notifications-item"> <img
                                     src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c82dd5b3-b0d8-44e8-b11d-a50e55b7b9de/dfquid8-d90263cc-d78a-46dd-a679-dc8b5213ca70.png/v1/fit/w_728,h_931/st__patrick_by_carlosoof10_dfquid8-375w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTMxIiwicGF0aCI6IlwvZlwvYzgyZGQ1YjMtYjBkOC00NGU4LWIxMWQtYTUwZTU1YjdiOWRlXC9kZnF1aWQ4LWQ5MDI2M2NjLWQ3OGEtNDZkZC1hNjc5LWRjOGI1MjEzY2E3MC5wbmciLCJ3aWR0aCI6Ijw9NzI4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.nskvIUkKExh2-PBM0MvLsNaP_6_g4vS-FwZ2_2O76Ls"
@@ -82,7 +82,7 @@
                                 <div class="mt-4">
                                     <a href="pickup.html" style="text-decoration: underline;">Coordinate pickup</a>
                                 </div>
-            
+
                             </div>
                         </div>
                     </div>
@@ -91,61 +91,74 @@
         </nav>
     </header>
     <div class="container" style="width:absolute;">
+
+        <div style="font-weight: bold;">
+            <label class="font-weight-bold mt-3">Donation ID:</label>
+            <a href="#" style="font-weight: 100; text-decoration: underline;">  #1F02Janakh387</a>
+        </div>
         
-        <div class="container border rounded p-3" style="margin-top: 50px; margin-bottom: 50px;">
+        <div style="font-weight: bold;">
+            <label class="font-weight-bold mt-3">Donor:</label>
+            <a href="profile.html" style="font-weight: 100; text-decoration: underline;">   John Smith</a>
+        </div>
+
+        <div class="container border rounded p-3" style="margin-top: 20px; margin-bottom: 50px;">
             <div class="row">
                 <!-- Google Maps iframe -->
 
                 <div class="col-lg-6 col-md-12">
                     <div style="font-weight: bold;">
                         <label for="inputGoogleMapLocation" class="font-weight-bold mt-3 mb-3">Pickup
-                            Location:</label>
+                            </label>
                     </div>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319"
                         width="100%" height="500" frameborder="0" style="border: 0"></iframe>
+
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Date</label>
+                        <input type="text" class="form-control"
+                            placeholder="12/05/2003" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Time</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="12:53 PM" readonly>
+                    </div>
+
+
+
+
                 </div>
 
                 <!-- Date and Time section -->
-                <div class="col-lg-6 col-md-12 d-flex flex-column align-items-start">
+                <div class="col-lg-6 col-md-12 flex-column align-items-start">
                     <div style="font-weight: bold;">
-                        <label class="font-weight-bold mt-3 mb-3">Date and Time of Pickup:</label>
+                        <label for="inputGoogleMapLocation" class="font-weight-bold mt-3 mb-3">Dropoff
+                            </label>
                     </div>
-                    <div class="ms-0">
-                        <button type="button" class="btn btn-secondary btn-lg" disabled>03/09/2003</button>
-                        <button type="button" class="btn btn-secondary btn-lg" disabled>15:00</button>
-                    </div>
-                    <div style="font-weight: bold;">
-                        <label class="font-weight-bold mt-3">Donation type:</label>
-                    </div>
-                    <div class="card mt-4">
-                        <div class="card-header text-light"
-                            style="background-color: rgb(33, 37, 41);font-weight: bold;">
-                            Food
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title text-dark">Donation details</h5>
-                            <p class="card-text text-dark">Detailsssssss are hereeeeeeeeee</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110671.71931135064!2d31.135339736938477!3d29.907757180941076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145849a9e52e2c33%3A0xd991f162458f252a!2sFagnoon%20Art%20School!5e0!3m2!1sen!2seg!4v1715013341460!5m2!1sen!2seg"
+                        width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                        </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Date</label>
+                        <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="dd/mm/yyyy">
                     </div>
-                    <div style="font-weight: bold;">
-                        <label class="font-weight-bold mt-3 mb-0">Contact Details:</label>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Time</label>
+                        <input type="time" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="dd/mm/yyyy">
                     </div>
-                    <div class="card mt-4">
-                        <div class="card-header text-light"
-                            style="background-color: rgb(33, 37, 41);font-weight: bold;">
-                            Phone Numbers
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title text-dark">+20 101 077 7507</h5>
-                            <h5 class="card-title text-dark">+20 102 315 0011</h5>
 
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
+
+        
         <!-- Buttons -->
         <div class="row mt-3 mb-4">
             <div class="col">
@@ -174,7 +187,7 @@
     <script src="js/plugins.js"></script>
     <script>
         (function ($) {
-            
+
             var initJarallax = function () {
                 jarallax(document.querySelectorAll(".jarallax"));
 

@@ -33,3 +33,21 @@ $(document).ready(function () {
 
 });
 
+function scrollToTarget(targetId) {
+    // Get the height of the navigation bar
+    var navbarHeight = document.getElementById('header-nav').offsetHeight + 45;
+
+    // Get the position of the target element
+    var targetPosition = document.getElementById(targetId).offsetTop;
+
+    // Calculate the adjusted scroll position by subtracting the navbar height
+    var adjustedPosition = targetPosition - navbarHeight;
+
+    // Scroll to the adjusted position
+    window.scrollTo({
+        top: adjustedPosition,
+        behavior: 'smooth'
+    });
+}
+
+
