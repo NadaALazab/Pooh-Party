@@ -199,16 +199,15 @@
 
 	<section id="post" class="padding-large ">
 		<div class="container">
-			<h2>Submit Donation Posts</h2>
-			<form id="donationForm">
-				<div class="form-group"></div>
-				<div id="donations">
-					<!-- Donations will be dynamically added here -->
-				</div>
-				<button type="button" class="btn btn-primary" onclick="addDonation()" style="margin-top: 20px;">
-					Add Donation
-				</button>
-			</form>
+		  <h2>Submit Donation Posts</h2>
+		  <form id="donationForm">
+			<div class="form-group"></div>
+			<div id="donations">
+			</div>
+			<button type="button" class="btn btn-primary mt-2" onclick="addDonation()">
+			  Add Donation
+			</button>
+		  </form>
 		</div>
 	</section>
 
@@ -529,8 +528,8 @@
 	function addDonation() {
 		var donationsDiv = document.getElementById("donations");
 
-		var card = document.createElement("div");
-		card.classList.add("card", "mb-3");
+    var card = document.createElement("div");
+    card.classList.add("card", "mb-4");
 
 		var cardBody = document.createElement("div");
 		cardBody.classList.add("card-body");
