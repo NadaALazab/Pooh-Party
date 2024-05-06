@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Requests</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center py-3 bg-primary text-white">
+            <h1>Blood Donation Requests</h1>
+        </header>
+        <main>
+            <section class="mb-3">
+                <label for="hospitalFilter" class="mr-2">Hospital:</label>
+                <select id="hospitalFilter" class="form-control">
+                    <option value="">All Hospitals</option>
+                    <option value="Hospital A">Hospital A</option>
+                    <option value="Hospital B">Hospital B</option>
+                </select>
+            </section>
+            <section id="bloodDonationsList" class="mb-3">
+                <!-- Blood donations items will be dynamically added here -->
+            </section>
+            <section id="itemDetails" class="mb-3">
+                <!-- Item details will be dynamically added here -->
+            </section>
+        </main>
+    </div>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bloodDonationsList = document.getElementById('bloodDonationsList');
+            const itemDetails = document.getElementById('itemDetails');
+            const hospitalFilter = document.getElementById('hospitalFilter');
+
+            // Example data, replace with actual data from your database
+            const donations = [
+                { patientName: 'John Doe', bloodType: 'O+', rhType: '+', hospitalName: 'Hospital A', hospitalArea: 'Area 1', governorate: 'Governorate 1', hospitalAddress: '123 Street, City 1', mapLocation: 'Hospital A Location' },
+                { patientName: 'jessie Doe', bloodType: 'O+', rhType: '+', hospitalName: 'Hospital B', hospitalArea: 'Area 1', governorate: 'Governorate 1', hospitalAddress: '123 Street, City 1', mapLocation: 'Hospital B Location' }
+                // Add more donations as needed
+            ];
+
+            function displayBloodDonationsItems() {
+                bloodDonationsList.innerHTML = ''; // Clear the list
+                const selectedHospital = hospitalFilter.value;
+
+                donations.forEach(donation => {
+                    if (selectedHospital === '' || donation.hospitalName === selectedHospital) {
+                        const listItem = document.createElement('li');
+                        listItem.className = 'list-group-item';
+                        listItem.innerHTML = `
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5 class="mb-1">${donation.patientName}</h5>
+                                    <p class="text-muted">Blood Type: ${donation.bloodType} (${donation.rhType}), Hospital: ${donation.hospitalName}</p>
+                                </div>
+                                <button class="btn btn-primary" onclick="displayItemDetails('${donation.hospitalName}')">View Details</button>
+                            </div>
+                        `;
+                        bloodDonationsList.appendChild(listItem);
+                    }
+                });
+            }
+
+            function displayItemDetails(hospitalName) {
+                const donation = donations.find(d => d.hospitalName === hospitalName);
+                itemDetails.innerHTML = `
+                    <div>
+                        <h5>${donation.patientName}</h5>
+                        <p>Blood Type: ${donation.bloodType} (${donation.rhType}), Hospital: ${donation.hospitalName}</p>
+                        <p>Hospital Area: ${donation.hospitalArea}, Governorate: ${donation.governorate}</p>
+                        <p>Hospital Address: ${donation.hospitalAddress}</p>
+                        <input type="text" id="hospitalLocation" value="${donation.hospitalAddress}" readonly>
+                    </div>
+                `;
+            }
+
+            displayBloodDonationsItems();
+            hospitalFilter.addEventListener('change', displayBloodDonationsItems);
+        });
+    </script>
+</body>
+</html>

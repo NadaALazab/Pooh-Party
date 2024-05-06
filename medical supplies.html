@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Supplies Donation Requests</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center py-3 bg-primary text-white">
+            <h1>Medical Supplies Donation Requests</h1>
+        </header>
+        <main>
+            <section class="mb-3">
+                <label for="typeFilter" class="mr-2">Type:</label>
+                <select id="typeFilter" class="form-control">
+                    <option value="">All Types</option>
+                    <option value="medicalDevices">Medical Devices</option>
+                    <option value="medicalEquipment">Medical Equipment</option>
+                    <option value="medication">Medication</option>
+                </select>
+            </section>
+            <section id="medicalSuppliesList" class="mb-3">
+                <!-- Medical supplies items will be dynamically added here -->
+            </section>
+            <section id="itemDetails" class="mb-3">
+                <!-- Item details will be dynamically added here -->
+            </section>
+        </main>
+    </div>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript functionality will go here
+   
+document.addEventListener('DOMContentLoaded', function() {
+    const medicalSuppliesList = document.getElementById('medicalSuppliesList');
+    const items = [
+        { name: 'Oxygen Tank', type: 'medicalDevices', use: 'Respiratory Support', image: 'oxygen-tank.jpg', quantity: 5 },
+        { name: 'Wheelchair', type: 'medicalEquipment', use: 'Mobility Aid', image: 'wheelchair.jpg', quantity: 3 },
+        { name: 'Insulin', type: 'medication', use: 'Diabetes Management', image: 'insulin.jpg', quantity: 10 },
+        // Add more items as needed
+    ];
+
+    function displayMedicalSuppliesItems() {
+        medicalSuppliesList.innerHTML = ''; // Clear the list
+        const typeFilter = document.getElementById('typeFilter');
+
+        items.forEach(item => {
+            if (typeFilter.value === '' || item.type === typeFilter.value) {
+                const listItem = document.createElement('li');
+                listItem.className = 'list-group-item';
+                listItem.innerHTML = `
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="mb-1">${item.name}</h5>
+                            <p class="text-muted">Type: ${item.type}, Use: ${item.use}</p>
+                            <img src="${item.image}" alt="${item.name}" width="100">
+                        </div>
+                        <span class="badge bg-primary">Quantity Needed: ${item.quantity}</span>
+                    </div>
+                `;
+                listItem.addEventListener('click', function() {
+                    displayItemDetails(item);
+                });
+                medicalSuppliesList.appendChild(listItem);
+            }
+        });
+    }
+
+    function displayItemDetails(item) {
+        const itemDetails = document.getElementById('itemDetails');
+        itemDetails.innerHTML = `
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${item.name}</h5>
+                    <p class="card-text">Type: ${item.type}</p>
+                    <p class="card-text">Use: ${item.use}</p>
+                    <p class="card-text">Quantity Needed: ${item.quantity}</p>
+                    <div class="form-group">
+                        <label for="donationQuantity">Donation Quantity:</label>
+                        <input type="number" class="form-control" id="donationQuantity" min="1" max="${item.quantity}" value="1">
+                    </div>
+                    <button class="btn btn-primary">Donate</button>
+                </div>
+            </div>
+        `;
+    }
+
+    displayMedicalSuppliesItems();
+    document.getElementById('typeFilter').addEventListener('change', displayMedicalSuppliesItems);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Medical Cases</h2>
+        <div class="form-group">
+            <label for="specialtyFilter">Medical Specialty:</label>
+            <select class="form-control" id="specialtyFilter" onchange="filterCases()">
+                <option value="">All Specialties</option>
+                <!-- Options will be dynamically populated -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="organizationFilter">Organization Name:</label>
+            <input type="text" class="form-control" id="organizationFilter" onchange="filterCases()">
+        </div>
+        <div class="form-group">
+            <label for="areaFilter">Area:</label>
+            <input type="text" class="form-control" id="areaFilter" onchange="filterCases()">
+        </div>
+        <div class="form-group">
+            <label for="governorateFilter">Governorate:</label>
+            <input type="text" class="form-control" id="governorateFilter" onchange="filterCases()">
+        </div>
+        <div id="medicalCasesList" class="list-group">
+            <!-- Medical cases will be dynamically added here -->
+        </div>
+    </div>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const medicalCasesList = document.getElementById('medicalCasesList');
+    const specialtyFilter = document.getElementById('specialtyFilter');
+    const organizationFilter = document.getElementById('organizationFilter');
+    const areaFilter = document.getElementById('areaFilter');
+    const governorateFilter = document.getElementById('governorateFilter');
+
+    // Example data, replace with actual data from your database
+    const cases = [
+        { id: 1, name: 'Case 1', specialty: 'Cardiology', organization: 'Hospital A', area: 'Area 1', governorate: 'Governorate 1', details: 'Details for Case 1' },
+        // Add more cases as needed
+    ];
+
+    // Function to filter and display cases
+    function filterCases() {
+        const filteredCases = cases.filter(case => {
+            // Apply filters based on the selected options
+            return (
+                (!specialtyFilter.value || case.specialty === specialtyFilter.value) &&
+                (!organizationFilter.value || case.organization === organizationFilter.value) &&
+                (!areaFilter.value || case.area.includes(areaFilter.value)) &&
+                (!governorateFilter.value || case.governorate.includes(governorateFilter.value))
+            );
+        });
+
+        // Display the filtered cases
+        displayCases(filteredCases);
+    }
+
+    // Function to display cases
+    function displayCases(filteredCases) {
+        medicalCasesList.innerHTML = ''; // Clear the list
+        filteredCases.forEach(case => {
+            const listItem = document.createElement('li');
+            listItem.className = 'list-group-item';
+            listItem.innerHTML = `
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h5 class="mb-1">${case.name}</h5>
+                        <p class="text-muted">Specialty: ${case.specialty}, Organization: ${case.organization}, Area: ${case.area}, Governorate: ${case.governorate}</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="displayCaseDetails('${case.id}')">View Details</button>
+                </div>
+            `;
+            medicalCasesList.appendChild(listItem);
+        });
+    }
+
+    // Call filterCases to initially show all cases
+    filterCases();
+});
+
+    </script>
+</body>
+</html>
