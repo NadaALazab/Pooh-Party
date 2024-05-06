@@ -577,21 +577,24 @@
 
 
 			cardBody.innerHTML = `
-		<div class="card-header ">
-	 				${selectedCategory}
-	 			</div>
-		<div class="card-body">
-					<h5 class="card-title text-dark">Donation details</h5>
-					<p class="card-text text-dark">${donationDetails}</p>
-					<div style="display: flex; justify-content: space-between ;">
-					<a href="#post" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
-					<a href="#post" class="btn btn-primary" onclick="editPost(selectedCategory,donationDetails)">Edit Post</a>
-					<div>
-						<p>Pending</p>
-						</div>
-					</div>
-				</div>
-        `;
+    <div class="card-header">
+        ${selectedCategory}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title text-dark">Donation details</h5>
+        <p class="card-text text-dark">${donationDetails}</p>
+        <div style="display: flex; justify-content: space-between;">
+            <div>
+                <a href="#post" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
+                <a href="#post" class="btn btn-primary" onclick="editPost(selectedCategory, donationDetails)">Edit Post</a>
+            </div>
+            <div>
+                <p>Pending</p>
+            </div>
+        </div>
+    </div>
+`;
+
 		};
 
 
@@ -675,18 +678,26 @@
 			card.classList.add("card");
 
 
+		
 			cardBody.innerHTML = `
-		<div class="card-header ">
-	 				${selectedCategory}
-	 			</div>
-		<div class="card-body">
-					<h5 class="card-title text-dark">Donation details</h5>
-					<p class="card-text text-dark">${donationDetails}</p>
-					<a href="#post" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
-					<a href="#post" class="btn btn-primary" onclick="editPost(selectedCategory,donationDetails)">Edit Post</a>
+    <div class="card-header">
+        ${selectedCategory}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title text-dark">Donation details</h5>
+        <p class="card-text text-dark">${donationDetails}</p>
+        <div style="display: flex; justify-content: space-between;">
+            <div>
+                <a href="#post" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
+                <a href="#post" class="btn btn-primary" onclick="editPost(selectedCategory, donationDetails)">Edit Post</a>
+            </div>
+            <div>
+                <p>Pending</p>
+            </div>
+        </div>
+    </div>
+`;
 
-				</div>
-        `;
 		};
 
 
