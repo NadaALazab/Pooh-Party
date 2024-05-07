@@ -16,7 +16,7 @@ function login(usern,password){
   else
   if(username =='admin' && password=='kongo'){
      alert(username +" Successfully logined");
-   window.location.assign("admin.html");
+   window.location.assign("Admin/index.html");
  }
  else
    if(username.slice(-12) =='organization'){
