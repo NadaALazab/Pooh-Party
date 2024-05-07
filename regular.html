@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+    <link href="plugins/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+	<section id="donationItems" class="padding-large">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <header class="text-center my-5">
+                <span class="text-muted">Identify Needs, Contribute to Causes</span>
+                <h2><strong>Requested Donation Items</strong></h2>
+              </header>
+            </div>
+          </div>
+	 
+	  <div class="row">
+		<div class="col-md-12">
+		  <div class="input-group mb-3">
+			<select class="form-control" id="categorySelect">
+			  <option value="">All Categories</option>
+			  <option value="clothes">Clothes</option>
+			  <option value="toys">Toys</option>
+			  <option value="food">Food</option>
+			  <option value="medicalSupplies">Medical Supplies</option>
+			  <option value="schoolSupplies">School Supplies</option>
+			  <option value="bloodDonations">Blood Donations</option>
+			</select>
+			<input type="text" class="form-control" placeholder="Search items..." id="searchInput">
+			<div class="input-group-append">
+			  <button class="btn btn-outline-secondary" type="button" id="searchButton">Search</button>
+			</div>
+		  </div>
+		  <ul class="list-group" id="itemList">
+			<!-- Donation items will be dynamically added here -->
+		  </ul>
+		</div>
+	  </div>
+	</div>
+  </section>
+  <script>
+	document.addEventListener('DOMContentLoaded', function() {
+		// Example data for demonstration
+		const items = [
+			{ name: 'T-Shirt', category: 'clothes', description: 'unisex ,for spring and made of cotton for adults', quantity: 10 },
+			{ name: 'stuffed animals', category: 'toys', description: 'Star Wars Action Figure ', quantity: 5 },
+			{ name: 'board games', category: 'toys', description: 'made up of 64 smaller squares, with eight squares in each row and column', quantity: 5 },
+			{ name: 'sweater', category: 'clothes', description: 'boys ,for winter and made of wool for children', quantity: 10 },
+			{ name: 'apples', category: 'food', description: 'type: fruitsAndVegetables, quantity: 10, unit: KG', quantity: 10 },
+			{ name: 'Canned Tomatoes', category: 'food', description: 'type: cannedFoods, quantity: 20, unit: Cans', quantity: 10 },
+			{ name: 'Pizza', category: 'food', description: 'type:freshMeals, quantity: 5, unit: Pieces', quantity: 10 },
+			{ name: 'Chocolate Chip Cookies', category: 'food', description: 'type: bakedGoods, quantity: 30, unit: Pieces', quantity: 10 },
+			{ name: 'Oxygen Tank', category: 'Medical Supplies', description: 'for Respiratory Support', quantity: 5 },
+            { name: 'Wheelchair', category: 'Medical Supplies', description: 'for Mobility Aid', quantity: 3 },
+            { name: 'Insulin', category: 'Medical Supplies', description: 'for Diabetes Management', quantity: 10 },
+			{ name: 'Math Book', category: 'School Supplies', description: 'John Doe, language: English, edition: 1st, summary: Basic math concepts', quantity: 10 },
+            { name: 'Pencil Set', category: 'School Supplies', amount: 100, quantity: 5 },
+		];
+	
+		// Function to filter items
+		function filterItems() {
+			const categorySelect = document.getElementById('categorySelect');
+			const searchInput = document.getElementById('searchInput');
+			const itemList = document.getElementById('itemList');
+	
+			// Filter items based on category and search input
+			const filteredItems = items.filter(item => {
+				// Check if the category matches or if no category is selected
+				if (categorySelect.value === '' || item.category === categorySelect.value) {
+					// Check if the item name includes the search query
+					return item.name.toLowerCase().includes(searchInput.value.toLowerCase());
+				}
+				return false;
+			});
+	
+			// Clear the item list
+			itemList.innerHTML = '';
+	
+			// Add filtered items to the list
+			filteredItems.forEach(item => {
+				const listItem = document.createElement('li');
+				listItem.className = 'list-group-item';
+				listItem.innerHTML = `
+					<div class="d-flex justify-content-between">
+						<div>
+							<h5 class="mb-1">${item.name}</h5>
+							<p class="text-muted">${item.description}</p>
+						</div>
+						<span class="badge bg-primary">Quantity Needed: ${item.quantity}</span>
+					</div>
+				`;
+				itemList.appendChild(listItem);
+			});
+		}
+	
+		// Debounce function for search input
+		function debounce(func, wait) {
+			let timeout;
+			return function executedFunction(...args) {
+				const later = () => {
+					clearTimeout(timeout);
+					func(...args);
+				};
+				clearTimeout(timeout);
+				timeout = setTimeout(later, wait);
+			};
+		}
+	
+		// Apply debouncing to the search input
+		const debouncedFilterItems = debounce(filterItems, 300); // Adjust the delay as needed
+	
+		// Call the filter function initially and on search
+		filterItems();
+		document.getElementById('searchButton').addEventListener('click', debouncedFilterItems);
+		searchInput.addEventListener('input', debouncedFilterItems); // Listen for input events
+	});
+	</script>
+	
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		 const categorySelect = document.getElementById('categorySelect');
+		
+		 categorySelect.addEventListener('change', function() {
+			const selectedCategory = this.value;
+			let redirectUrl = '';
+		
+			// Determine the redirect URL based on the selected category
+			switch (selectedCategory) {
+			  case 'clothes':
+				redirectUrl = 'clothes.html'; // Assuming you have a page named clothes.html
+				break;
+			  case 'toys':
+				redirectUrl = 'toys.html'; // Assuming you have a page named toys.html
+				break;
+			  case 'food':
+				redirectUrl = 'food.html'; // Assuming you have a page named food.html
+				break;
+			  case 'medicalSupplies':
+				redirectUrl = 'medical supplies.html'; // Assuming you have a page named medical-supplies.html
+				break;
+			  case 'schoolSupplies':
+				redirectUrl = 'school supplies.html'; // Assuming you have a page named school-supplies.html
+				break;
+			  case 'bloodDonations':
+				redirectUrl = 'blood donations.html'; // Assuming you have a page named blood-donations.html
+				break;
+			  default:
+				// If "All Categories" is selected, redirect to a default page or the homepage
+				redirectUrl = 'index.html'; // Assuming you have a homepage named index.html
+			}
+		
+			// Redirect the user to the selected category page
+			window.location.href = redirectUrl;
+		 });
+		});
+		</script>
+  
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="plugins/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

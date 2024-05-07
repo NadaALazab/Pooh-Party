@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy Donation Requests</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center py-3 bg-primary text-white">
+            <h1>Toy Donation Requests</h1>
+        </header>
+        <main>
+            <section class="mb-3">
+                <label for="ageFilter" class="mr-2">Age:</label>
+                <select id="ageFilter" class="form-control">
+                    <option value="">All Ages</option>
+                    <option value="0-2">0-2</option>
+                    <option value="3-5">3-5</option>
+                    <option value="6-8">6-8</option>
+                    <option value="9-12">9-12</option>
+                </select>
+            </section>
+            <section class="mb-3">
+                <label for="genderFilter" class="mr-2">Gender:</label>
+                <select id="genderFilter" class="form-control">
+                    <option value="">All Genders</option>
+                    <option value="boys">Boys</option>
+                    <option value="girls">Girls</option>
+                    <option value="unisex">Unisex</option>
+                </select>
+            </section>
+            <section class="mb-3">
+                <label for="categoryFilter" class="mr-2">Category:</label>
+                <select id="categoryFilter" class="form-control">
+                    <option value="">All Categories</option>
+                    <option value="boardGames">Board Games</option>
+                    <option value="stuffedToys">Stuffed Toys</option>
+                    <option value="dolls">Dolls</option>
+                    <option value="sports">Sports</option>
+                    <option value="cars">Cars</option>
+                    <option value="outdoor">Outdoor</option>
+                </select>
+            </section>
+            <section id="toysList" class="mb-3">
+                <!-- Toys items will be dynamically added here -->
+            </section>
+            <section id="itemDetails" class="mb-3">
+                <!-- Item details will be dynamically added here -->
+            </section>
+        </main>
+    </div>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toysList = document.getElementById('toysList');
+            const itemDetails = document.getElementById('itemDetails');
+            const ageFilter = document.getElementById('ageFilter');
+            const genderFilter = document.getElementById('genderFilter');
+            const categoryFilter = document.getElementById('categoryFilter');
+
+            // Example data, replace with actual data from your database
+            const toys = [
+                { name: 'Board Game Set', age: '6-8', gender: 'unisex', category: 'boardGames', image: 'Pooh-Party/images/chess game.jpg', quantity: 5 },
+                { name: 'Stuffed Animal', age: '0-2', gender: 'unisex', category: 'stuffedToys', image: 'path/to/your/image2.jpg', quantity: 10 },
+                // Add more items as needed
+            ];
+
+            function displayToysItems() {
+                toysList.innerHTML = ''; // Clear the list
+                const selectedAge = ageFilter.value;
+                const selectedGender = genderFilter.value;
+                const selectedCategory = categoryFilter.value;
+
+                toys.forEach(toy => {
+                    if (selectedAge === '' || toy.age === selectedAge) {
+                        const listItem = document.createElement('li');
+                        listItem.className = 'list-group-item';
+                        listItem.innerHTML = `
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5 class="mb-1">${toy.name}</h5>
+                                    <p class="text-muted">Age: ${toy.age}, Gender: ${toy.gender}, Category: ${toy.category}</p>
+                                    <img src="${toy.image}" alt="${toy.name}" width="100">
+                                </div>
+                                <span class="badge bg-primary">Quantity Needed: ${toy.quantity}</span>
+                            </div>
+                        `;
+                        listItem.addEventListener('click', function() {
+                            displayItemDetails(toy);
+                        });
+                        toysList.appendChild(listItem);
+                    }
+                });
+            }
+
+            function displayItemDetails(toy) {
+                itemDetails.innerHTML = `
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">${toy.name}</h5>
+                            <p class="card-text">Age: ${toy.age}, Gender: ${toy.gender}, Category: ${toy.category}</p>
+                            <img src="${toy.image}" alt="${toy.name}" width="100">
+                            <div class="form-group">
+                                <label for="donationQuantity">Donation Quantity:</label>
+                                <input type="number" class="form-control" id="donationQuantity" min="1" max="${toy.quantity}" value="1">
+                            </div>
+                            <button class="btn btn-primary">Donate</button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            displayToysItems();
+            ageFilter.addEventListener('change', displayToysItems);
+            genderFilter.addEventListener('change', displayToysItems);
+            categoryFilter.addEventListener('change', displayToysItems);
+        });
+    </script>
+</body>
+</html>

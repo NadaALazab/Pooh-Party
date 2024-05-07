@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation Requests</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center py-3 bg-primary text-white">
+            <h1>Food Donation Requests</h1>
+        </header>
+        <main>
+            <section class="mb-3">
+                <label for="typeFilter" class="mr-2">Type:</label>
+                <select id="typeFilter" class="form-control">
+                    <option value="">All Types</option>
+                    <option value="fruitsAndVegetables">Fruits and Vegetables</option>
+                    <option value="cannedFoods">Canned Foods</option>
+                    <option value="freshMeals">Fresh Meals</option>
+                    <option value="bakedGoods">Baked Goods</option>
+                </select>
+            </section>
+            <section id="foodList" class="mb-3">
+                <!-- Food items will be dynamically added here -->
+            </section>
+            <section id="itemDetails" class="mb-3">
+                <!-- Item details will be dynamically added here -->
+            </section>
+        </main>
+    </div>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript functionality will go here
+        document.addEventListener('DOMContentLoaded', function() {
+    const foodList = document.getElementById('foodList');
+    const itemDetails = document.getElementById('itemDetails');
+    const typeFilter = document.getElementById('typeFilter');
+
+    // Example data, replace with actual data from your database
+    const foods = [
+        { name: 'Apples', type: 'fruitsAndVegetables', quantity: 10, unit: 'KG' },
+        { name: 'Canned Tomatoes', type: 'cannedFoods', quantity: 20, unit: 'Cans' },
+        { name: 'Pizza', type: 'freshMeals', quantity: 5, unit: 'Pieces' },
+        { name: 'Chocolate Chip Cookies', type: 'bakedGoods', quantity: 30, unit: 'Pieces' },
+        // Add more items as needed
+    ];
+
+    function displayFoodItems() {
+        foodList.innerHTML = ''; // Clear the list
+        const selectedType = typeFilter.value;
+
+        foods.forEach(food => {
+            if (selectedType === '' || food.type === selectedType) {
+                const listItem = document.createElement('li');
+                listItem.className = 'list-group-item';
+                listItem.innerHTML = `
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="mb-1">${food.name}</h5>
+                            <p class="text-muted">Type: ${food.type}</p>
+                        </div>
+                        <span class="badge bg-primary">Quantity Needed: ${food.quantity} ${food.unit}</span>
+                    </div>
+                `;
+                listItem.addEventListener('click', function() {
+                    displayItemDetails(food);
+                });
+                foodList.appendChild(listItem);
+            }
+        });
+    }
+
+    function displayItemDetails(food) {
+        itemDetails.innerHTML = `
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${food.name}</h5>
+                    <p class="card-text">Type: ${food.type}</p>
+                    <div class="form-group">
+                        <label for="donationQuantity">Donation Quantity:</label>
+                        <input type="number" class="form-control" id="donationQuantity" min="1" max="${food.quantity}" value="1">
+                    </div>
+                    <button class="btn btn-primary">Donate</button>
+                </div>
+            </div>
+        `;
+    }
+
+    displayFoodItems();
+    typeFilter.addEventListener('change', displayFoodItems);
+});
+
+    </script>
+</body>
+</html>
