@@ -76,7 +76,7 @@
           {
             name: "Sweater",
             age: "child",
-            gender: "boys",
+            gender: "men",
             season: "winter",
             material: "wool",
             quantity: 5,
@@ -92,8 +92,7 @@
 
           clothes.forEach((clothing) => {
             if (
-              (selectedAge === "" ||
-              clothing.age === selectedAge) &&
+              (selectedAge === "" || clothing.age === selectedAge) &&
               (clothing.gender === selectedGender || selectedGender === "") &&
               (clothing.season === selectedSeason || selectedSeason === "")
             ) {
@@ -129,7 +128,7 @@
                   <button class="btn btn-primary">Donate</button>
               </div>
           </div>
-      `;
+        `;
         }
 
         displayClothesItems();

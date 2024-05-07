@@ -1,94 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doctor Dashboard</title>
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
-        <h2>Medical Cases</h2>
-        <div class="form-group">
-            <label for="specialtyFilter">Medical Specialty:</label>
-            <select class="form-control" id="specialtyFilter" onchange="filterCases()">
-                <option value="">All Specialties</option>
-                <!-- Options will be dynamically populated -->
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="organizationFilter">Organization Name:</label>
-            <input type="text" class="form-control" id="organizationFilter" onchange="filterCases()">
-        </div>
-        <div class="form-group">
-            <label for="areaFilter">Area:</label>
-            <input type="text" class="form-control" id="areaFilter" onchange="filterCases()">
-        </div>
-        <div class="form-group">
-            <label for="governorateFilter">Governorate:</label>
-            <input type="text" class="form-control" id="governorateFilter" onchange="filterCases()">
-        </div>
-        <div id="medicalCasesList" class="list-group">
-            <!-- Medical cases will be dynamically added here -->
-        </div>
+      <header class="text-center py-3 bg-primary text-white">
+        <h1>Medical Cases</h1>
+      </header>
+      <main>
+        <section class="mb-3">
+          <label for="specialtyFilter" class="mr-2">Medical Specialty</label>
+          <select id="specialtyFilter" class="form-control">
+            <option value="">All Specialties</option>
+            <option value="dermatology">Dermatology</option>
+            <option value="psychiatry">Psychiatry</option>
+            <option value="cardiology">Cardiology</option>
+          </select>
+        </section>
+        <section class="mb-3">
+          <label for="organizationFilter" class="mr-2">Organization</label>
+          <select id="organizationFilter" class="form-control">
+            <option value="">All Organizations</option>
+            <option value="organization1">Organization 1</option>
+            <option value="organization2">Organization 2</option>
+            <option value="organization3">Organization 3</option>
+          </select>
+        </section>
+        <section class="mb-3">
+          <label for="areaFilter" class="mr-2">Area</label>
+          <select id="areaFilter" class="form-control">
+            <option value="">All Areas</option>
+            <option value="area1">Area 1</option>
+            <option value="area2">Area 2</option>
+            <option value="area3">Area 3</option>
+          </select>
+        </section>
+        <section class="mb-3">
+          <label for="governorateFilter" class="mr-2">Governorate</label>
+          <select id="governorateFilter" class="form-control">
+            <option value="">All Governorates</option>
+            <option value="governorate1">Governorate 1</option>
+            <option value="governorate2">Governorate 2</option>
+            <option value="governorate3">Governorate 3</option>
+          </select>
+        </section>
+        <section id="medicalCasesList" class="list-group">
+          <!-- Medical cases will be dynamically added here -->
+        </section>
+        <section id="itemDetails" class="mb-3">
+          <!-- Item details will be dynamically added here -->
+        </section>
+      </main>
     </div>
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const medicalCasesList = document.getElementById('medicalCasesList');
-    const specialtyFilter = document.getElementById('specialtyFilter');
-    const organizationFilter = document.getElementById('organizationFilter');
-    const areaFilter = document.getElementById('areaFilter');
-    const governorateFilter = document.getElementById('governorateFilter');
+      document.addEventListener("DOMContentLoaded", function () {
+        const medicalCasesList = document.getElementById("medicalCasesList");
+        const itemDetails = document.getElementById("itemDetails");
+        const specialtyFilter = document.getElementById("specialtyFilter");
+        const organizationFilter =
+          document.getElementById("organizationFilter");
+        const areaFilter = document.getElementById("areaFilter");
+        const governorateFilter = document.getElementById("governorateFilter");
 
-    // Example data, replace with actual data from your database
-    const cases = [
-        { id: 1, name: 'Case 1', specialty: 'Cardiology', organization: 'Hospital A', area: 'Area 1', governorate: 'Governorate 1', details: 'Details for Case 1' },
-        // Add more cases as needed
-    ];
+        // Example data, replace with actual data from your database
+        const cases = [
+          {
+            id: 1,
+            name: "Alyssa Smith",
+            specialty: "cardiology",
+            organization: "organization3",
+            area: "area1",
+            governorate: "governorate1",
+            age: 35,
+            gender: "Female",
+            weight: 60,
+            location: "location 1",
+            address: "address 1",
+            details: "Details for Case 1",
+          },
+          {
+            id: 2,
+            name: "Zack Johnson",
+            specialty: "dermatology",
+            organization: "organization1",
+            area: "area3",
+            governorate: "governorate2",
+            age: 24,
+            gender: "Male",
+            weight: 66,
+            location: "location 2",
+            address: "address 2",
+            details: "Details for Case 2",
+          },
+          {
+            id: 3,
+            name: "Ellie Brown",
+            specialty: "psychiatry",
+            organization: "organization2",
+            area: "area2",
+            governorate: "governorate3",
+            age: 33,
+            gender: "Female",
+            weight: 58,
+            location: "location 3",
+            address: "address 3",
+            details: "Details for Case 3",
+          },
+          // Add more cases as needed
+        ];
 
-    // Function to filter and display cases
-    function filterCases() {
-        const filteredCases = cases.filter(case => {
-            // Apply filters based on the selected options
-            return (
-                (!specialtyFilter.value || case.specialty === specialtyFilter.value) &&
-                (!organizationFilter.value || case.organization === organizationFilter.value) &&
-                (!areaFilter.value || case.area.includes(areaFilter.value)) &&
-                (!governorateFilter.value || case.governorate.includes(governorateFilter.value))
-            );
-        });
+        function displayMedicalCases() {
+          medicalCasesList.innerHTML = ""; // Clear the list
+          const selectedSpecialty = specialtyFilter.value;
+          const selectedOrganization = organizationFilter.value;
+          const selectedArea = areaFilter.value;
+          const selectedGovernorate = governorateFilter.value;
 
-        // Display the filtered cases
-        displayCases(filteredCases);
-    }
-
-    // Function to display cases
-    function displayCases(filteredCases) {
-        medicalCasesList.innerHTML = ''; // Clear the list
-        filteredCases.forEach(case => {
-            const listItem = document.createElement('li');
-            listItem.className = 'list-group-item';
-            listItem.innerHTML = `
-                <div class="d-flex justify-content-between">
-                    <div>
-                        <h5 class="mb-1">${case.name}</h5>
-                        <p class="text-muted">Specialty: ${case.specialty}, Organization: ${case.organization}, Area: ${case.area}, Governorate: ${case.governorate}</p>
+          cases.forEach((medicalCase) => {
+            if (
+              (medicalCase.specialty === selectedSpecialty ||
+                selectedSpecialty === "") &&
+              (medicalCase.organization === selectedOrganization ||
+                selectedOrganization === "") &&
+              (medicalCase.area === selectedArea || selectedArea === "") &&
+              (medicalCase.governorate === selectedGovernorate ||
+                selectedGovernorate === "")
+            ) {
+              const listItem = document.createElement("li");
+              listItem.className = "list-group-item";
+              listItem.innerHTML = `
+                    <div class="d-flex justify-content-between">
+                      <div>
+                          <h5 class="mb-1">${medicalCase.name}</h5>
+                          <p class="text-muted">Age: ${medicalCase.age}, Gender: ${medicalCase.gender}, Weight: ${medicalCase.weight}, Location: ${medicalCase.location}</p>
+                      </div>
+                      <span class="badge bg-primary">Address ${medicalCase.address}</span>
                     </div>
-                    <button class="btn btn-primary" onclick="displayCaseDetails('${case.id}')">View Details</button>
-                </div>
-            `;
-            medicalCasesList.appendChild(listItem);
-        });
-    }
+                    `;
+              listItem.addEventListener("click", function () {
+                displayItemDetails(medicalCase);
+              });
+              medicalCasesList.appendChild(listItem);
+            }
+          });
+        }
+        function displayItemDetails(medicalCase) {
+          itemDetails.innerHTML = `
+          <div class="card">
+              <div class="card-body">
+                  <h5 class="card-title">${medicalCase.name}</h5>
+                  <p class="card-text">  
+                    Age: ${medicalCase.age}, Gender: ${medicalCase.gender}, Weight: ${medicalCase.weight},<br>
+                    Location: ${medicalCase.location}, Address: ${medicalCase.address}, <br>
+                    Organization: ${medicalCase.organization}, Medical Specialty: ${medicalCase.specialty},<br>
+                    Details: ${medicalCase.details}
+                  </p>
+                  
+                  <button class="btn btn-primary">Donate</button>
+              </div>
+          </div>
+        `;
+        }
 
-    // Call filterCases to initially show all cases
-    filterCases();
-});
-
+        displayMedicalCases();
+        specialtyFilter.addEventListener("change", displayMedicalCases);
+        organizationFilter.addEventListener("change", displayMedicalCases);
+        areaFilter.addEventListener("change", displayMedicalCases);
+        governorateFilter.addEventListener("change", displayMedicalCases);
+      });
     </script>
-</body>
+  </body>
 </html>
