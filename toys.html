@@ -139,7 +139,7 @@
                 const selectedCategory = categoryFilter.value;
 
                 toys.forEach(toy => {
-                    if (selectedAge === '' || toy.age === selectedAge) {
+                    if (selectedAge === '' || toy.age === selectedAge&&selectedGender === '' || toy.gender === selectedGender&&selectedCategory === '' || toy.category === selectedCategory ) {
                         const listItem = document.createElement('li');
                         listItem.className = 'list-group-item';
                         listItem.innerHTML = `
