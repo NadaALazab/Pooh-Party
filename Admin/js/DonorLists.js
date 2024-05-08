@@ -35,6 +35,7 @@ function eraseAll(){
     checkboxes.forEach(function(checkbox){
         checkbox.checked = false;
     });
+    showAll();
 
 }
 var checkboxes = document.querySelectorAll("input[type = 'checkbox']");
@@ -67,9 +68,32 @@ function counter(organizations){
     return x;
           
 }
+function isAllNotChecked(){
+    let count = 0;
+    checkboxes.forEach(function(organization){
+         if(organization.checked){
+            count++;
+         }
+    });
+  return count;
 
-function showOrhide(filter){
+
+}
+function showAll(){
+
+    var organizations = document.querySelectorAll(".card");
+    organizations.forEach(function(organization){
+          organization.hidden = false;
+    });
+    counter(organizations);
     
+}
+function showOrhide(filter){
+    if(isAllNotChecked()==0){
+        showAll();
+        
+    }
+    else{
     var x = getNotHidden();
     var organizations = document.querySelectorAll(".card");
           var check = document.getElementById(filter);
@@ -103,10 +127,7 @@ function showOrhide(filter){
                     organization.hidden = false;
                     x++; 
                 }
-               
-
-           
-        
+          
         });
         tt.innerText = x;
     
@@ -118,7 +139,7 @@ function showOrhide(filter){
     });
     counter(organizations);
           }
-   
+        }
     
 }
 
