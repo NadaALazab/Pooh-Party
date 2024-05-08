@@ -18,10 +18,13 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 
 	<!-- script
 	================================================== -->
@@ -39,6 +42,11 @@
 </div>
 
 <header class="site-header position-fixed py-1 text-white">
+	<div class ="left-section ">
+		<a class="material-icons" id="menu">menu</a>	
+		<a href=""><i class="material-icons">notifications</i></a>
+	</div>	
+	
   	<nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
 	
 		<div class="container-fluid">
@@ -88,6 +96,24 @@
 	  	</div>
 
 	</nav>
+	<div class="content-home" id="menu-dropdown" style="display:none;">
+		<aside>
+			<nav>
+				<a herf="teacher.html" class="nav-link active">
+					<i class="material-icons">school</i>
+					<span id="active-span">Teacher</span>
+				</a>
+				<a herf="#" class="nav-link active">
+					<i class="material-icons">medication</i>
+					<span id="active-span">Doctor</span>
+				</a>
+				<a herf="#" class="nav-link active">
+					<i class="material-icons">person</i>
+					<span id="active-span">Regular </span>
+				</a>
+			</nav>
+		</aside>
+	</div>
 </header>
 
 <section id="intro" class="padding-large jarallax">
@@ -418,6 +444,7 @@
   <script src="plugins/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
+  <script src="modal-with-custom-action.js"></script>
 
 </body>
 </html>

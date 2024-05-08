@@ -28,68 +28,7 @@ function login(usern,password){
  
 }
 
-function role (r){
 
-  var modalWrapR=null;
-  let roleDonor=r.toLowerCase();
-  if(roleDonor=='doctor'){
-    modalWrapR = document.createElement('div');
-    modalWrapR.innerHTML =`
-    <div class="modal fade" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header bg-light">
-            <h5 class="modal-title">${roleDonor}</h5>
-            <button type="button" class="btn-back" data-bs-dismiss="modal" aria-label="Back"></button>
-          </div>
-          <div class="modal-body">
-          <form  >
-          <!-- Email input -->
-          <div data-mdb-input-init class="form-outline mb-4">
-            <label class="form-label"  for="username3">Email address</label>
-            <input type="email" id="username3"  class="form-control" required />
-             
-          </div>
-            `;
-  }
-  else{
-  if(roleDonor='teacher'){
-
-    modalWrapR = document.createElement('div');
-    modalWrapR.innerHTML =`
-    <form>
-      <div class="skills-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="skill" class="skills-control" id="exampleskills" aria-describedby="skillHelp" placeholder="Enter your skills">
-        <small id="emailHelp" class="skills-text text-muted">what are you teaching.</small>
-      </div>
-      <div class="time-group">
-        <label for="exampleInputPassword1">enter when you avaliable </label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      </div>
-      <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-            `;
-  }
-  else{
-    modalWrapR = document.createElement('div');
-    modalWrapR.innerHTML =`
-    <div class="modal fade" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header bg-light">
-            <h5 class="modal-title">${roleDonor}</h5>
-            <button type="button" class="btn-back" data-bs-dismiss="modal" aria-label="Back"></button>
-          </div>
-            `;
-
-  }
-}
-}
 
 
 var modalWrap = null;
@@ -190,14 +129,112 @@ const showReg = (title, yesBtnLabel = 'Register', noBtnLabel = 'Cancel') => {
               <input type="email" id="password3" class="form-control" required />
             </div>
           
-            <div class="dropdown">
-            <label for="cars">Gender:</label>
-              <select name="cars" id="cars">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-            </div>
-          
+            <div class="dropdown mb-4">
+  <label for="gender">Gender:</label>
+  <select name="gender" id="gender" class="form-select">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+</div>
+
+<div class="dropdown mb-4">
+  <label for="occupation">Occupation:</label>
+  <select name="occupation" id="occupation" class="form-select" onchange="navigate()">
+    <option value="regular_donor">Regular Donor</option>
+    <option value="doctor">Doctor</option>
+    <option value="teacher">Teacher</option>
+  </select>
+</div>
+<!-- Hidden File Input -->
+<div id="documentUpload" class="d-none">
+  <label for="document">Upload Document:</label>
+  <input type="file" id="document" name="document" accept=".pdf,.doc,.docx">
+</div>
+
+<script>
+  function navigate() {
+    var selectElement = document.getElementById("occupation");
+    var selectedOption = selectElement.value;
+
+    if (selectedOption === "regular_donor") {
+      window.location.href = "regular_donor.html";
+    } else if (selectedOption === "doctor") {
+      window.location.href = "doctor.html";
+    } else if (selectedOption === "teacher") {
+      window.location.href = "teacher.html";
+    }
+  }
+</script>
+
+<div class="form-outline mb-4">
+  <label class="form-label" for="email">Email</label>
+  <input type="email" id="email" class="form-control" required />
+</div>
+
+<div class="form-outline mb-4">
+  <label class="form-label" for="contact">Contact Number</label>
+  <input type="text" id="contact" class="form-control" required />
+</div>
+
+<div class="form-outline mb-4">
+  <label class="form-label" for="password">Password</label>
+  <input type="password" id="password" class="form-control" required />
+</div>
+
+<div class="form-outline mb-4">
+  <label class="form-label" for="address">Address</label>
+  <input type="text" id="address" class="form-control" required />
+</div>
+
+<div class="form-outline mb-4">
+  <label class="form-label" for="area">Area</label>
+  <input type="text" id="area" class="form-control" required />
+</div>
+
+<div class="form-outline mb-4">
+  <label class="form-label" for="governorate">Governorate</label>
+  <input type="text" id="governorate" class="form-control" required />
+</div>
+<div id="teacherFields" class="d-none">
+ <div class="form-group">
+    <label for="subjects">Subjects:</label>
+    <select class="form-control" id="subjects" multiple>
+      <option value="math">Math</option>
+      <option value="science">Science</option>
+      <option value="history">History</option>
+      <!-- Add more subjects as needed -->
+    </select>
+ </div>
+
+ <div class="form-group">
+    <label for="proBonoClasses">Number of Pro-Bono Classes:</label>
+    <input type="number" class="form-control" id="proBonoClasses" min="0">
+ </div>
+
+ <div class="form-group">
+    <label for="privateTutoring">Number of Private Tutoring Sessions:</label>
+    <input type="number" class="form-control" id="privateTutoring" min="0">
+ </div>
+</div>
+<div id="doctorFields" class="d-none">
+  <div class="form-group">
+    <label for="clinicLocation">Clinic Location:</label>
+    <input type="text" id="governorate" class="form-control" required />
+  </div>
+
+  <div class="form-group">
+    <label for="specialty">Specialty:</label>
+    <select class="form-control" id="specialty">
+      <option value="">Select Specialty</option>
+      <option value="cardiology">Cardiology</option>
+      <option value="orthopedics">Orthopedics</option>
+      <!-- Add more specialties as needed -->
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="proBonoCases">Number of Pro-Bono Cases:</label>
+    <input type="number" class="form-control" id="proBonoCases" min="0">
+  </div>
           </form>
           </div>
           <div class="modal-footer bg-light">
@@ -217,3 +254,68 @@ const showReg = (title, yesBtnLabel = 'Register', noBtnLabel = 'Cancel') => {
   modal1.show();
 
 }
+function navigate() {
+  var occupation = document.getElementById('occupation').value;
+  var documentUpload = document.getElementById('documentUpload');
+  var doctorFields = document.getElementById('doctorFields'); // Doctor-specific fields
+  var teacherFields = document.getElementById('teacherFields'); // Teacher-specific fields
+ 
+  // Show or hide the document upload section based on occupation
+  if (occupation === 'doctor' || occupation === 'teacher') {
+     documentUpload.classList.remove('d-none');
+  } else {
+     documentUpload.classList.add('d-none');
+  }
+ 
+  // Show or hide the doctor-specific fields based on occupation
+  if (occupation === 'doctor') {
+     doctorFields.classList.remove('d-none');
+     teacherFields.classList.add('d-none'); // Ensure teacher fields are hidden when doctor is selected
+  } else {
+     doctorFields.classList.add('d-none');
+  }
+ 
+  // Show or hide the teacher-specific fields based on occupation
+  if (occupation === 'teacher') {
+     teacherFields.classList.remove('d-none');
+     doctorFields.classList.add('d-none'); // Ensure doctor fields are hidden when teacher is selected
+  } else {
+     teacherFields.classList.add('d-none');
+  }
+
+  
+ }
+ /*function menulist(){
+  var menu = document.getElementById('menu');
+  var dropdown = document.getElementById('menu-dropdown');
+  if(menu.addEventListener.onclick ){
+    if(dropdown.style.display === 'none'){
+      
+      dropdown.style.display='inline-block';
+      
+    }
+    else{
+      dropdown.style.display='none';
+    }
+  }
+  
+
+ }*/
+
+ document.addEventListener('DOMContentLoaded', function() {
+  var menu = document.getElementById('menu');
+  var dropdown = document.getElementById('menu-dropdown');
+
+  menu.addEventListener('click', function() {
+      if (dropdown.style.display === 'none') {
+          dropdown.style.display = 'block';
+          
+      } else {
+          dropdown.style.display = 'none';
+      }
+  });
+});
+
+ 
+
+
