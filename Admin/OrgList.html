@@ -78,7 +78,11 @@
         .avatar-online:before {
             background-color: #198754;
         }
-
+        .show {
+  background-color: #F4BE37;
+  border-color: #F4BE37;
+  color: #092035;
+}
         .avatar-indicators:before {
             border: 2px solid #FFF;
             border-radius: 50%;
@@ -207,8 +211,9 @@
           rel="stylesheet">
   
       <!-- Custom styles for this template-->
-      <link href="css/Donors.css" rel="stylesheet">
-  
+      <link href="css/Donors.css" rel="stylesheet"  >
+    
+      
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
         integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -217,7 +222,7 @@
         integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
         <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
          <!-- Sidebar -->
-         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" style="background-color: #092035;" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center " href="index.html">
@@ -337,34 +342,34 @@
                     <span>Type</span>
                 </a>
                 <div id="collapsePages1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded Type input-group filter-input-group">
+                    <div class="bg-white py-2 collapse-inner rounded Type   ">
                        
                         <div class="form-check collapse-item">
-                            <input class="form-check-input" data-filter=".food" type="checkbox" value="" id="food">
+                            <input class="form-check-input" onchange="showOrhide('food')" type="checkbox" value="" id="food">
                             <label class="form-check-label" for="food">
                               Food
                             </label>
                           </div>
                           <div class="form-check collapse-item">
-                            <input class="form-check-input" data-filter=".health" type="checkbox" value="" id="health" >
+                            <input class="form-check-input" onchange="showOrhide('health')" type="checkbox" value="" id="health" >
                             <label class="form-check-label" for="health">
                               Health
                             </label>
                           </div>    
                           <div class="form-check collapse-item">
-                            <input class="form-check-input" data-filter=".school" type="checkbox" value="" id="school" >
+                            <input class="form-check-input" onchange="showOrhide('school')" type="checkbox" value="" id="school" >
                             <label class="form-check-label" for="school">
                               School Supplies
                             </label>
                           </div>    
                           <div class="form-check collapse-item">
-                            <input class="form-check-input" data-filter=".clothes" type="checkbox" value="" id="cloth" >
+                            <input class="form-check-input" onchange="showOrhide('cloth')" type="checkbox" value="" id="cloth" >
                             <label class="form-check-label" for="cloth">
                               Clothes
                             </label>
                           </div>
                           <div class="form-check collapse-item">
-                            <input class="form-check-input" data-filter=".toys" type="checkbox" value="" id="toys" >
+                            <input class="form-check-input" onchange="showOrhide('toys')" type="checkbox" value="" id="toys" >
                             <label class="form-check-label" for="toys">
                               Toys
                             </label>    
@@ -412,7 +417,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-12">
 
-                        <div class="card mb-5 rounded-3 cairo" id="Org1">
+                        <div class="card mb-5 rounded-3 cairo health" id="Org1">
                             <div>
                                 <img src="img/helal.png" alt="Image" class="img-fluid rounded-top">
                             </div>
@@ -430,7 +435,7 @@
 
                                     <div class="d-flex justify-content-between
                 align-items-center" style="padding-top: 14px;">
-                                        <a href="#!" class="btn btn-outline-primary">Show Profile</a>
+                                        <a href="#!" class="btn btn-primary btn-sm rounded-pill me-4">Show Profile</a>
                                         <a  class="btn btn-danger btn-circle rounded-pill" onclick="remove('Org1')" >
                                             <i class="fas fa-trash"></i>
                                         </a>
@@ -442,7 +447,7 @@
 
                     <div class="col-lg-4 col-12">
 
-                        <div class="card mb-5 rounded-3 aswan" id="Org2" >
+                        <div class="card mb-5 rounded-3 aswan health" id="Org2" >
                             <div>
                                 <img src="img/MYA_Logo.jpg" alt="Image" class="img-fluid rounded-top">
                             </div>
@@ -460,7 +465,7 @@
 
                                     <div class="d-flex justify-content-between
                 align-items-center" style="padding-top: 18px;">
-                                        <a href="#!" class="btn btn-outline-primary">Show Profile</a>
+                                        <a href="#!" class="btn btn-primary btn-sm rounded-pill me-4">Show Profile</a>
                                         <a  class="btn btn-danger btn-circle rounded-pill" onclick="remove('Org2')" >
                                             <i class="fas fa-trash"></i>
                                         </a>
@@ -472,7 +477,7 @@
 
                     <div class="col-lg-4 col-12">
 
-                        <div class="card mb-5 rounded-3 hurghada" id="Org3">
+                        <div class="card mb-5 rounded-3 hurghada food" id="Org3">
                             <div>
                                 <img src="img/foodBandk.jpg" alt="Image" class="img-fluid rounded-top">
                             </div>
@@ -490,7 +495,7 @@
 
                                     <div class="d-flex justify-content-between
                 align-items-center">
-                                        <a href="#!" class="btn btn-outline-primary">Show Profile</a>
+                                        <a href="#!" class="btn btn-primary btn-sm rounded-pill me-4">Show Profile</a>
                                         <a  class="btn btn-danger btn-circle rounded-pill" onclick="remove('Org3')" >
                                             <i class="fas fa-trash"></i>
                                         </a>
@@ -502,7 +507,7 @@
 
                     <div class="col-lg-4 col-12">
 
-                        <div class="card mb-5 rounded-3 cairo" id="Org4">
+                        <div class="card mb-5 rounded-3 cairo toys food health" id="Org4">
                             <div>
                                 <img src="img/AYB2.jpg" alt="Image" class="img-fluid rounded-top">
                             </div>
@@ -520,7 +525,7 @@
 
                                     <div class="d-flex justify-content-between
                 align-items-center">
-                                        <a href="#!" class="btn btn-outline-primary">Show Profile</a>
+                                        <a href="#!" class="btn btn-primary btn-sm rounded-pill me-4">Show Profile</a>
                                        <a  class="btn btn-danger btn-circle rounded-pill" onclick="remove('Org4')" >
                                         <i class="fas fa-trash"></i>
                                     </a>
@@ -532,7 +537,7 @@
 
                     <div class="col-lg-4 col-12">
 
-                        <div class="card mb-5 rounded-3 giza" id="Org5">
+                        <div class="card mb-5 rounded-3 giza food" id="Org5">
                             <div>
                                 <img src="img/EgyFoodBank.jpg" alt="Image" class="img-fluid rounded-top">
                             </div>
@@ -562,7 +567,7 @@
 
                     <div class="col-lg-4     col-12">
 
-                        <div class="card mb-5 rounded-3" id="Org6">
+                        <div class="card mb-5 rounded-3 cloth alex" id="Org6">
                             <div>
                                 <img src="img/Misr-El-Kheir-Foundation.jpeg" alt="Image" class="img-fluid rounded-top">
                             </div>
