@@ -24,9 +24,55 @@ function login(usern,password){
    alert(username +" Successfully logined");
    window.location.assign("donor.html");
  }
-  
- 
 }
+
+function register(occu){
+  // document.addEventListener('DOMContentLoaded', function() {
+    let occupation = occu.toLowerCase();
+		//const registerRedirect = document.getElementById('occupation');
+		
+		//registerRedirect.addEventListener('change', function() {
+		//const selectedOccupation = this.value;
+		let redirectUrl = '';
+		
+			// Determine the redirect URL based on the selected category
+			switch (occupation) {
+			  case 'doctor':
+          alert(occupation+" Successfully registered"); // Assuming you have a page named clothes.html
+          redirectUrl = 'doctor.html';
+				break;
+			  case 'regular_donor':
+          alert(occupation+" Successfully registered");
+				  redirectUrl = 'regular.html'; // Assuming you have a page named toys.html
+				break;
+			  case 'teacher':
+          alert(occupation+" Successfully registered");
+				  redirectUrl = 'teacher.html'; // Assuming you have a page named food.html
+				break;
+			  // case 'medicalSupplies':
+				// redirectUrl = 'medical supplies.html'; // Assuming you have a page named medical-supplies.html
+				// break;
+			  // case 'schoolSupplies':
+				// redirectUrl = 'school supplies.html'; // Assuming you have a page named school-supplies.html
+				// break;
+			  // case 'bloodDonations':
+				// redirectUrl = 'blood donations.html'; // Assuming you have a page named blood-donations.html
+				// break;
+			  default:
+          alert("Enter Valid data");
+				// If "All Categories" is selected, redirect to a default page or the homepage
+				  redirectUrl = 'main.html'; // Assuming you have a homepage named index.html
+			}
+		
+			// Redirect the user to the selected category page
+			window.location.href = redirectUrl;
+		//  });
+		// });
+  }
+
+
+
+  
 
 
 
@@ -114,12 +160,12 @@ const showReg = (title, yesBtnLabel = 'Register', noBtnLabel = 'Cancel') => {
             <!-- First Name input -->
             <div data-mdb-input-init class="form-outline mb-4">
               <label class="form-label"  for="username3">First Name</label>
-              <input type="email" id="username3" class="form-control" required />
+              <input type="text" id="username3" class="form-control" required />
             </div>
 
             <div data-mdb-input-init class="form-outline mb-4">
               <label class="form-label" for="password3">Last Name</label>
-              <input type="email" id="password3" class="form-control" required />
+              <input type="text" id="password3" class="form-control" required />
             </div>
           
             <div class="dropdown mb-4">
@@ -242,7 +288,7 @@ const showReg = (title, yesBtnLabel = 'Register', noBtnLabel = 'Cancel') => {
     </div>
   `;
 
-  modalWrap1.querySelector('.modal-success-btn').onclick = ()=> login(document.getElementById('username3').value,document.getElementById('password3').value);
+  modalWrap1.querySelector('.modal-success-btn').onclick = ()=> register(document.getElementById('occupation').value);
 
   document.body.append(modalWrap1);
 
