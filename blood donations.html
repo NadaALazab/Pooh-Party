@@ -6,12 +6,19 @@
     <title>Blood Donation Requests</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 </head>
 <body>
     <div class="container">
-        <header class="text-center py-3 bg-primary text-white">
-            <h1>Blood Donation Requests</h1>
-        </header>
+        <div class="row">
+            <div class="col-md-12">
+              <header class="text-center my-5">
+                <span class="text-muted">Identify Needs, Contribute to Causes</span>
+                <h2><strong>blood donations requests</strong></h2>
+              </header>
+            </div>
+          </div>
         <main>
             <section class="mb-3">
                 <label for="hospitalFilter" class="mr-2">Hospital:</label>
@@ -27,6 +34,8 @@
             <section id="itemDetails" class="mb-3">
                 <!-- Item details will be dynamically added here -->
             </section>
+            <!-- Map Container -->
+            <div id="map" style="height: 400px; width: 100%;"></div>
         </main>
     </div>
     <!-- Bootstrap JS and jQuery -->
@@ -44,6 +53,7 @@
                 { patientName: 'jessie Doe', bloodType: 'O+', rhType: '+', hospitalName: 'Hospital B', hospitalArea: 'Area 1', governorate: 'Governorate 1', hospitalAddress: '123 Street, City 1', mapLocation: 'Hospital B Location' }
                 // Add more donations as needed
             ];
+            
 
             function displayBloodDonationsItems() {
                 bloodDonationsList.innerHTML = ''; // Clear the list

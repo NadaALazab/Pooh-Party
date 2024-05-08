@@ -51,6 +51,62 @@
         </section>
       </main>
     </div>
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Transportation Form</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Transportation Form</h1>
+    <form id="donorForm">
+      <div class="form-group">
+        <label for="transportationType">Transportation Type:</label>
+        <select class="form-control" id="transportationType">
+          <option value="truck">Truck</option>
+          <option value="car">Car</option>
+          <option value="motorcycle">Motorcycle</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="pickupTime">Pickup Time:</label>
+        <input class="form-control" type="time" id="pickupTime">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div id="etaContainer"></div>
+  </div>
+
+  <!-- Include Bootstrap JS and your custom script -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // JavaScript logic goes here
+    document.getElementById("donorForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Retrieve selected values
+      var transportationType = document.getElementById("transportationType").value;
+      var pickupTime = document.getElementById("pickupTime").value;
+
+      // Calculate ETA (example: add 30 minutes to pickup time)
+      var eta = new Date();
+      eta.setMinutes(eta.getMinutes() + 30);
+
+      // Display ETA
+      var etaContainer = document.getElementById("etaContainer");
+      etaContainer.innerHTML = "ETA: " + eta.toLocaleTimeString();
+
+      // Optionally, send ETA to server-side for further processing (e.g., notification)
+      // ...
+
+      // Optionally, show a notification when the driver arrives
+      // ...
+    });
+  </script>
+</body>
+</html>
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
