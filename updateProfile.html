@@ -185,6 +185,8 @@
             container.appendChild(newDiv);
         }
         function redirectToMain() {
+            var value = document.getElementById("inputOrganizationType").value;
+            localStorage.setItem("type", value);
             window.location.href = "./main.html";
         }
         function deleteprofile() {
