@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Clothes Donation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <header class="text-center my-5">
+                  <span class="text-muted">Identify Needs, Contribute to Causes</span>
+                  <h2><strong>clothes donation requests</strong></h2>
+                </header>
+              </div>
+            </div>
+        <main>
+            <section class="mb-3">
+                <label for="ageFilter" class="mr-2">Age:</label>
+                <select id="ageFilter" class="form-control">
+                    <option value="">All Ages</option>
+                    <option value="adult">Adult</option>
+                    <option value="child">Child</option>
+                </select>
+            </section>
+            <section class="mb-3">
+                <label for="genderFilter" class="mr-2">Gender:</label>
+                <select id="genderFilter" class="form-control">
+                    <option value="">All Genders</option>
+                    <option value="men">Men</option>
+                    <option value="women">Women</option>
+                    <option value="unisex">Unisex</option>
+                </select>
+            </section>
+            <section class="mb-3">
+                <label for="seasonFilter" class="mr-2">Season:</label>
+                <select id="seasonFilter" class="form-control">
+                    <option value="">All Seasons</option>
+                    <option value="spring">Spring</option>
+                    <option value="summer">Summer</option>
+                    <option value="fall">Fall</option>
+                    <option value="winter">Winter</option>
+                </select>
+            </section>
+            <section id="clothesList" class="mb-3">
+                <!-- Clothes items will be dynamically added here -->
+            </section>
+            <section id="itemDetails" class="mb-3">
+                <!-- Item details will be dynamically added here -->
+            </section>
+        </main>
+    </div>
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Transportation Form</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Transportation Form</h1>
+    <form id="donorForm">
+      <div class="form-group">
+        <label for="transportationType">Transportation Type:</label>
+        <select class="form-control" id="transportationType">
+          <option value="truck">Truck</option>
+          <option value="car">Car</option>
+          <option value="motorcycle">Motorcycle</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="pickupTime">Pickup Time:</label>
+        <input class="form-control" type="time" id="pickupTime">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div id="etaContainer"></div>
+  </div>
+
+  <!-- Include Bootstrap JS and your custom script -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // JavaScript logic goes here
+    document.getElementById("donorForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Retrieve selected values
+      var transportationType = document.getElementById("transportationType").value;
+      var pickupTime = document.getElementById("pickupTime").value;
+
+      // Calculate ETA (example: add 30 minutes to pickup time)
+      var eta = new Date();
+      eta.setMinutes(eta.getMinutes() + 30);
+
+      // Display ETA
+      var etaContainer = document.getElementById("etaContainer");
+      etaContainer.innerHTML = "ETA: " + eta.toLocaleTimeString();
+
+      // Optionally, send ETA to server-side for further processing (e.g., notification)
+      // ...
+
+      // Optionally, show a notification when the driver arrives
+      // ...
+    });
+  </script>
+</body>
+</html>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript functionality will go here
+document.addEventListener('DOMContentLoaded', function() {
+  const clothesList = document.getElementById('clothesList');
+  const itemDetails = document.getElementById('itemDetails');
+  const ageFilter = document.getElementById('ageFilter');
+  const genderFilter = document.getElementById('genderFilter');
+  const seasonFilter = document.getElementById('seasonFilter');
+
+  // Example data, replace with actual data from your database
+  const clothes = [
+      { name: 'T-Shirt', age: 'adult', gender: 'unisex', season: 'spring', material: 'cotton', quantity: 10 },
+      { name: 'Sweater', age: 'child', gender: 'Men', season: 'winter', material: 'wool', quantity: 5 },
+      // Add more items as needed
+  ];
+
+  function displayClothesItems() {
+      clothesList.innerHTML = ''; // Clear the list
+      const selectedAge = ageFilter.value;
+      const selectedGender = genderFilter.value;
+      const selectedSeason = seasonFilter.value;
+
+      clothes.forEach(clothing => {
+          if (selectedAge === '' || clothing.age === selectedAge && (selectedGender === '' || clothing.gender === selectedGender)
+          && (selectedSeason === '' || clothing.season === selectedSeason)) {
+              const listItem = document.createElement('li');
+              listItem.className = 'list-group-item';
+              listItem.innerHTML = `
+                  <div class="d-flex justify-content-between">
+                      <div>
+                          <h5 class="mb-1">${clothing.name}</h5>
+                          <p class="text-muted">Age: ${clothing.age}, Gender: ${clothing.gender}, Season: ${clothing.season}, Material: ${clothing.material}</p>
+                      </div>
+                      <span class="badge bg-primary">Quantity Needed: ${clothing.quantity}</span>
+                  </div>
+              `;
+              listItem.addEventListener('click', function() {
+                  displayItemDetails(clothing);
+              });
+              clothesList.appendChild(listItem);
+          }
+      });
+  }
+
+  function displayItemDetails(clothing) {
+      itemDetails.innerHTML = `
+          <div class="card">
+              <div class="card-body">
+                  <h5 class="card-title">${clothing.name}</h5>
+                  <p class="card-text">Age: ${clothing.age}, Gender: ${clothing.gender}, Season: ${clothing.season}, Material: ${clothing.material}</p>
+                  <div class="form-group">
+                      <label for="donationQuantity">Donation Quantity:</label>
+                      <input type="number" class="form-control" id="donationQuantity" min="1" max="${clothing.quantity}" value="1">
+                  </div>
+                  <button class="btn btn-primary">Donate</button>
+              </div>
+          </div>
+      `;
+  }
+
+  displayClothesItems();
+  ageFilter.addEventListener('change', displayClothesItems);
+  genderFilter.addEventListener('change', displayClothesItems);
+  seasonFilter.addEventListener('change', displayClothesItems);
+});
+
+</script>
+</body>
+</html>

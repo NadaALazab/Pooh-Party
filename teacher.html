@@ -1,98 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post Display</title>
-  <link rel="stylesheet" href="style.css">
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
-</head>
-<body>
-    
-    
-
-    <div class="input-search">
-          <label class="form-label" for="form1">Search</label>
-          <input id="search-input" type="search" id="form1" class="form-control" />
-          
-        <a class="material-icons"   id ="search">
-            <span class="material-symbols-outlined">
-                search
-                </span>
-        </a>
-         
-      </div>
-
-    <script src="teach.js"></script>
-</body>
-</html>
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Clothes Donation</title>
+    <title>Add post Donation</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
 </head>
 <body>
-    <div class="input-search">
-        <label class="form-label" for="form1">Search</label>
-        <input id="search-input" type="search" id="form1" class="form-control" />
-        
-      <a class="material-icons"   id ="search">
-          <span class="material-symbols-outlined">
-              search
-              </span>
-      </a>
-       
-    </div>
     <div class="container">
         <div class="container">
             <div class="row">
               <div class="col-md-12">
                 <header class="text-center my-5">
                   <span class="text-muted">Identify Needs, Contribute to Causes</span>
-                  <h2><strong>clothes donation requests</strong></h2>
+                  <h2><strong>post donation requests</strong></h2>
                 </header>
               </div>
             </div>
         <main>
             <section class="mb-3">
-                <label for="ageFilter" class="mr-2">Age:</label>
-                <select id="ageFilter" class="form-control">
-                    <option value="">All Ages</option>
-                    <option value="adult">Adult</option>
-                    <option value="child">Child</option>
+                <label for="subjectFilter" class="mr-2">subject:</label>
+                <select id="subjectFilter" class="form-control">
+                    <option value="">All subjects </option>
+                    <option value="Math">Math</option>
+                    <option value="CS">CS</option>
                 </select>
             </section>
             <section class="mb-3">
-                <label for="genderFilter" class="mr-2">Gender:</label>
-                <select id="genderFilter" class="form-control">
-                    <option value="">All Genders</option>
-                    <option value="men">Men</option>
-                    <option value="women">Women</option>
-                    <option value="unisex">Unisex</option>
+                <label for="areaFilter" class="mr-2">area:</label>
+                <select id="areaFilter" class="form-control">
+                    <option value="">All areas</option>
+                    <option value="New Cairo">New Cairo</option>
+                    <option value="rehab">rehab</option>
+                    <option value="Nasr City">Nasr City</option>
                 </select>
             </section>
             <section class="mb-3">
-                <label for="seasonFilter" class="mr-2">Season:</label>
-                <select id="seasonFilter" class="form-control">
-                    <option value="">All Seasons</option>
-                    <option value="spring">Spring</option>
-                    <option value="summer">Summer</option>
-                    <option value="fall">Fall</option>
-                    <option value="winter">Winter</option>
+                <label for="governorateFilter" class="mr-2">governorate:</label>
+                <select id="governorateFilter" class="form-control">
+                    <option value="">All governorates</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Alex">Alex</option>
+                    <option value="Fayoum">Fayoum</option>
+                    <option value="Aswan"> Aswan</option>
                 </select>
             </section>
-            <section id="clothesList" class="mb-3">
+            <section id="posts" class="mb-3">
                 <!-- Clothes items will be dynamically added here -->
             </section>
             <section id="itemDetails" class="mb-3">
@@ -100,118 +55,63 @@
             </section>
         </main>
     </div>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Transportation Form</title>
-  <!-- Include Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Transportation Form</h1>
-    <form id="donorForm">
-      <div class="form-group">
-        <label for="transportationType">Transportation Type:</label>
-        <select class="form-control" id="transportationType">
-          <option value="truck">Truck</option>
-          <option value="car">Car</option>
-          <option value="motorcycle">Motorcycle</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="pickupTime">Pickup Time:</label>
-        <input class="form-control" type="time" id="pickupTime">
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    <div id="etaContainer"></div>
-  </div>
-
-  <!-- Include Bootstrap JS and your custom script -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    // JavaScript logic goes here
-    document.getElementById("donorForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      // Retrieve selected values
-      var transportationType = document.getElementById("transportationType").value;
-      var pickupTime = document.getElementById("pickupTime").value;
-
-      // Calculate ETA (example: add 30 minutes to pickup time)
-      var eta = new Date();
-      eta.setMinutes(eta.getMinutes() + 30);
-
-      // Display ETA
-      var etaContainer = document.getElementById("etaContainer");
-      etaContainer.innerHTML = "ETA: " + eta.toLocaleTimeString();
-
-      // Optionally, send ETA to server-side for further processing (e.g., notification)
-      // ...
-
-      // Optionally, show a notification when the driver arrives
-      // ...
-    });
-  </script>
-</body>
-</html>
+   
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         // JavaScript functionality will go here
 document.addEventListener('DOMContentLoaded', function() {
-  const clothesList = document.getElementById('clothesList');
+  const posts = document.getElementById('posts');
   const itemDetails = document.getElementById('itemDetails');
-  const ageFilter = document.getElementById('ageFilter');
-  const genderFilter = document.getElementById('genderFilter');
-  const seasonFilter = document.getElementById('seasonFilter');
+  const subjectFilter = document.getElementById('subjectFilter');
+  const areaFilter = document.getElementById('areaFilter');
+  const governorateFilter = document.getElementById('governorateFilter');
 
   // Example data, replace with actual data from your database
-  const clothes = [
-      { name: 'T-Shirt', age: 'adult', gender: 'unisex', season: 'spring', material: 'cotton', quantity: 10 },
-      { name: 'Sweater', age: 'child', gender: 'Men', season: 'winter', material: 'wool', quantity: 5 },
+  const post = [
+      { name: 'organization1',  subject: 'Math', area: 'New Cairo', governorate: 'Cairo', Google_map_marker: '##', NumOfStudents: 10 },
+      { name: 'organization2', subject: 'CS', area: 'Nasr City', governorate: 'Cairo', Google_map_marker: '##', NumOfStudents: 5 },
       // Add more items as needed
   ];
 
-  function displayClothesItems() {
-      clothesList.innerHTML = ''; // Clear the list
-      const selectedAge = ageFilter.value;
-      const selectedGender = genderFilter.value;
-      const selectedSeason = seasonFilter.value;
+  function displayposts() {
+      posts.innerHTML = ''; // Clear the list
+      const selectedsubject = subjectFilter.value;
+      const selectedarea = areaFilter.value;
+      const selectedgovernorate = governorateFilter.value;
 
-      clothes.forEach(clothing => {
-          if (selectedAge === '' || clothing.age === selectedAge && (selectedGender === '' || clothing.gender === selectedGender)
-          && (selectedSeason === '' || clothing.season === selectedSeason)) {
+      post.forEach(teaching => {
+          if ((selectedsubject === '' || teaching.subject === selectedsubject) && (selectedarea === '' || teaching.area === selectedarea)
+          && (selectedgovernorate === '' || teaching.governorate === selectedgovernorate)) {
               const listItem = document.createElement('li');
               listItem.className = 'list-group-item';
               listItem.innerHTML = `
                   <div class="d-flex justify-content-between">
                       <div>
-                          <h5 class="mb-1">${clothing.name}</h5>
-                          <p class="text-muted">Age: ${clothing.age}, Gender: ${clothing.gender}, Season: ${clothing.season}, Material: ${clothing.material}</p>
+                          <h5 class="mb-1">${teaching.name}</h5>
+                          <p class="text-muted">subject: ${teaching.subject}, area: ${teaching.area}, governorate: ${teaching.governorate},  Google_map_marker: ${teaching. Google_map_marker}</p>
                       </div>
-                      <span class="badge bg-primary">Quantity Needed: ${clothing.quantity}</span>
+                      <span class="badge bg-primary">NumOfStudents Needed: ${teaching.NumOfStudents}</span>
                   </div>
               `;
               listItem.addEventListener('click', function() {
-                  displayItemDetails(clothing);
+                  displayItemDetails(teaching);
               });
-              clothesList.appendChild(listItem);
+              posts.appendChild(listItem);
           }
       });
   }
 
-  function displayItemDetails(clothing) {
+  function displayItemDetails(teaching) {
       itemDetails.innerHTML = `
           <div class="card">
               <div class="card-body">
-                  <h5 class="card-title">${clothing.name}</h5>
-                  <p class="card-text">Age: ${clothing.age}, Gender: ${clothing.gender}, Season: ${clothing.season}, Material: ${clothing.material}</p>
+                  <h5 class="card-title">${teaching.name}</h5>
+                  <p class="card-text">subject: ${teaching.subject}, area: ${teaching.area}, governorate: ${teaching.governorate}, Google_map_marker: ${teaching.Google_map_marker}</p>
                   <div class="form-group">
-                      <label for="donationQuantity">Donation Quantity:</label>
-                      <input type="number" class="form-control" id="donationQuantity" min="1" max="${clothing.quantity}" value="1">
+                      <label for="donationNumOfStudents">Donation NumOfStudents:</label>
+                      <input type="number" class="form-control" id="donationNumOfStudents" min="1" max="${teaching.NumOfStudents}" value="1">
                   </div>
                   <button class="btn btn-primary">Donate</button>
               </div>
@@ -219,13 +119,12 @@ document.addEventListener('DOMContentLoaded', function() {
       `;
   }
 
-  displayClothesItems();
-  ageFilter.addEventListener('change', displayClothesItems);
-  genderFilter.addEventListener('change', displayClothesItems);
-  seasonFilter.addEventListener('change', displayClothesItems);
+  displayposts();
+  subjectFilter.addEventListener('change', displayposts);
+  areaFilter.addEventListener('change', displayposts);
+  governorateFilter.addEventListener('change', displayposts);
 });
 
 </script>
-<script src="teach.js"></script>
 </body>
-</html>-->
+</html>
