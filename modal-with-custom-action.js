@@ -29,10 +29,6 @@ function login(usern,password){
 function register(occu){
   // document.addEventListener('DOMContentLoaded', function() {
     let occupation = occu.toLowerCase();
-		//const registerRedirect = document.getElementById('occupation');
-		
-		//registerRedirect.addEventListener('change', function() {
-		//const selectedOccupation = this.value;
 		let redirectUrl = '';
 		
 			// Determine the redirect URL based on the selected category
@@ -49,19 +45,9 @@ function register(occu){
           alert(occupation+" Successfully registered");
 				  redirectUrl = 'teacher.html'; // Assuming you have a page named food.html
 				break;
-			  // case 'medicalSupplies':
-				// redirectUrl = 'medical supplies.html'; // Assuming you have a page named medical-supplies.html
-				// break;
-			  // case 'schoolSupplies':
-				// redirectUrl = 'school supplies.html'; // Assuming you have a page named school-supplies.html
-				// break;
-			  // case 'bloodDonations':
-				// redirectUrl = 'blood donations.html'; // Assuming you have a page named blood-donations.html
-				// break;
 			  default:
           alert("Enter Valid data");
-				// If "All Categories" is selected, redirect to a default page or the homepage
-				  redirectUrl = 'main.html'; // Assuming you have a homepage named index.html
+				  //redirectUrl = 'main.html'; // Assuming you have a homepage named main.html
 			}
 		
 			// Redirect the user to the selected category page
@@ -87,7 +73,6 @@ var modalWrap1 = null;
  * @param {string} noBtnLabel label of No button 
  * @param {function} callback callback function when click Yes button
  */
-
 
 const showModal = (title, yesBtnLabel = 'Login', noBtnLabel = 'Cancel') => {
   if (modalWrap !== null) {

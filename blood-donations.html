@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Donation Requests</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <header class="text-center my-5">
+            <span class="text-muted">Identify Needs, Contribute to Causes</span>
+            <h2><strong>blood donations requests</strong></h2>
+          </header>
+        </div>
+      </div>
+      <main>
+        <section class="mb-3">
+          <label for="hospitalFilter" class="mr-2">Hospital:</label>
+          <select id="hospitalFilter" class="form-control">
+            <option value="">All Hospitals</option>
+            <option value="Hospital A">Hospital A</option>
+            <option value="Hospital B">Hospital B</option>
+          </select>
+        </section>
+        <section id="bloodDonationsList" class="mb-3">
+          <!-- Blood donations items will be dynamically added here -->
+        </section>
+        <section id="itemDetails" class="mb-3">
+          <!-- Item details will be dynamically added here -->
+        </section>
+        <!-- Map Container -->
+        <div id="map" style="height: 400px; width: 100%"></div>
+      </main>
+    </div>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const bloodDonationsList =
+          document.getElementById("bloodDonationsList");
+        const itemDetails = document.getElementById("itemDetails");
+        const hospitalFilter = document.getElementById("hospitalFilter");
+
+        // Example data, replace with actual data from your database
+        const donations = [
+          {
+            patientName: "John Doe",
+            bloodType: "O+",
+            rhType: "+",
+            hospitalName: "Hospital A",
+            hospitalArea: "Area 1",
+            governorate: "Governorate 1",
+            hospitalAddress: "123 Street, City 1",
+            mapLocation: "Hospital A Location",
+          },
+          {
+            patientName: "jessie Doe",
+            bloodType: "O+",
+            rhType: "+",
+            hospitalName: "Hospital B",
+            hospitalArea: "Area 1",
+            governorate: "Governorate 1",
+            hospitalAddress: "123 Street, City 1",
+            mapLocation: "Hospital B Location",
+          },
+          // Add more donations as needed
+        ];
+
+        function displayBloodDonationsItems() {
+          bloodDonationsList.innerHTML = ""; // Clear the list
+          const selectedHospital = hospitalFilter.value;
+
+          donations.forEach((donation) => {
+            if (
+              selectedHospital === "" ||
+              donation.hospitalName === selectedHospital
+            ) {
+              const listItem = document.createElement("li");
+              listItem.className = "list-group-item";
+              listItem.innerHTML = `
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h5 class="mb-1">${donation.patientName}</h5>
+                        <p class="text-muted">Blood Type: ${donation.bloodType} (${donation.rhType}), Hospital: ${donation.hospitalName}</p>
+                    </div>
+                    <button class="btn btn-primary" id="popup" onclick=console.log("displayItemDetails(donation)")>View Details</button>
+                </div>
+                `;
+              listItem.addEventListener("click", function () {
+                displayItemDetails(donation);
+                //showModal(donation.patientName);
+              });
+
+              bloodDonationsList.appendChild(listItem);
+            }
+          });
+        }
+        // }
+        function displayItemDetails(donation) {
+          var modalWrap = null;
+          //console.log("TEST DONE");
+          //   const donation = donations.find(
+          //     (d) => d.hospitalName === hospitalName
+          //   );
+          // const showModal = (title = "Donation Details", yesBtnLabel = "Donate", noBtnLabel = "Cancel") => {
+          if (modalWrap !== null) {
+            modalWrap.remove();
+          }
+          modalWrap = document.createElement("div");
+          modalWrap.innerHTML = `
+            <div class="modal fade" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-light">
+                            <h5 class="modal-title">Donation Details</h5>
+                            <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+                        </div>
+                        <div class="modal-body">
+                        <form>
+                            <!-- <h3 class="card-title">Hellooo</h3> -->
+                            <h5 class="card-title">${donation.patientName}</h5>
+                            <p class="card-text">Blood Type: ${donation.bloodType} (${donation.rhType}), Hospital: ${donation.hospitalName}</p>
+                            <p class="card-text">Hospital Area: ${donation.hospitalArea}, Governorate: ${donation.governorate}</p>
+                            <p class="card-text">Hospital Address: ${donation.hospitalAddress}</p>
+                            <!--<input type="text" id="hospitalLocation" value="${donation.hospitalAddress}" readonly>-->
+                        </form>
+                        </div>
+                        <div class="modal-footer bg-light">
+                            <button type="button" class="btn btn-secondary modal-cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary modal-success-btn">Donate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+
+          modalWrap.querySelector(".modal-success-btn").onclick = () =>
+            alertAndAssign();
+          modalWrap.querySelector(".modal-cancel-btn").onclick = () => window.location.assign("blood-donations.html");
+            
+            document.body.append(modalWrap);
+            
+            var modal = new bootstrap.Modal(modalWrap.querySelector(".modal"));
+            modal.show();
+        }
+
+        displayBloodDonationsItems();
+        hospitalFilter.addEventListener("change", displayBloodDonationsItems);
+      });
+      
+      // closeModal = () => {
+      //   var modal = document.querySelector(".modal");
+      //   var modalWrap = modal.parentElement;
+      //   modalWrap.remove();
+      // };
+
+      function alertAndAssign() {
+        alert("Donation Successful!");
+        window.location.assign("blood-donations.html");
+      }
+    </script>
+  </body>
+</html>

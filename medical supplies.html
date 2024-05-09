@@ -1,145 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medical Supplies Donation Requests</title>
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-              <header class="text-center my-5">
-                <span class="text-muted">Identify Needs, Contribute to Causes</span>
-                <h2><strong>Medical supplies donations requests</strong></h2>
-              </header>
-            </div>
-          </div>
-        <main>
-            <section class="mb-3">
-                <label for="typeFilter" class="mr-2">Type:</label>
-                <select id="typeFilter" class="form-control">
-                    <option value="">All Types</option>
-                    <option value="medicalDevices">Medical Devices</option>
-                    <option value="medicalEquipment">Medical Equipment</option>
-                    <option value="medication">Medication</option>
-                </select>
-            </section>
-            <section id="medicalSuppliesList" class="mb-3">
-                <!-- Medical supplies items will be dynamically added here -->
-            </section>
-            <section id="itemDetails" class="mb-3">
-                <!-- Item details will be dynamically added here -->
-            </section>
-        </main>
+      <div class="row">
+        <div class="col-md-12">
+          <header class="text-center my-5">
+            <span class="text-muted">Identify Needs, Contribute to Causes</span>
+            <h2><strong>Medical supplies donations requests</strong></h2>
+          </header>
+        </div>
+      </div>
+      <main>
+        <section class="mb-3">
+          <label for="typeFilter" class="mr-2">Type:</label>
+          <select id="typeFilter" class="form-control">
+            <option value="">All Types</option>
+            <option value="medicalDevices">Medical Devices</option>
+            <option value="medicalEquipment">Medical Equipment</option>
+            <option value="medication">Medication</option>
+          </select>
+        </section>
+        <section id="medicalSuppliesList" class="mb-3">
+          <!-- Medical supplies items will be dynamically added here -->
+        </section>
+        <section id="itemDetails" class="mb-3">
+          <!-- Item details will be dynamically added here -->
+        </section>
+      </main>
     </div>
     <!DOCTYPE html>
-<html>
-<head>
-  <title>Transportation Form</title>
-  <!-- Include Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Transportation Form</h1>
-    <form id="donorForm">
-      <div class="form-group">
-        <label for="transportationType">Transportation Type:</label>
-        <select class="form-control" id="transportationType">
-          <option value="truck">Truck</option>
-          <option value="car">Car</option>
-          <option value="motorcycle">Motorcycle</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="pickupTime">Pickup Time:</label>
-        <input class="form-control" type="time" id="pickupTime">
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    <div id="etaContainer"></div>
-  </div>
+    <html>
+      <head>
+        <title>Transportation Form</title>
+        <!-- Include Bootstrap CSS -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+      </head>
+      <body>
+        <div class="container">
+          <h1>Transportation Form</h1>
+          <form id="donorForm">
+            <div class="form-group">
+              <label for="transportationType">Transportation Type:</label>
+              <select class="form-control" id="transportationType">
+                <option value="truck">Truck</option>
+                <option value="car">Car</option>
+                <option value="motorcycle">Motorcycle</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pickupTime">Pickup Time:</label>
+              <input class="form-control" type="time" id="pickupTime" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <div id="etaContainer"></div>
+        </div>
 
-  <!-- Include Bootstrap JS and your custom script -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    // JavaScript logic goes here
-    document.getElementById("donorForm").addEventListener("submit", function(event) {
-      event.preventDefault();
+        <!-- Include Bootstrap JS and your custom script -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+          // JavaScript logic goes here
+          document
+            .getElementById("donorForm")
+            .addEventListener("submit", function (event) {
+              event.preventDefault();
 
-      // Retrieve selected values
-      var transportationType = document.getElementById("transportationType").value;
-      var pickupTime = document.getElementById("pickupTime").value;
+              // Retrieve selected values
+              var transportationType =
+                document.getElementById("transportationType").value;
+              var pickupTime = document.getElementById("pickupTime").value;
 
-      // Calculate ETA (example: add 30 minutes to pickup time)
-      var eta = new Date();
-      eta.setMinutes(eta.getMinutes() + 30);
+              // Calculate ETA (example: add 30 minutes to pickup time)
+              var eta = new Date();
+              eta.setMinutes(eta.getMinutes() + 30);
 
-      // Display ETA
-      var etaContainer = document.getElementById("etaContainer");
-      etaContainer.innerHTML = "ETA: " + eta.toLocaleTimeString();
+              // Display ETA
+              var etaContainer = document.getElementById("etaContainer");
+              etaContainer.innerHTML = "ETA: " + eta.toLocaleTimeString();
 
-      // Optionally, send ETA to server-side for further processing (e.g., notification)
-      // ...
+              // Optionally, send ETA to server-side for further processing (e.g., notification)
+              // ...
 
-      // Optionally, show a notification when the driver arrives
-      // ...
-    });
-  </script>
-</body>
-</html>
+              // Optionally, show a notification when the driver arrives
+              // ...
+            });
+        </script>
+      </body>
+    </html>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        // JavaScript functionality will go here
-   
-document.addEventListener('DOMContentLoaded', function() {
-    const medicalSuppliesList = document.getElementById('medicalSuppliesList');
-    const items = [
-        { name: 'Oxygen Tank', type: 'medicalDevices', use: 'Respiratory Support', image: 'images/tank.jpg', quantity: 5 },
-        { name: 'Wheelchair', type: 'medicalEquipment', use: 'Mobility Aid', image: 'images/wheelchair.jpg', quantity: 3 },
-        { name: 'Insulin', type: 'medication', use: 'Diabetes Management', image: 'images/insulin.jpg', quantity: 10 },
-        // Add more items as needed
-    ];
+      // JavaScript functionality will go here
 
-    function displayMedicalSuppliesItems() {
-        medicalSuppliesList.innerHTML = ''; // Clear the list
-        const typeFilter = document.getElementById('typeFilter');
+      document.addEventListener("DOMContentLoaded", function () {
+        const medicalSuppliesList = document.getElementById(
+          "medicalSuppliesList"
+        );
+        const items = [
+          {
+            name: "Oxygen Tank",
+            type: "medicalDevices",
+            use: "Respiratory Support",
+            image: "images/tank.jpg",
+            quantity: 5,
+          },
+          {
+            name: "Wheelchair",
+            type: "medicalEquipment",
+            use: "Mobility Aid",
+            image: "images/wheelchair.jpg",
+            quantity: 3,
+          },
+          {
+            name: "Insulin",
+            type: "medication",
+            use: "Diabetes Management",
+            image: "images/insulin.jpg",
+            quantity: 10,
+          },
+          // Add more items as needed
+        ];
 
-        items.forEach(item => {
-            if (typeFilter.value === '' || item.type === typeFilter.value) {
-                const listItem = document.createElement('li');
-                listItem.className = 'list-group-item';
-                listItem.innerHTML = `
+        function displayMedicalSuppliesItems() {
+          medicalSuppliesList.innerHTML = ""; // Clear the list
+          const typeFilter = document.getElementById("typeFilter");
+
+          items.forEach((item) => {
+            if (typeFilter.value === "" || item.type === typeFilter.value) {
+              const listItem = document.createElement("li");
+              listItem.className = "list-group-item";
+              listItem.innerHTML = `
                     <div class="d-flex justify-content-between">
                         <div>
                             <h5 class="mb-1">${item.name}</h5>
                             <p class="text-muted">Type: ${item.type}, Use: ${item.use}</p>
-                            <img src="${item.image}" alt="${item.name}" width="100">
                         </div>
                         <span class="badge bg-primary">Quantity Needed: ${item.quantity}</span>
                     </div>
                 `;
-                listItem.addEventListener('click', function() {
-                    displayItemDetails(item);
-                });
-                medicalSuppliesList.appendChild(listItem);
+              listItem.addEventListener("click", function () {
+                displayItemDetails(item);
+              });
+              medicalSuppliesList.appendChild(listItem);
             }
-        });
-    }
+          });
+        }
 
-    function displayItemDetails(item) {
-        const itemDetails = document.getElementById('itemDetails');
-        itemDetails.innerHTML = `
+        function displayItemDetails(item) {
+          const itemDetails = document.getElementById("itemDetails");
+          itemDetails.innerHTML = `
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">${item.name}</h5>
                     <p class="card-text">Type: ${item.type}</p>
                     <p class="card-text">Use: ${item.use}</p>
                     <p class="card-text">Quantity Needed: ${item.quantity}</p>
+                    <p><img src="${item.image}" alt="${item.name}" width="100"></p>
                     <div class="form-group">
                         <label for="donationQuantity">Donation Quantity:</label>
                         <input type="number" class="form-control" id="donationQuantity" min="1" max="${item.quantity}" value="1">
@@ -148,11 +177,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
         `;
-    }
+        }
 
-    displayMedicalSuppliesItems();
-    document.getElementById('typeFilter').addEventListener('change', displayMedicalSuppliesItems);
-});
-</script>
-</body>
+        displayMedicalSuppliesItems();
+        typeFilter.addEventListener("change", displayMedicalSuppliesItems);
+      });
+    </script>
+  </body>
 </html>
