@@ -3,12 +3,16 @@
 
 <head>
 
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" type="x-icon" href="../images/logo2.png">
+    
+
+    
     <title>Admin - Dashboard</title>
 
     <!-- Custom fonts for this template-->
@@ -28,7 +32,13 @@
 </head>
 
 <body id="page-top">
-
+    <div id="overlayer">
+        <span class="loader">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+        </span>
+    </div>
     <!-- Page Wrapper -->
     <div id="wrapper" style="background-color:  #092035;">
 
@@ -349,7 +359,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Registeration</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Update Profile</h1>
 
                     </div>
 
@@ -383,7 +393,7 @@
                         </div>
                         <div class="col-md-12">
                             <label for="inputLastName" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputLastName" required  style="width:49%;" />
+                            <input type="email" class="form-control" id="inputLastName" required style="width:49%;" />
                         </div>
                         <div class="col-md-6">
                             <label for="inputLastName" class="form-label">Old Password</label>
@@ -510,9 +520,68 @@
     <script src="vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="plugins/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script>
+        (function ($) {
+            var initJarallax = function () {
+                jarallax(document.querySelectorAll(".jarallax"));
 
+                jarallax(document.querySelectorAll(".jarallax-keep-img"), {
+                    keepImg: true,
+                });
+            };
+            $(document).ready(function () {
+                // preloader
+                $(window).load(function () {
+                    $("#overlayer").fadeOut("slow");
+                    $("body").addClass("loaded");
+                });
+
+                initJarallax();
+
+                // Animate on Scroll
+                AOS.init({
+                    duration: 600,
+                    once: true,
+                });
+            });
+        })(jQuery);
+        function addNew() {
+            // Create a new file input element
+            var newInput = document.createElement("input");
+            newInput.type = "file";
+            newInput.className = "form-control";
+            newInput.required = true;
+
+            // Create a new div to contain the file input
+            var newDiv = document.createElement("div");
+
+            // Check if the container already has elements
+            var container = document.querySelector(".addmore");
+            if (container.children.length > 0) {
+                newDiv.className = "col-12 mt-3"; // Add margin-top if container already has elements
+            } else {
+                newDiv.className = "col-12"; // Otherwise, keep it without margin-top
+            }
+
+            newDiv.appendChild(newInput);
+
+            // Append the new div to the parent container
+            container.appendChild(newDiv);
+        }
+        function redirectToMain() {
+            var value = document.getElementById("inputOrganizationType").value;
+            localStorage.setItem("type", value);
+            window.location.href = "./main.html";
+        }
+        function deleteprofile() {
+            window.alert("Profile Deleted Successfully");
+            window.location.href = "./main.html";
+        }
+    </script>
 </body>
 
 </html>
