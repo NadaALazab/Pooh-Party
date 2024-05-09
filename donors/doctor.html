@@ -339,7 +339,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="donorprofile.html">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -527,64 +527,95 @@
         ];
 
         function displayMedicalCases() {
-          medicalCasesList.innerHTML = ""; // Clear the list
-          const selectedSpecialty = specialtyFilter.value;
-          const selectedOrganization = organizationFilter.value;
-          const selectedArea = areaFilter.value;
-          const selectedGovernorate = governorateFilter.value;
+  medicalCasesList.innerHTML = ""; // Clear the list
+  const selectedSpecialty = specialtyFilter.value;
+  const selectedOrganization = organizationFilter.value;
+  const selectedArea = areaFilter.value;
+  const selectedGovernorate = governorateFilter.value;
 
-          cases.forEach((medicalCase) => {
-            if (
-              (medicalCase.specialty === selectedSpecialty ||
-                selectedSpecialty === "") &&
-              (medicalCase.organization === selectedOrganization ||
-                selectedOrganization === "") &&
-              (medicalCase.area === selectedArea || selectedArea === "") &&
-              (medicalCase.governorate === selectedGovernorate ||
-                selectedGovernorate === "")
-            ) {
-              const listItem = document.createElement("li");
-              listItem.className = "list-group-item";
-              listItem.innerHTML = `
-                    <div class="d-flex justify-content-between">
-                      <div>
-                          <h5 class="mb-1">${medicalCase.name}</h5>
-                          <p class="text-muted">Age: ${medicalCase.age}, Gender: ${medicalCase.gender}, Weight: ${medicalCase.weight}, Location: ${medicalCase.location}</p>
-                      </div>
-                      <span class="badge bg-primary">Address ${medicalCase.address}</span>
-                    </div>
-                    `;
-              listItem.addEventListener("click", function () {
-                displayItemDetails(medicalCase);
-              });
-              medicalCasesList.appendChild(listItem);
-            }
-          });
-        }
-        function displayItemDetails(medicalCase) {
-          itemDetails.innerHTML = `
-          <div class="card">
-              <div class="card-body">
-                  <h5 class="card-title">${medicalCase.name}</h5>
-                  <p class="card-text">  
-                    Age: ${medicalCase.age}, Gender: ${medicalCase.gender}, Weight: ${medicalCase.weight},<br>
-                    Location: ${medicalCase.location}, Address: ${medicalCase.address}, <br>
-                    Organization: ${medicalCase.organization}, Medical Specialty: ${medicalCase.specialty},<br>
-                    Details: ${medicalCase.details}
-                  </p>
-                  
-                  <button class="btn btn-primary">Donate</button>
-              </div>
+  cases.forEach((medicalCase) => {
+    if (
+      (medicalCase.specialty === selectedSpecialty ||
+        selectedSpecialty === "") &&
+      (medicalCase.organization === selectedOrganization ||
+        selectedOrganization === "") &&
+      (medicalCase.area === selectedArea || selectedArea === "") &&
+      (medicalCase.governorate === selectedGovernorate ||
+        selectedGovernorate === "")
+    ) {
+      const listItem = document.createElement("li");
+      listItem.className = "list-group-item";
+      listItem.innerHTML = `
+          <div class="d-flex justify-content-between">
+            <div>
+                <h5 class="mb-1">${medicalCase.name}</h5>
+                <p class="text-muted">Age: ${medicalCase.age}, Gender: ${medicalCase.gender}, Weight: ${medicalCase.weight}, Location: ${medicalCase.location},address:${medicalCase.address}</p>
+            </div>
+            <button type="button" class="btn btn-primary modal-success-btn">view details</button>
           </div>
-        `;
-        }
-
-        displayMedicalCases();
-        specialtyFilter.addEventListener("change", displayMedicalCases);
-        organizationFilter.addEventListener("change", displayMedicalCases);
-        areaFilter.addEventListener("change", displayMedicalCases);
-        governorateFilter.addEventListener("change", displayMedicalCases);
+          `;
+      listItem.addEventListener("click", function () {
+        displayItemDetails(medicalCase);
       });
+      medicalCasesList.appendChild(listItem);
+    }
+  });
+}
+
+function displayItemDetails(medicalCase) {
+  var modalWrap = null;
+
+  if (modalWrap !== null) {
+    modalWrap.remove();
+  }
+  modalWrap = document.createElement("div");
+  modalWrap.innerHTML = `
+    <div class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title">Medical Case Details</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">${medicalCase.name}</h5>
+                            <p class="card-text">  
+                                Age: ${medicalCase.age}, Gender: ${medicalCase.gender}, Weight: ${medicalCase.weight},<br>
+                                Location: ${medicalCase.location}, Address: ${medicalCase.address}, <br>
+                                Organization: ${medicalCase.organization}, Medical Specialty: ${medicalCase.specialty},<br>
+                                Details: ${medicalCase.details}
+                            </p>
+                            <button type="button" class="btn btn-secondary modal-cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary modal-success-btn">Donate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  `;
+  modalWrap.querySelector(".modal-success-btn").onclick = () =>
+            alertAndAssign();
+          modalWrap.querySelector(".modal-cancel-btn").onclick = () =>
+            window.location.assign("doctor.html");
+
+  document.body.append(modalWrap);
+
+  var modal = new bootstrap.Modal(modalWrap.querySelector(".modal"));
+  modal.show();
+}
+
+displayMedicalCases();
+specialtyFilter.addEventListener("change", displayMedicalCases);
+organizationFilter.addEventListener("change", displayMedicalCases);
+areaFilter.addEventListener("change", displayMedicalCases);
+governorateFilter.addEventListener("change", displayMedicalCases);
+      });
+      function alertAndAssign() {
+        alert("Donation Successful!");
+        window.location.assign("doctor.html");
+      }
     </script>
   </body>
 </html>

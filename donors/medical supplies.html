@@ -340,7 +340,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="donorprofile.html">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -534,35 +534,48 @@
         ];
 
         function displayMedicalSuppliesItems() {
-          medicalSuppliesList.innerHTML = ""; // Clear the list
-          const typeFilter = document.getElementById("typeFilter");
+  medicalSuppliesList.innerHTML = ""; // Clear the list
+  const typeFilter = document.getElementById("typeFilter");
 
-          items.forEach((item) => {
-            if (typeFilter.value === "" || item.type === typeFilter.value) {
-              const listItem = document.createElement("li");
-              listItem.className = "list-group-item";
-              listItem.innerHTML = `
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h5 class="mb-1">${item.name}</h5>
-                            <p class="text-muted">Type: ${item.type}, Use: ${item.use}</p>
-                        </div>
-                        <span class="badge bg-primary">Quantity Needed: ${item.quantity}</span>
-                    </div>
-                `;
-              listItem.addEventListener("click", function () {
-                displayItemDetails(item);
-              });
-              medicalSuppliesList.appendChild(listItem);
-            }
-          });
-        }
+  items.forEach((item) => {
+    if (typeFilter.value === "" || item.type === typeFilter.value) {
+      const listItem = document.createElement("li");
+      listItem.className = "list-group-item";
+      listItem.innerHTML = `
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h5 class="mb-1">${item.name}</h5>
+                    <p class="text-muted">Type: ${item.type}, Use: ${item.use}</p>
+                </div>
+                <button type="button" class="btn btn-primary modal-success-btn">view details</button>
+            </div>
+        `;
+      listItem.addEventListener("click", function () {
+        displayItemDetails(item);
+      });
+      medicalSuppliesList.appendChild(listItem);
+    }
+  });
+}
 
-        function displayItemDetails(item) {
-          const itemDetails = document.getElementById("itemDetails");
-          itemDetails.innerHTML = `
-            <div class="card">
-                <div class="card-body">
+function displayItemDetails(item) {
+  var modalWrap = document.getElementById("modalWrap");
+
+  if (modalWrap !== null) {
+    modalWrap.remove();
+  }
+
+  modalWrap = document.createElement("div");
+  modalWrap.className = "modal fade";
+  modalWrap.id = "modalWrap";
+  modalWrap.innerHTML = `
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title">Medical supply Details</h5>            
+            </div>
+            <div class="modal-body">
+                <form>
                     <h5 class="card-title">${item.name}</h5>
                     <p class="card-text">Type: ${item.type}</p>
                     <p class="card-text">Use: ${item.use}</p>
@@ -572,15 +585,49 @@
                         <label for="donationQuantity">Donation Quantity:</label>
                         <input type="number" class="form-control" id="donationQuantity" min="1" max="${item.quantity}" value="1">
                     </div>
-                    <button class="btn btn-primary">Donate</button>
-                </div>
+                </form>
             </div>
-        `;
-        }
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-secondary modal-cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                 <button type="button" class="btn btn-primary modal-success-btn">Donate</button>
+            </div>
+        </div>
+    </div>
+  `;
+  modalWrap.querySelector(".modal-success-btn").onclick = () =>
+            alertAndAssign();
+          modalWrap.querySelector(".modal-cancel-btn").onclick = () =>
+            window.location.assign("medical supplies.html");
 
-        displayMedicalSuppliesItems();
-        typeFilter.addEventListener("change", displayMedicalSuppliesItems);
-      });
+
+  document.body.appendChild(modalWrap);
+
+  var modal = new bootstrap.Modal(modalWrap);
+  modal.show();
+}
+
+function donateMedicalSupplies(maxQuantity) {
+  const donationQuantity = parseInt(document.getElementById("donationQuantity").value);
+
+  if (donationQuantity > maxQuantity) {
+    alert("Invalid donation quantity. Please enter a quantity within the available range.");
+    return;
+  }
+
+  // Perform the donation logic here
+  // ...
+
+  alert("Donation Successful!");
+  window.location.reload(); // Refresh the page or perform any other action after successful donation
+}
+
+displayMedicalSuppliesItems();
+typeFilter.addEventListener("change", displayMedicalSuppliesItems);
+      })
+      function alertAndAssign() {
+        alert("Donation Successful!");
+        window.location.assign("medical supplies.html");
+      }
     </script>
   </body>
 </html>

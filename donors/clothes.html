@@ -342,10 +342,10 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="donorprofile.html">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a>
+                                </a>                                
                                 <a class="dropdown-item" href="forgot-password.html">
                                     <i class="fas fa-solid fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Change Password
@@ -558,57 +558,91 @@
         ];
 
         function displayClothesItems() {
-          clothesList.innerHTML = ""; // Clear the list
-          const selectedAge = ageFilter.value;
-          const selectedGender = genderFilter.value;
-          const selectedSeason = seasonFilter.value;
+  clothesList.innerHTML = ""; // Clear the list
+  const selectedAge = ageFilter.value;
+  const selectedGender = genderFilter.value;
+  const selectedSeason = seasonFilter.value;
 
-          clothes.forEach((clothing) => {
-            if (
-              (selectedAge === "" || clothing.age === selectedAge) &&
-              (clothing.gender === selectedGender || selectedGender === "") &&
-              (clothing.season === selectedSeason || selectedSeason === "")
-            ) {
-              const listItem = document.createElement("li");
-              listItem.className = "list-group-item";
-              listItem.innerHTML = `
-                  <div class="d-flex justify-content-between">
-                      <div>
-                          <h5 class="mb-1">${clothing.name}</h5>
-                          <p class="text-muted">Age: ${clothing.age}, Gender: ${clothing.gender}, Season: ${clothing.season}, Material: ${clothing.material}</p>
-                      </div>
-                      <span class="badge bg-primary">Quantity Needed: ${clothing.quantity}</span>
-                  </div>
-              `;
-              listItem.addEventListener("click", function () {
-                displayItemDetails(clothing);
-              });
-              clothesList.appendChild(listItem);
-            }
-          });
-        }
-
-        function displayItemDetails(clothing) {
-          itemDetails.innerHTML = `
-          <div class="card">
-              <div class="card-body">
-                  <h5 class="card-title">${clothing.name}</h5>
-                  <p class="card-text">Age: ${clothing.age}, Gender: ${clothing.gender}, Season: ${clothing.season}, Material: ${clothing.material}</p>
-                  <div class="form-group">
-                      <label for="donationQuantity">Donation Quantity:</label>
-                      <input type="number" class="form-control" id="donationQuantity" min="1" max="${clothing.quantity}" value="1">
-                  </div>
-                  <button class="btn btn-primary">Donate</button>
+  clothes.forEach((clothing) => {
+    if (
+      (selectedAge === "" || clothing.age === selectedAge) &&
+      (clothing.gender === selectedGender || selectedGender === "") &&
+      (clothing.season === selectedSeason || selectedSeason === "")
+    ) {
+      const listItem = document.createElement("li");
+      listItem.className = "list-group-item";
+      listItem.innerHTML = `
+          <div class="d-flex justify-content-between">
+              <div>
+                  <h5 class="mb-1">${clothing.name}</h5>
+                  <p class="text-muted">Age: ${clothing.age}, Gender: ${clothing.gender}, Season: ${clothing.season}, Material: ${clothing.material},quantity needed:${clothing.quantity}</p>
               </div>
+              <button type="button" class="btn btn-primary modal-success-btn">view details</button>
           </div>
-        `;
-        }
-
-        displayClothesItems();
-        ageFilter.addEventListener("change", displayClothesItems);
-        genderFilter.addEventListener("change", displayClothesItems);
-        seasonFilter.addEventListener("change", displayClothesItems);
+      `;
+      listItem.addEventListener("click", function () {
+        displayItemDetails(clothing);
       });
+      clothesList.appendChild(listItem);
+    }
+  });
+}
+
+function displayItemDetails(clothing) {
+  var modalWrap = null;
+
+  if (modalWrap !== null) {
+    modalWrap.remove();
+  }
+  modalWrap = document.createElement("div");
+  modalWrap.innerHTML = `
+    <div class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title">Clothing Details</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">${clothing.name}</h5>
+                            <p class="card-text">Age: ${clothing.age}, Gender: ${clothing.gender}, Season: ${clothing.season}, Material: ${clothing.material}</p>
+                            <div class="form-group">
+                                <label for="donationQuantity">Donation Quantity:</label>
+                                <input type="number" class="form-control" id="donationQuantity" min="1" max="${clothing.quantity}" value="1">
+                            </form>
+                        </div>
+                        <div class="modal-footer bg-light">
+                            <button type="button" class="btn btn-secondary modal-cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary modal-success-btn">Donate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  `;
+  modalWrap.querySelector(".modal-success-btn").onclick = () =>
+            alertAndAssign();
+          modalWrap.querySelector(".modal-cancel-btn").onclick = () =>
+            window.location.assign("clothes.html");
+
+
+  document.body.append(modalWrap);
+
+  var modal = new bootstrap.Modal(modalWrap.querySelector(".modal"));
+  modal.show();
+}
+
+displayClothesItems();
+ageFilter.addEventListener("change", displayClothesItems);
+genderFilter.addEventListener("change", displayClothesItems);
+seasonFilter.addEventListener("change", displayClothesItems);
+function alertAndAssign() {
+        alert("Donation Successful!");
+        window.location.assign("clothes.html");
+      }
+});
     </script>
   </body>
 </html>
