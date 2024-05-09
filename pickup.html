@@ -2,35 +2,36 @@
 <html lang="en">
 
 <head>
-    <title>Register</title>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="author" content="TemplatesJungle" />
-    <meta name="keywords" content="Free HTML CSS Website Template for Non-profit Organizations" />
-    <meta name="description" content="Free HTML CSS Website Template for Non-profit Organizations" />
-    <link rel="shortcut icon" type="x-icon" href="images/logo2.png" />
-    <link rel="stylesheet" type="text/css" href="css/vendor.css" />
-    <link href="plugins/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="notification-style.css">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="x-icon" href="../images/logo2.png">
+    
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    
+    <title>test</title>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Custom fonts for this template-->
+    <link href="profile/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
-    <!-- script
-	================================================== -->
-    <!-- <script src="js/modernizr.js"></script> -->
+    <!-- Custom styles for this template-->
+
+    <link href="../profile/sb-admin-2.css" rel="stylesheet">
+    <style>
+        .sidebar-dark {
+            background-color: #092035;
+        }
+    </style>
 </head>
 
-<body>
+<body id="page-top">
     <div id="overlayer">
         <span class="loader">
             <div class="dot dot-1"></div>
@@ -38,212 +39,543 @@
             <div class="dot dot-3"></div>
         </span>
     </div>
+    <!-- Page Wrapper -->
+    <div id="wrapper" style="background-color:  #092035;">
 
-    <header class="py-1 text-white" style="background-color: #092035">
-        <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="organization.html"><img src="images/logo4.png" class="logo" width="90"
-                        height="90" /></a>
-                <h2 class="text-White fs-3 mr-4">Coordinate Donation Pickup</h2>
-                <div class="notification-box clickable">
-                    <div id="bell">
-                        <span class="notification-count">2</span>
-                        <div class="notification-bell">
-                            <span class="bell-top"></span>
-                            <span class="bell-middle"></span>
-                            <span class="bell-bottom"></span>
-                            <span class="bell-rad"></span>
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #092035;">
 
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center " href="index.html">
+                <div class="sidebar-brand-icon pt-5  pb-2">
+                    <img src="../images/logo4.png" class="logo" width="90" height="90" />
+                </div>
+
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0 mt-5">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span class="yellow">Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-solid fa-users"></i>
+                    <span class="yellow">Accounts</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="DonorsList1.html">Donors</a>
+                        <a class="collapse-item" href="OrgList.html">Organizations</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-solid fa-plus"></i>
+                    <span class=" yellow">Requests</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" href="WaitingListDonor.html">Donors</a>
+                        <a class="collapse-item" href="utilities-border.html">Organizations</a>
+
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Addons
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span class="yellow">Pages</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="login.html">Login</a>
+                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Other Pages:</h6>
+                        <a class="collapse-item" href="404.html">404 Page</a>
+                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand   topbar mb-4 static-top shadow" style="color: #092035;">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" style="color: #092035;"
+                        class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group" style="color: #092035;">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-warning" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto" style="background-color:  #092035;">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle " href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw " style="color:white;"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header" style="background-color: #092035 ; color: #F4BE37;">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw" style="color: white;"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header" style="background-color: #092035 ; color: #F4BE37;">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="profile/img/undraw_profile_1.svg" alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="profile/img/undraw_profile_2.svg" alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="profile/img/undraw_profile_3.svg" alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline yellow small">Omar Magdy</span>
+                                <img class="img-profile rounded-circle" src="profile/img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="forgot-password.html">
+                                    <i class="fas fa-solid fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Change Password
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Update Profile</h1>
+
+                    </div>
+
+                    <!-- Content Row -->
+
+
+                    <!-- Content Row -->
+
+                    <div class="container" style="width:absolute;">
+
+                        <div style="font-weight: bold;">
+                            <label class="font-weight-bold mt-3">Donation ID:</label>
+                            <a href="donation.html" style="font-weight: 100; text-decoration: underline;">  #1F02Janakh387</a>
+                        </div>
+                        
+                        <div style="font-weight: bold;">
+                            <label class="font-weight-bold mt-3">Donor:</label>
+                            <a href="profile.html" style="font-weight: 100; text-decoration: underline;">   John Smith</a>
+                        </div>
+                
+                        <div class="container border rounded p-3" style="margin-top: 20px; margin-bottom: 50px;">
+                            <div class="row">
+                                <!-- Google Maps iframe -->
+                
+                                <div class="col-lg-6 col-md-12">
+                                    <div style="font-weight: bold;">
+                                        <label for="inputGoogleMapLocation" class="font-weight-bold mt-3 mb-3">Pickup
+                                            </label>
+                                    </div>
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319"
+                                        width="100%" height="500" frameborder="0" style="border: 0"></iframe>
+                
+                
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Date</label>
+                                        <input type="text" class="form-control"
+                                            placeholder="12/05/2003" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Time</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="12:53 PM" readonly>
+                                    </div>
+                
+                
+                
+                
+                                </div>
+                
+                                <!-- Date and Time section -->
+                                <div class="col-lg-6 col-md-12 flex-column align-items-start">
+                                    <div style="font-weight: bold;">
+                                        <label for="inputGoogleMapLocation" class="font-weight-bold mt-3 mb-3">Dropoff
+                                            </label>
+                                    </div>
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110671.71931135064!2d31.135339736938477!3d29.907757180941076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145849a9e52e2c33%3A0xd991f162458f252a!2sFagnoon%20Art%20School!5e0!3m2!1sen!2seg!4v1715013341460!5m2!1sen!2seg"
+                                        width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Date</label>
+                                        <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="dd/mm/yyyy">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Time</label>
+                                        <input type="time" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="dd/mm/yyyy">
+                                    </div>
+                
+                                </div>
+                            </div>
+                        </div>
+                
+                        
+                        <!-- Buttons -->
+                        <div class="row mt-3 mb-4">
+                            <div class="col">
+                                <a type="button" href="organization.html" class="btn btn-danger w-100"
+                                    style="background-color: #F4BE37;border-color: #F4BE37;color: #092035;font-weight:bolder;">Send to
+                                    Drivers</a>
+                            </div>
+                            <div class="col">
+                                <a type="button" href="organization.html" class="btn btn-danger w-100"
+                                    style="background-color: #092035;border-color: #092035;color: white; ">Send "Out of Range" Message
+                                    to
+                                    Donor</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="notifications" style="display: none;" id="box">
-                        <h2>Notifications - 2</h2>
-                        <div id="item">
-                            <div class="notifications-item" onclick="scrollToTarget('Sponge')"> <img
-                                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c82dd5b3-b0d8-44e8-b11d-a50e55b7b9de/df88w1u-28c92797-9336-4acc-bc3e-ade5a7c0d290.png/v1/fit/w_828,h_1104/spongebob_png_vector_by_carlosoof10_df88w1u-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTUzNiIsInBhdGgiOiJcL2ZcL2M4MmRkNWIzLWIwZDgtNDRlOC1iMTFkLWE1MGU1NWI3YjlkZVwvZGY4OHcxdS0yOGM5Mjc5Ny05MzM2LTRhY2MtYmMzZS1hZGU1YTdjMGQyOTAucG5nIiwid2lkdGgiOiI8PTExNTEifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.RbNAWRFJen8H8-BsMNetSzlKmqMbGusdF5Q_Fum9js0"
-                                    alt="img">
-                                <div class="text">
-                                    <h4>Sponge Bob</h4>
-                                    <p>Chose to fulfill clothes donation</p>
-                                </div>
-                                <div class="mt-4 ">
-                                    <a href="pickup.html" style="text-decoration: underline;">Coordinate pickup</a>
-                                </div>
-
-
-                            </div>
-                            <div class="notifications-item"> <img
-                                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c82dd5b3-b0d8-44e8-b11d-a50e55b7b9de/dfquid8-d90263cc-d78a-46dd-a679-dc8b5213ca70.png/v1/fit/w_728,h_931/st__patrick_by_carlosoof10_dfquid8-375w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTMxIiwicGF0aCI6IlwvZlwvYzgyZGQ1YjMtYjBkOC00NGU4LWIxMWQtYTUwZTU1YjdiOWRlXC9kZnF1aWQ4LWQ5MDI2M2NjLWQ3OGEtNDZkZC1hNjc5LWRjOGI1MjEzY2E3MC5wbmciLCJ3aWR0aCI6Ijw9NzI4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.nskvIUkKExh2-PBM0MvLsNaP_6_g4vS-FwZ2_2O76Ls"
-                                    alt="img">
-                                <div class="text">
-                                    <h4>Patrick Star</h4>
-                                    <p>Chose to fulfill seafood donation</p>
-                                </div>
-                                <div class="mt-4">
-                                    <a href="pickup.html" style="text-decoration: underline;">Coordinate pickup</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container" style="width:absolute;">
-
-        <div style="font-weight: bold;">
-            <label class="font-weight-bold mt-3">Donation ID:</label>
-            <a href="donation.html" style="font-weight: 100; text-decoration: underline;">  #1F02Janakh387</a>
-        </div>
-        
-        <div style="font-weight: bold;">
-            <label class="font-weight-bold mt-3">Donor:</label>
-            <a href="profile.html" style="font-weight: 100; text-decoration: underline;">   John Smith</a>
-        </div>
-
-        <div class="container border rounded p-3" style="margin-top: 20px; margin-bottom: 50px;">
-            <div class="row">
-                <!-- Google Maps iframe -->
-
-                <div class="col-lg-6 col-md-12">
-                    <div style="font-weight: bold;">
-                        <label for="inputGoogleMapLocation" class="font-weight-bold mt-3 mb-3">Pickup
-                            </label>
-                    </div>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319"
-                        width="100%" height="500" frameborder="0" style="border: 0"></iframe>
-
-
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Date</label>
-                        <input type="text" class="form-control"
-                            placeholder="12/05/2003" readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Time</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="12:53 PM" readonly>
-                    </div>
-
-
-
 
                 </div>
+                <!-- /.container-fluid -->
 
-                <!-- Date and Time section -->
-                <div class="col-lg-6 col-md-12 flex-column align-items-start">
-                    <div style="font-weight: bold;">
-                        <label for="inputGoogleMapLocation" class="font-weight-bold mt-3 mb-3">Dropoff
-                            </label>
-                    </div>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110671.71931135064!2d31.135339736938477!3d29.907757180941076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145849a9e52e2c33%3A0xd991f162458f252a!2sFagnoon%20Art%20School!5e0!3m2!1sen!2seg!4v1715013341460!5m2!1sen!2seg"
-                        width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!-- End of Main Content -->
 
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Date</label>
-                        <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="dd/mm/yyyy">
+            <!-- Footer -->
+            <footer class="sticky-footer">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Hand x Hand 2024</span>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Time</label>
-                        <input type="time" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="dd/mm/yyyy">
-                    </div>
-
                 </div>
-            </div>
-        </div>
+            </footer>
+            <!-- End of Footer -->
 
-        
-        <!-- Buttons -->
-        <div class="row mt-3 mb-4">
-            <div class="col">
-                <a type="button" href="organization.html" class="btn btn-danger w-100"
-                    style="background-color: #F4BE37;border-color: #F4BE37;color: #092035;font-weight:bolder;">Send to
-                    Drivers</a>
-            </div>
-            <div class="col">
-                <a type="button" href="organization.html" class="btn btn-danger w-100"
-                    style="background-color: #092035;border-color: #092035;color: white; ">Send "Out of Range" Message
-                    to
-                    Donor</a>
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="../main.html">Logout</a>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+    <!-- Custom scripts for all pages-->
+    <script src="sb-admin-2.min.js"></script>
 
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
 
-
-
+    <!-- Page level custom scripts -->
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="plugins/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="js/plugins.js"></script>
-        <script>
-            (function ($) {
+    <script>
+        (function ($) {
+            var initJarallax = function () {
+                jarallax(document.querySelectorAll(".jarallax"));
 
-                var initJarallax = function () {
-                    jarallax(document.querySelectorAll(".jarallax"));
-
-                    jarallax(document.querySelectorAll(".jarallax-keep-img"), {
-                        keepImg: true,
-                    });
-                };
-                $(document).ready(function () {
-                    // preloader
-                    $(window).load(function () {
-                        $("#overlayer").fadeOut("slow");
-                        $("body").addClass("loaded");
-                    });
-
-                    initJarallax();
-
-                    // Animate on Scroll
-                    AOS.init({
-                        duration: 600,
-                        once: true,
-                    });
+                jarallax(document.querySelectorAll(".jarallax-keep-img"), {
+                    keepImg: true,
                 });
-            })(jQuery);
-            function addNew() {
-                // Create a new file input element
-                var newInput = document.createElement("input");
-                newInput.type = "file";
-                newInput.className = "form-control";
-                newInput.required = true;
+            };
+            $(document).ready(function () {
+                // preloader
+                $(window).load(function () {
+                    $("#overlayer").fadeOut("slow");
+                    $("body").addClass("loaded");
+                });
 
-                // Create a new div to contain the file input
-                var newDiv = document.createElement("div");
+                initJarallax();
 
-                // Check if the container already has elements
-                var container = document.querySelector(".addmore");
-                if (container.children.length > 0) {
-                    newDiv.className = "col-12 mt-3"; // Add margin-top if container already has elements
-                } else {
-                    newDiv.className = "col-12"; // Otherwise, keep it without margin-top
-                }
+                // Animate on Scroll
+                AOS.init({
+                    duration: 600,
+                    once: true,
+                });
+            });
+        })(jQuery);
+        function addNew() {
+            // Create a new file input element
+            var newInput = document.createElement("input");
+            newInput.type = "file";
+            newInput.className = "form-control";
+            newInput.required = true;
 
-                newDiv.appendChild(newInput);
+            // Create a new div to contain the file input
+            var newDiv = document.createElement("div");
 
-                // Append the new div to the parent container
-                container.appendChild(newDiv);
+            // Check if the container already has elements
+            var container = document.querySelector(".addmore");
+            if (container.children.length > 0) {
+                newDiv.className = "col-12 mt-3"; // Add margin-top if container already has elements
+            } else {
+                newDiv.className = "col-12"; // Otherwise, keep it without margin-top
             }
-            function redirectToMain() {
-                window.location.href = "./main.html";
-            }
-        </script>
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script src="plugins/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/notification-script.js"></script>
+
+            newDiv.appendChild(newInput);
+
+            // Append the new div to the parent container
+            container.appendChild(newDiv);
+        }
+        function redirectToMain() {
+            var value = document.getElementById("inputOrganizationType").value;
+            localStorage.setItem("type", value);
+            window.location.href = "./main.html";
+        }
+        function deleteprofile() {
+            window.alert("Profile Deleted Successfully");
+            window.location.href = "../main.html";
+        }
+    </script>
 </body>
 
 </html>
