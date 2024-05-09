@@ -498,7 +498,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           <h5 class="mb-1">${teaching.name}</h5>
                           <p class="text-muted">subject: ${teaching.subject}, area: ${teaching.area}, governorate: ${teaching.governorate},  Google_map_marker: ${teaching. Google_map_marker}</p>
                       </div>
-                      <span class="badge bg-primary">NumOfStudents Needed: ${teaching.NumOfStudents}</span>
+                      <span class="badge bg-primary" style="background-color: #092035; color: #F4BE37;">NumOfStudents Needed: ${teaching.NumOfStudents}</span>
                   </div>
               `;
               listItem.addEventListener('click', function() {
@@ -516,10 +516,10 @@ document.addEventListener('DOMContentLoaded', function() {
                   <h5 class="card-title">${teaching.name}</h5>
                   <p class="card-text">subject: ${teaching.subject}, area: ${teaching.area}, governorate: ${teaching.governorate}, Google_map_marker: ${teaching.Google_map_marker}</p>
                   <div class="form-group">
-                      <label for="donationNumOfStudents">Donation NumOfStudents:</label>
+                      <label for="donationNumOfStudents" >Donation NumOfStudents:</label>
                       <input type="number" class="form-control" id="donationNumOfStudents" min="1" max="${teaching.NumOfStudents}" value="1">
                   </div>
-                  <button class="btn btn-primary">Donate</button>
+                  <button class="btn btn-primary" >Donate</button>
               </div>
           </div>
       `;
