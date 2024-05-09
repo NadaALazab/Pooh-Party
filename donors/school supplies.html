@@ -511,7 +511,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           ${supply.type === 'books'? `<p>Author: ${supply.author}, Language: ${supply.language}, Edition: ${supply.edition}</p>` : ''}
                           ${supply.type === 'books'? `<img src="${supply.image}" alt="${supply.name}" width="100">` : ''}
                       </div>
-                      <span class="badge bg-primary">Quantity Needed: ${supply.quantity}</span>
+                      <span type="button" class="btn btn-primary btn-sm"style="background-color: #092035 !important; color: #F4BE37 !important;">Quantity Needed: ${supply.quantity}</span>
                   </div>
               `;
               listItem.addEventListener('click', function() {
