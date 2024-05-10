@@ -373,38 +373,38 @@
                 </header>
               </div>
             </div>
-        <main>
-            <section class="mb-3">
-                <label for="ageFilter" class="mr-2">Age:</label>
-                <select id="ageFilter" class="form-control">
-                    <option value="">All Ages</option>
-                    <option value="0-2">0-2</option>
-                    <option value="3-5">3-5</option>
-                    <option value="6-8">6-8</option>
-                    <option value="9-12">9-12</option>
-                </select>
-            </section>
-            <section class="mb-3">
-                <label for="genderFilter" class="mr-2">Gender:</label>
-                <select id="genderFilter" class="form-control">
-                    <option value="">All Genders</option>
-                    <option value="boys">Boys</option>
-                    <option value="girls">Girls</option>
-                    <option value="unisex">Unisex</option>
-                </select>
-            </section>
-            <section class="mb-3">
-                <label for="categoryFilter" class="mr-2">Category:</label>
-                <select id="categoryFilter" class="form-control">
-                    <option value="">All Categories</option>
-                    <option value="boardGames">Board Games</option>
-                    <option value="stuffedToys">Stuffed Toys</option>
-                    <option value="dolls">Dolls</option>
-                    <option value="sports">Sports</option>
-                    <option value="cars">Cars</option>
-                    <option value="outdoor">Outdoor</option>
-                </select>
-            </section>
+            <main>
+                    <section class="mb-3" style="display: inline-block; width: 30%;">
+                        <label for="ageFilter" class="mr-2">Age:</label>
+                        <select id="ageFilter" class="form-control">
+                            <option value="">All Ages</option>
+                            <option value="0-2">0-2</option>
+                            <option value="3-5">3-5</option>
+                            <option value="6-8">6-8</option>
+                            <option value="9-12">9-12</option>
+                        </select>
+                    </section>
+                    <section class="mb-3" style="display: inline-block; width: 30%;">
+                        <label for="genderFilter" class="mr-2">Gender:</label>
+                        <select id="genderFilter" class="form-control">
+                            <option value="">All Genders</option>
+                            <option value="boys">Boys</option>
+                            <option value="girls">Girls</option>
+                            <option value="unisex">Unisex</option>
+                        </select>
+                    </section>
+                    <section class="mb-3" style="display: inline-block; width: 30%;">
+                        <label for="categoryFilter" class="mr-2">Category:</label>
+                        <select id="categoryFilter" class="form-control">
+                            <option value="">All Categories</option>
+                            <option value="boardGames">Board Games</option>
+                            <option value="stuffedToys">Stuffed Toys</option>
+                            <option value="dolls">Dolls</option>
+                            <option value="sports">Sports</option>
+                            <option value="cars">Cars</option>
+                            <option value="outdoor">Outdoor</option>
+                        </select>
+                    </section>
             <section id="toysList" class="mb-3">
                 <!-- Toys items will be dynamically added here -->
             </section>
@@ -568,7 +568,6 @@ function displayItemDetails(toy) {
         <div class="modal-content">
             <div class="modal-header bg-light">
                 <h5 class="modal-title">Toy Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form>
