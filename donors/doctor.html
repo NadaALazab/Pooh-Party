@@ -27,6 +27,9 @@
       .sidebar-dark {
         background-color: #092035;
       }
+        .yellow{
+            color: #F4BE37;
+        }
     </style>
 
     <!-- Google Maps JavaScript API -->
@@ -332,7 +335,7 @@
                         <li class="nav-item dropdown no-arrow"  >
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                                <span class="mr-2 d-none d-lg-inline yellow small" >Omar Magdy</span>
+                                <span class="mr-2 d-none d-lg-inline yellow small" >Sherif Yehia</span>
                                 <img class="img-profile rounded-circle"
                                     src="../images/undraw_profile.svg">
                             </a>
@@ -367,7 +370,8 @@
             <!-- Begin Page Content -->
     <div class="container">
       <header class="text-center py-3  text-gray-400">
-        <h1>Medical Cases</h1>
+        <span class="text-muted">Identify Needs, Contribute to Causes</span>
+        <h1 class="yellow font-weight-bold">Medical Cases</h1>
       </header>
       <main>
         <section class="mb-3" style="display: inline-block; width: 30%;">
@@ -550,7 +554,7 @@
           <div class="d-flex justify-content-between">
             <div>
                 <h5 class="mb-1">${medicalCase.name}</h5>
-                <p class="text-muted">Age: ${medicalCase.age}, Gender: ${medicalCase.gender}, Weight: ${medicalCase.weight}, Location: ${medicalCase.location},address:${medicalCase.address}</p>
+                <p class="text-muted">Age: ${medicalCase.age},   Gender: ${medicalCase.gender},   Weight: ${medicalCase.weight},   Location: ${medicalCase.location},  Address:${medicalCase.address}</p>
             </div>
             <button type="button" class="btn btn-primary modal-success-btn">view details</button>
           </div>
@@ -585,7 +589,8 @@ function displayItemDetails(medicalCase) {
                                 Age: ${medicalCase.age}, Gender: ${medicalCase.gender}, Weight: ${medicalCase.weight},<br>
                                 Location: ${medicalCase.location}, Address: ${medicalCase.address}, <br>
                                 Organization: ${medicalCase.organization}, Medical Specialty: ${medicalCase.specialty},<br>
-                                Details: ${medicalCase.details}
+                                Details: ${medicalCase.details}<hr>
+                                Google maps marker:<br>
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110507.97104653851!2d31.342592!3d30.054809599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e21f28cf1d7%3A0x30bcfb14f962d52c!2sBaron%20Empain%20Palace!5e0!3m2!1sen!2seg!4v1715436994495!5m2!1sen!2seg" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </p>
                             <button type="button" class="btn btn-secondary modal-cancel-btn" data-bs-dismiss="modal">Cancel</button>

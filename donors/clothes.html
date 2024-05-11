@@ -31,6 +31,9 @@
       .sidebar-dark {
         background-color: #092035;
       }
+        .yellow{
+            color: #F4BE37;
+        }
     </style>
     <!-- Google Maps JavaScript API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
@@ -369,8 +372,9 @@
 
             <!-- Begin Page Content -->
     <div class="container">
-      <header class="text-center py-3 bg-primary text-white">
-        <h1>Add Clothes Donation</h1>
+      <header class="text-center py-3 text-white">
+        <span class="text-muted">Identify Needs, Contribute to Causes</span>
+        <h1 class="yellow font-weight-bold">Add Clothes Donation</h1>
       </header>
       <main>
         <section class="mb-3" style="display: inline-block; width: 30%;">
@@ -408,23 +412,13 @@
         </section>
       </main>
     </div>
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <title>Transportation Form</title>
-        <!-- Include Bootstrap CSS -->
-        <link
-          rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        />
-      </head>
-      <body>
         <div class="container">
-          <h1>Transportation Form</h1>
+          <h1 class="yellow">Transportation Form</h1>
           <form id="donorForm">
             <div class="form-group">
               <label for="transportationType">Transportation Type:</label>
               <select class="form-control" id="transportationType">
+                <option selected>Choose...</option>
                 <option value="truck">Truck</option>
                 <option value="car">Car</option>
                 <option value="motorcycle">Motorcycle</option>
