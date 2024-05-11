@@ -384,7 +384,7 @@
 		<div class="col-md-12">
 		  <div class="input-group mb-3">
 			<select class="form-control" id="categorySelect">
-			  <option value="">All Categories</option>
+			  <option value="">Choose a Category</option>
 			  <option value="clothes">Clothes</option>
 			  <option value="toys">Toys</option>
 			  <option value="food">Food</option>
@@ -392,7 +392,7 @@
 			  <option value="schoolSupplies">School Supplies</option>
 			  <option value="bloodDonations">Blood Donations</option>
 			</select>
-			<input type="text" class="form-control" placeholder="Search items..." id="searchInput">
+			<input type="text" class="form-control" placeholder="Search by Category..." id="searchInput">
 			<div class="input-group-append">
 			  <button class="btn btn-outline-secondary" type="button" id="searchButton">Search</button>
 			</div>
@@ -465,19 +465,19 @@
 	document.addEventListener('DOMContentLoaded', function() {
 		// Example data for demonstration
 		const items = [
-			{ name: 'T-Shirt', category: 'clothes', description: 'unisex ,for spring and made of cotton for adults', quantity: 10 },
-			{ name: 'stuffed animals', category: 'toys', description: 'Star Wars Action Figure ', quantity: 5 },
-			{ name: 'board games', category: 'toys', description: 'made up of 64 smaller squares, with eight squares in each row and column', quantity: 5 },
-			{ name: 'sweater', category: 'clothes', description: 'boys ,for winter and made of wool for children', quantity: 10 },
-			{ name: 'apples', category: 'food', description: 'type: fruitsAndVegetables, quantity: 10, unit: KG', quantity: 10 },
-			{ name: 'Canned Tomatoes', category: 'food', description: 'type: cannedFoods, quantity: 20, unit: Cans', quantity: 10 },
-			{ name: 'Pizza', category: 'food', description: 'type:freshMeals, quantity: 5, unit: Pieces', quantity: 10 },
-			{ name: 'Chocolate Chip Cookies', category: 'food', description: 'type: bakedGoods, quantity: 30, unit: Pieces', quantity: 10 },
-			{ name: 'Oxygen Tank', category: 'Medical Supplies', description: 'for Respiratory Support', quantity: 5 },
-            { name: 'Wheelchair', category: 'Medical Supplies', description: 'for Mobility Aid', quantity: 3 },
-            { name: 'Insulin', category: 'Medical Supplies', description: 'for Diabetes Management', quantity: 10 },
-			{ name: 'Math Book', category: 'School Supplies', description: 'John Doe, language: English, edition: 1st, summary: Basic math concepts', quantity: 10 },
-            { name: 'Pencil Set', category: 'School Supplies', amount: 100, quantity: 5 },
+			{ name: 'T-Shirt', category: 'clothes', description: 'unisex ,for spring and made of cotton for adults', quantity: 10, value:'clothes' },
+			{ name: 'Stuffed animals', category: 'toys', description: 'Star Wars Action Figure ', quantity: 5, value:'toys' },
+			{ name: 'Board games', category: 'toys', description: 'made up of 64 smaller squares, with eight squares in each row and column', quantity: 5, value:'toys' },
+			{ name: 'Sweater', category: 'clothes', description: 'boys ,for winter and made of wool for children', quantity: 10, value:'clothes' },
+			{ name: 'Apples', category: 'food', description: 'type: fruitsAndVegetables, quantity: 10, unit: KG', quantity: 10, value:'food' },
+			{ name: 'Canned Tomatoes', category: 'food', description: 'type: cannedFoods, quantity: 20, unit: Cans', quantity: 10, value:'food' },
+			{ name: 'Pizza', category: 'food', description: 'type:freshMeals, quantity: 5, unit: Pieces', quantity: 10, value:'food' },
+			{ name: 'Chocolate Chip Cookies', category: 'food', description: 'type: bakedGoods, quantity: 30, unit: Pieces', quantity: 10, value:'food' },
+			{ name: 'Oxygen Tank', category: 'Medical Supplies', description: 'for Respiratory Support', quantity: 5, value:'medical supplies' },
+            { name: 'Wheelchair', category: 'Medical Supplies', description: 'for Mobility Aid', quantity: 3, value:'medical supplies'},
+            { name: 'Insulin', category: 'Medical Supplies', description: 'for Diabetes Management', quantity: 10, value:'medical supplies'},
+			{ name: 'Math Book', category: 'School Supplies', description: 'John Doe, language: English, edition: 1st, summary: Basic math concepts', quantity: 10, value:'school supplies' },
+            { name: 'Pencil Set', category: 'School Supplies', amount: 100, quantity: 5, value:'school supplies' },
 		];
 
 		// Function to filter items
@@ -491,7 +491,7 @@
 				// Check if the category matches or if no category is selected
 				if (categorySelect.value === '' || item.category === categorySelect.value) {
 					// Check if the item name includes the search query
-					return item.name.toLowerCase().includes(searchInput.value.toLowerCase());
+					return item.value.toLowerCase().includes(searchInput.value.toLowerCase());
 				}
 				return false;
 			});
@@ -506,10 +506,11 @@
 				listItem.innerHTML = `
 					<div class="d-flex justify-content-between">
 						<div>
-							<h5 class="mb-1">${item.name}</h5>
+							<h5 class="mb-1">${item.name} (${item.value})</h5>
 							<p class="text-muted">${item.description}</p>
+                            <p class="text-muted">Quantity Needed: ${item.quantity}</p>
 						</div>
-						<span class="badge bg-primary">Quantity Needed: ${item.quantity}</span>
+						<!--<span class="badge bg-primary">Quantity Needed: ${item.quantity}</span>-->
 					</div>
 				`;
 				itemList.appendChild(listItem);
