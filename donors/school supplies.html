@@ -496,53 +496,101 @@ document.addEventListener('DOMContentLoaded', function() {
   ];
 
   function displaySchoolSuppliesItems() {
-      schoolSuppliesList.innerHTML = ''; // Clear the list
-      const selectedType = typeFilter.value;
+  schoolSuppliesList.innerHTML = ""; // Clear the list
+  const selectedType = typeFilter.value;
 
-      supplies.forEach(supply => {
-          if (selectedType === '' || supply.type === selectedType) {
-              const listItem = document.createElement('li');
-              listItem.className = 'list-group-item';
-              listItem.innerHTML = `
-                  <div class="d-flex justify-content-between">
-                      <div>
-                          <h5 class="mb-1">${supply.name}</h5>
-                          <p class="text-muted">Type: ${supply.type}</p>
-                          ${supply.type === 'books'? `<p>Author: ${supply.author}, Language: ${supply.language}, Edition: ${supply.edition}</p>` : ''}
-                          ${supply.type === 'books'? `<img src="${supply.image}" alt="${supply.name}" width="100">` : ''}
-                      </div>
-                      <span class="badge bg-primary">Quantity Needed: ${supply.quantity}</span>
-                  </div>
-              `;
-              listItem.addEventListener('click', function() {
-                  displayItemDetails(supply);
-              });
-              schoolSuppliesList.appendChild(listItem);
-          }
-      });
-  }
-
-  function displayItemDetails(supply) {
-      itemDetails.innerHTML = `
-          <div class="card">
-              <div class="card-body">
-                  <h5 class="card-title">${supply.name}</h5>
-                  <p class="card-text">Type: ${supply.type}</p>
-                  ${supply.type === 'books'? `<p>Author: ${supply.author}, Language: ${supply.language}, Edition: ${supply.edition}</p>` : ''}
-                  ${supply.type === 'books'? `<img src="${supply.image}" alt="${supply.name}" width="100">` : ''}
-                  <div class="form-group">
-                      <label for="donationQuantity">Donation Quantity:</label>
-                      <input type="number" class="form-control" id="donationQuantity" min="1" max="${supply.quantity}" value="1">
-                  </div>
-                  <button class="btn btn-primary">Donate</button>
+  supplies.forEach((supply) => {
+    if (selectedType === "" || supply.type === selectedType) {
+      const listItem = document.createElement("li");
+      listItem.className = "list-group-item";
+      listItem.innerHTML = `
+          <div class="d-flex justify-content-between">
+              <div>
+                  <h5 class="mb-1">${supply.name}</h5>
+                  <p class="text-muted">Type: ${supply.type}</p>
+                  ${supply.type === "books" ? `<p>Author: ${supply.author}, Language: ${supply.language}, Edition: ${supply.edition}</p>` : ""}
+                  ${supply.type === "books" ? `<img src="${supply.image}" alt="${supply.name}" width="100">` : ""}
               </div>
+              <button type="button" class="btn btn-primary modal-success-btn">view details</button>
           </div>
       `;
+      listItem.addEventListener("click", function () {
+        displayItemDetails(supply);
+      });
+      schoolSuppliesList.appendChild(listItem);
+    }
+  });
+}
+
+function displayItemDetails(supply) {
+  var modalWrap = document.getElementById("modalWrap");
+
+  if (modalWrap !== null) {
+    modalWrap.remove();
   }
 
-  displaySchoolSuppliesItems();
-  typeFilter.addEventListener('change', displaySchoolSuppliesItems);
-});
+  modalWrap = document.createElement("div");
+  modalWrap.className = "modal fade";
+  modalWrap.id = "modalWrap";
+  modalWrap.innerHTML = `
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title">School supply Details</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <h5 class="card-title">${supply.name}</h5>
+                    <p class="card-text">Type: ${supply.type}</p>
+                    ${supply.type === "books" ? `<p>Author: ${supply.author}, Language: ${supply.language}, Edition: ${supply.edition}</p>` : ""}
+                    ${supply.type === "books" ? `<img src="${supply.image}" alt="${supply.name}" width="100">` : ""}
+                    <div class="form-group">
+                        <label for="donationQuantity">Donation Quantity:</label>
+                        <input type="number" class="form-control" id="donationQuantity" min="1" max="${supply.quantity}" value="1">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-secondary modal-cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary modal-success-btn">Donate</button>
+            </div>
+        </div>
+    </div>
+  `;
+  modalWrap.querySelector(".modal-success-btn").onclick = () =>
+            alertAndAssign();
+          modalWrap.querySelector(".modal-cancel-btn").onclick = () =>
+            window.location.assign("school supplies.html");
+
+
+  document.body.appendChild(modalWrap);
+
+  var modal = new bootstrap.Modal(modalWrap);
+  modal.show();
+}
+
+function donateSupply(maxQuantity) {
+  const donationQuantity = parseInt(document.getElementById("donationQuantity").value);
+
+  if (donationQuantity > maxQuantity) {
+    alert("Invalid donation quantity. Please enter a value within the available range.");
+    return;
+  }
+
+  // Perform the donation logic here
+  // ...
+
+  alert("Donation Successful!");
+  window.location.reload(); // Refresh the page or perform any other action after successful donation
+}
+
+displaySchoolSuppliesItems();
+typeFilter.addEventListener("change", displaySchoolSuppliesItems);
+})
+function alertAndAssign() {
+        alert("Donation Successful!");
+        window.location.assign("school supplies.html");
+      }
 </script>
 </body>
 </html>

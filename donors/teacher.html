@@ -373,34 +373,34 @@
                 </header>
               </div>
             </div>
-        <main>
-            <section class="mb-3">
-                <label for="subjectFilter" class="mr-2">subject:</label>
-                <select id="subjectFilter" class="form-control">
-                    <option value="">All subjects </option>
-                    <option value="Math">Math</option>
-                    <option value="CS">CS</option>
-                </select>
-            </section>
-            <section class="mb-3">
-                <label for="areaFilter" class="mr-2">area:</label>
-                <select id="areaFilter" class="form-control">
-                    <option value="">All areas</option>
-                    <option value="New Cairo">New Cairo</option>
-                    <option value="rehab">rehab</option>
-                    <option value="Nasr City">Nasr City</option>
-                </select>
-            </section>
-            <section class="mb-3">
-                <label for="governorateFilter" class="mr-2">governorate:</label>
-                <select id="governorateFilter" class="form-control">
-                    <option value="">All governorates</option>
-                    <option value="Cairo">Cairo</option>
-                    <option value="Alex">Alex</option>
-                    <option value="Fayoum">Fayoum</option>
-                    <option value="Aswan"> Aswan</option>
-                </select>
-            </section>
+            <main>
+                <section class="mb-3" style="display: inline-block; width: 30%;">
+                    <label for="subjectFilter" class="mr-2">Subject:</label>
+                    <select id="subjectFilter" class="form-control">
+                        <option value="">All Subjects</option>
+                        <option value="Math">Math</option>
+                        <option value="CS">CS</option>
+                    </select>
+                </section>
+                <section class="mb-3" style="display: inline-block; width: 30%;">
+                    <label for="areaFilter" class="mr-2">Area:</label>
+                    <select id="areaFilter" class="form-control">
+                        <option value="">All Areas</option>
+                        <option value="New Cairo">New Cairo</option>
+                        <option value="rehab">Rehab</option>
+                        <option value="Nasr City">Nasr City</option>
+                    </select>
+                </section>
+                <section class="mb-3" style="display: inline-block; width: 30%;">
+                    <label for="governorateFilter" class="mr-2">Governorate:</label>
+                    <select id="governorateFilter" class="form-control">
+                        <option value="">All Governorates</option>
+                        <option value="Cairo">Cairo</option>
+                        <option value="Alex">Alex</option>
+                        <option value="Fayoum">Fayoum</option>
+                        <option value="Aswan">Aswan</option>
+                    </select>
+                </section>
             <section id="posts" class="mb-3">
                 <!-- Clothes items will be dynamically added here -->
             </section>
@@ -482,55 +482,103 @@ document.addEventListener('DOMContentLoaded', function() {
   ];
 
   function displayposts() {
-      posts.innerHTML = ''; // Clear the list
-      const selectedsubject = subjectFilter.value;
-      const selectedarea = areaFilter.value;
-      const selectedgovernorate = governorateFilter.value;
+  posts.innerHTML = ""; // Clear the list
+  const selectedsubject = subjectFilter.value;
+  const selectedarea = areaFilter.value;
+  const selectedgovernorate = governorateFilter.value;
 
-      post.forEach(teaching => {
-          if ((selectedsubject === '' || teaching.subject === selectedsubject) && (selectedarea === '' || teaching.area === selectedarea)
-          && (selectedgovernorate === '' || teaching.governorate === selectedgovernorate)) {
-              const listItem = document.createElement('li');
-              listItem.className = 'list-group-item';
-              listItem.innerHTML = `
-                  <div class="d-flex justify-content-between">
-                      <div>
-                          <h5 class="mb-1">${teaching.name}</h5>
-                          <p class="text-muted">subject: ${teaching.subject}, area: ${teaching.area}, governorate: ${teaching.governorate},  Google_map_marker: ${teaching. Google_map_marker}</p>
-                      </div>
-                      <span class="badge bg-primary">NumOfStudents Needed: ${teaching.NumOfStudents}</span>
-                  </div>
-              `;
-              listItem.addEventListener('click', function() {
-                  displayItemDetails(teaching);
-              });
-              posts.appendChild(listItem);
-          }
-      });
-  }
-
-  function displayItemDetails(teaching) {
-      itemDetails.innerHTML = `
-          <div class="card">
-              <div class="card-body">
-                  <h5 class="card-title">${teaching.name}</h5>
-                  <p class="card-text">subject: ${teaching.subject}, area: ${teaching.area}, governorate: ${teaching.governorate}, Google_map_marker: ${teaching.Google_map_marker}</p>
-                  <div class="form-group">
-                      <label for="donationNumOfStudents">Donation NumOfStudents:</label>
-                      <input type="number" class="form-control" id="donationNumOfStudents" min="1" max="${teaching.NumOfStudents}" value="1">
-                  </div>
-                  <button class="btn btn-primary">Donate</button>
+  post.forEach((teaching) => {
+    if (
+      (selectedsubject === "" || teaching.subject === selectedsubject) &&
+      (selectedarea === "" || teaching.area === selectedarea) &&
+      (selectedgovernorate === "" || teaching.governorate === selectedgovernorate)
+    ) {
+      const listItem = document.createElement("li");
+      listItem.className = "list-group-item";
+      listItem.innerHTML = `
+          <div class="d-flex justify-content-between">
+              <div>
+                  <h5 class="mb-1">${teaching.name}</h5>
+                  <p class="text-muted">subject: ${teaching.subject}, area: ${teaching.area}, governorate: ${teaching.governorate},  Google_map_marker: ${teaching.Google_map_marker}</p>
               </div>
+              <button type="button" class="btn btn-primary modal-success-btn">view details</button>
           </div>
       `;
+      listItem.addEventListener("click", function () {
+        displayItemDetails(teaching);
+      });
+      posts.appendChild(listItem);
+    }
+  });
+}
+
+function displayItemDetails(teaching) {
+  var modalWrap = document.getElementById("modalWrap");
+
+  if (modalWrap !== null) {
+    modalWrap.remove();
   }
 
-  displayposts();
-  subjectFilter.addEventListener('change', displayposts);
-  areaFilter.addEventListener('change', displayposts);
-  governorateFilter.addEventListener('change', displayposts);
-});
+  modalWrap = document.createElement("div");
+  modalWrap.className = "modal fade";
+  modalWrap.id = "modalWrap";
+  modalWrap.innerHTML = `
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title">Donation Details</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <h5 class="card-title">${teaching.name}</h5>
+                    <p class="card-text">subject: ${teaching.subject}, area: ${teaching.area}, governorate: ${teaching.governorate}, Google_map_marker: ${teaching.Google_map_marker}</p>
+                    <div class="form-group">
+                        <label for="donationNumOfStudents">Donation NumOfStudents:</label>
+                        <input type="number" class="form-control" id="donationNumOfStudents" min="1" max="${teaching.NumOfStudents}" value="1">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-secondary modal-cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary modal-success-btn">Donate</button>
+            </div>
+        </div>
+    </div>
+  `;
+  modalWrap.querySelector(".modal-success-btn").onclick = () =>
+            alertAndAssign();
+          modalWrap.querySelector(".modal-cancel-btn").onclick = () =>
+            window.location.assign("teacher.html");
+  document.body.appendChild(modalWrap);
 
+  var modal = new bootstrap.Modal(modalWrap);
+  modal.show();
+}
+
+function donateTeaching(maxNumOfStudents) {
+  const donationNumOfStudents = parseInt(document.getElementById("donationNumOfStudents").value);
+
+  if (donationNumOfStudents > maxNumOfStudents) {
+    alert("Invalid donation number of students. Please enter a value within the available range.");
+    return;
+  }
+
+  // Perform the donation logic here
+  // ...
+
+  alert("Donation Successful!");
+  window.location.reload(); // Refresh the page or perform any other action after successful donation
+}
+
+displayposts();
+subjectFilter.addEventListener("change", displayposts);
+areaFilter.addEventListener("change", displayposts);
+governorateFilter.addEventListener("change", displayposts);
+})
+function alertAndAssign() {
+        alert("Donation Successful!");
+        window.location.assign("teacher.html");
+      }
 </script>
 </body>
 </html>
