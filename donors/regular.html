@@ -369,16 +369,18 @@
                 <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
-	<section id="donationItems" class="padding-large">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <header class="text-center my-5">
-                <span class="text-muted">Identify Needs, Contribute to Causes</span>
-                <h2><strong>Requested Donation Items</strong></h2>
-              </header>
-            </div>
-          </div>
+            <section id="donationItems" class="padding-large">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <header class="text-center my-5">
+                                <h2><strong style="color: var(--yellow);">Requested Donation Items</strong></h2>
+                            </header>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
 
 	  <div class="row">
 		<div class="col-md-12">
@@ -479,7 +481,7 @@
 			{ name: 'Math Book', category: 'School Supplies', description: 'John Doe, language: English, edition: 1st, summary: Basic math concepts', quantity: 10 },
             { name: 'Pencil Set', category: 'School Supplies', amount: 100, quantity: 5 },
 		];
-
+        
 		// Function to filter items
 		function filterItems() {
 			const categorySelect = document.getElementById('categorySelect');
