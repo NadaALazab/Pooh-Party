@@ -20,13 +20,26 @@ function login(usern,password){
  }
  else
    if(username.slice(-12) =='organization'){
-     alert(username+" Successfully logined");
-   window.location.assign("organization.html");
+    alert(username+" Successfully logined");
+    window.location.assign("Organisation/profile/OrgProfile.html");
    }
  else{
+    if(username.toLowerCase()=='doctor'){
    alert(username +" Successfully logined");
-   window.location.assign("donor.html");
+   window.location.assign("donors/doctor.html");
  }
+ 
+ else if(username.toLowerCase()=='teacher'){
+  alert(username +" Successfully logined");
+  window.location.assign("donors/teacher.html");
+}
+else{
+  alert(username +" Successfully logined");
+  window.location.assign("donors/regular.html");
+}
+
+
+}
   
  
 }
