@@ -262,8 +262,8 @@ const showReg = (title, yesBtnLabel = 'Register', noBtnLabel = 'Cancel') => {
               <label for="proBonoCases">Number of Pro-Bono Cases</label>
               <input type="number" class="form-control" id="proBonoCases" min="0">
             </div>  
-          </form>
-          </div>
+            </div>
+            </form>
           <div class="modal-footer bg-light">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">${noBtnLabel}</button>
             <button type="button" class="btn btn-primary modal-success-btn" >${yesBtnLabel}</button>

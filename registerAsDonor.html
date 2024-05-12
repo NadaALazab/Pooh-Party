@@ -81,7 +81,7 @@
           <input
             type="text"
             class="form-control"
-            id="inputFirstName"
+            id="inputFirstName validationDefault01"
             required
           />
         </div>
@@ -98,82 +98,103 @@
             <option>Other</option>
           </select>
         </div>
+
         <div class="col-md-6">
-          <label for="inputContactNumber" class="form-label"
-            >Contact Number</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="inputContactNumber"
-            required
-          />
+          <label for="inputContactNumber" class="form-label">Contact Number</label>
+          <input type="text" class="form-control" id="inputContactNumber" required />
         </div>
+
         <div class="col-md-12">
-          <label for="inputLastName" class="form-label">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="inputLastName"
-            required
-          />
-        </div>
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail" require />
+        </div> 
         <div class="col-md-12">
           <label for="inputLastName" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="inputLastName"
-            required
-          />
+          <input type="password" class="form-control"  id="inputLastName" required />
         </div>
 
         <div class="col-md-6">
-          <label for="occupation" class="form-label"
-            >Donor Role</label
-          >
+          <label for="occupation" class="form-label">Donor Role</label>
           <!-- <input type="text" class="form-control" id="inputOrganizationType" required /> -->
-          <select name="occupation" id="occupation" class="form-select" required>
+          <select name="occupation" id="occupation" class="form-select" onchange="navigate()" required/>
             <option selected>Choose...</option>
-            <option value="regular">Regular Donor</option>
-            <option value="doctor">Doctor</option>
-            <option value="teacher">Teacher</option>
+            <option value="Regular Donor">Regular Donor</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Teacher">Teacher</option>
           </select>
         </div>
         <div class="col-6">
-          <label for="inputOrganizationAddress" class="form-label"
-            >Donor Address</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="inputOrganizationAddress"
-            placeholder="1234 Main St"
-            required
-          />
+          <label for="inputOrganizationAddress" class="form-label">Donor Address</label>
+          <input type="text" class="form-control" id="inputOrganizationAddress" placeholder="1234 Main St"  required />
         </div>
         <div class="col-6">
-          <label for="inputOrganizationArea" class="form-label"
-            >Donor Area</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="inputOrganizationArea"
-            required
-          />
+          <label for="inputOrganizationArea" class="form-label">Donor Area</label>
+          <input type="text" class="form-control" id="inputOrganizationArea" required/>
         </div>
         <div class="col-md-6">
-          <label for="inputOrganizationGovernorate" class="form-label"
-            >Donor Governorate</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="inputOrganizationGovernorate"
-            required
-          />
+          <label for="inputOrganizationGovernorate" class="form-label">Donor Governorate</label>
+          <input type="text" class="form-control" id="inputOrganizationGovernorate" required/>
         </div>
+        
+        <div id="teacherFields" class="d-none">
+          <div class="mb-4">
+            <label for="subjects" class="form-label">Subjects</label>
+            <select class="form-select" id="subjects" required>
+              <option selected>Choose...</option>
+              <option value="math">Math</option>
+              <option value="science">Science</option>
+              <option value="history">History</option>
+              <option value="english">English</option>
+                  <!-- Add more subjects as needed -->
+            </select>
+                <!-- <label for="proBonoClasses">Number of Pro-Bono Classes</label>
+                <input type="number" class="form-control" id="proBonoClasses" min="0"> -->
+            </div>
+
+            <div class="mb-4">
+                <label for="proBonoClasses" class="form-label">Number of Pro-Bono Classes</label>
+                <input type="number" class="form-control" id="proBonoClasses" min="0" required/>
+            </div>
+
+            <div class="">
+                <label for="privateTutoring" class="form-label">Number of Private Tutoring Sessions</label>
+                <input type="number" class="form-control" id="privateTutoring" min="0" required/>
+            </div>
+         </div>
+
+         <!-- <div id="documentUpload" class="d-none">
+               <label for="document">Upload Document</label>
+               <input type="file" id="document" name="document" accept=".pdf,.doc,.docx">
+         </div> -->
+         
+         <div id="doctorFields" class="d-none">
+            <div class="mb-4">
+              <label for="clinicLocation" class="form-label">Clinic Location</label>
+              <input type="text" class="form-control" id="clinicLocation" required/>
+            </div>
+              
+            <div class="mb-4">
+              <label for="specialty" class="form-label">Specialty</label>
+              <select class="form-select" id="specialty" required>
+                <option value="">Select Specialty</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="neurology">Neurology</option>
+                <option value="pediatrics">Pediatrics</option>
+                <!-- Add more specialties as needed -->
+              </select>
+            </div>
+            <div class="">
+              <label for="proBonoCases" class="form-label">Number of Pro-Bono Cases</label>
+              <input type="number" class="form-control" id="proBonoCases" min="0" required/>
+            </div>  
+          </div>
+          <div id="documentUpload" class=" d-none">
+           <label for="inputDocumentUpload" class="form-label">Document Upload for Donor Verification (For Doctor & Teacher)</label>
+           <input type="file" class="form-control" id="inputDocumentUpload" required />
+         </div>
+
+
         <div class="col-12">
           <label for="inputGoogleMapLocation" class="form-label"
             >Google Map Location</label
@@ -187,17 +208,6 @@
           ></iframe>
         </div>
 
-        <div class="col-12">
-          <label for="inputDocumentUpload" class="form-label"
-            >Document Upload for Donor Verification (For Doctor & Teacher)</label
-          >
-          <input
-            type="file"
-            class="form-control"
-            id="inputDocumentUpload"
-            required
-          />
-        </div>
         <div class="col-12">
           <!-- <div class="addmore col-12"></div>
           <button type="button" onclick="addNew()" class="mt-2">
@@ -219,13 +229,7 @@
           <br>
         </div>
         <div class="col-12 text-right">
-          <button
-            type="button"
-            class="btn btn-primary"
-            onclick="redirectToMain()"
-          >
-            Register
-          </button>
+          <button type="submit" class="btn btn-primary" onclick="redirectToMain()">Register</button>
         </div>
       </form>
     </section>
@@ -286,15 +290,15 @@
         var value = document.getElementById("occupation").value;
         localStorage.setItem("type", value);
         switch (value) {
-            case "doctor":
+            case "Doctor":
                 alert(value + " Successfully registered"); // Assuming you have a page named clothes.html
                 redirectUrl = "donors/doctor.html";
                 break;
-            case "regular_donor":
+            case "Regular Donor":
                 alert(value + " Successfully registered");
                 redirectUrl = "donors/regular.html"; // Assuming you have a page named toys.html
                 break;
-            case "teacher":
+            case "Teacher":
                 alert(value + " Successfully registered");
                 redirectUrl = "donors/teacher.html"; // Assuming you have a page named food.html
                 break;
@@ -308,36 +312,66 @@
         //  });
         // });
       }
-        // window.location.href = "./main.html";
-      function register(occu) {
-        // document.addEventListener('DOMContentLoaded', function() {
-        let occupation = occu.toLowerCase();
-        let redirectUrl = "";
+      function navigate() {
+        var occupation = document.getElementById('occupation').value;
+        var documentUpload = document.getElementById('documentUpload');
+        var doctorFields = document.getElementById('doctorFields'); // Doctor-specific fields
+        var teacherFields = document.getElementById('teacherFields'); // Teacher-specific fields
 
-        // Determine the redirect URL based on the selected category
-        switch (occupation) {
-            case "doctor":
-                alert(occupation + " Successfully registered"); // Assuming you have a page named clothes.html
-                redirectUrl = "doctor.html";
-                break;
-            case "regular_donor":
-                alert(occupation + " Successfully registered");
-                redirectUrl = "regular.html"; // Assuming you have a page named toys.html
-                break;
-            case "teacher":
-                alert(occupation + " Successfully registered");
-                redirectUrl = "teacher.html"; // Assuming you have a page named food.html
-                break;
-            default:
-                alert("Enter Valid data");
-          //redirectUrl = 'main.html'; // Assuming you have a homepage named main.html
+        // Show or hide the document upload section based on occupation
+        if (occupation === 'Doctor' || occupation === 'Teacher') {
+           documentUpload.classList.remove('d-none');
+        } else {
+           documentUpload.classList.add('d-none');
         }
+      
+        // Show or hide the doctor-specific fields based on occupation
+        if (occupation === 'Doctor') {
+           doctorFields.classList.remove('d-none');
+           teacherFields.classList.add('d-none'); // Ensure teacher fields are hidden when doctor is selected
+        } else {
+           doctorFields.classList.add('d-none');
+        }
+      
+        // Show or hide the teacher-specific fields based on occupation
+        if (occupation === 'Teacher') {
+           teacherFields.classList.remove('d-none');
+           doctorFields.classList.add('d-none'); // Ensure doctor fields are hidden when teacher is selected
+        } else {
+           teacherFields.classList.add('d-none');
+        }
+      
+      }      
+        // window.location.href = "./main.html";
+      // function register(occu) {
+      //   // document.addEventListener('DOMContentLoaded', function() {
+      //   let occupation = occu.toLowerCase();
+      //   let redirectUrl = "";
 
-        // Redirect the user to the selected category page
-        window.location.href = redirectUrl;
-        //  });
-        // });
-      }
+      //   // Determine the redirect URL based on the selected category
+      //   switch (occupation) {
+      //       case "doctor":
+      //           alert(occupation + " Successfully registered"); // Assuming you have a page named clothes.html
+      //           redirectUrl = "doctor.html";
+      //           break;
+      //       case "regular":
+      //           alert(occupation + " Successfully registered");
+      //           redirectUrl = "regular.html"; // Assuming you have a page named toys.html
+      //           break;
+      //       case "teacher":
+      //           alert(occupation + " Successfully registered");
+      //           redirectUrl = "teacher.html"; // Assuming you have a page named food.html
+      //           break;
+      //       default:
+      //           alert("Enter Valid data");
+      //     //redirectUrl = 'main.html'; // Assuming you have a homepage named main.html
+      //   }
+
+      //   // Redirect the user to the selected category page
+      //   window.location.href = redirectUrl;
+      //   //  });
+      //   // });
+      // }
     </script>
   </body>
 </html>
