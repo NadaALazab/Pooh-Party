@@ -67,7 +67,6 @@
                     <option selected>Choose...</option>
                     <option>Male</option>
                     <option>Female</option>
-                    <option>Other</option>
                 </select>
             </div>
             <div class="col-md-12">
@@ -84,8 +83,14 @@
             </div>
 
             <div class="col-md-6">
-                <label for="inputOrganizationType" class="form-label">Organization Type</label>
-                <input type="text" class="form-control" id="inputOrganizationType" required />
+                <label for="inputOrganizationType" class="form-label">Organization type</label>
+                <select id="inputOrganizationType" class="form-select" required>
+                    <option selected>Choose...</option>
+                    <option>School</option>
+                    <option>Hospital</option>
+                    <option>Orphanage</option>
+
+                </select>
             </div>
             <div class="col-6">
                 <label for="inputOrganizationAddress" class="form-label">Organization Address</label>
