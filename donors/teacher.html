@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" type="x-icon" href="../images/logo2.png" />
-    <title>Add post Donation</title>
+    <title>Teaching Donation</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link
@@ -53,19 +53,25 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="teacher.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span class="yellow">Dashboard</span></a>
             </li>
-
-            <!-- Divider -->
             <hr class="sidebar-divider">
 
+            <!-- Divider -->
+            <!-- <hr class="sidebar-divider"> -->
+            
             <!-- Heading -->
             <div class="sidebar-heading">
                 Interface
             </div>
-
+            
+            <li class="nav-item active">
+                <a class="nav-link" href="OrgList.html">
+                    <i class="fas fa-solid fa-users"></i>
+                    <span class="yellow">View Organization</span></a>
+            </li>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -73,13 +79,13 @@
                     <i class="fas fa-solid fa-users"></i>
                     <span class="yellow">Accounts</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
                         <a class="collapse-item" href="DonorsList1.html">Donors</a>
                         <a class="collapse-item" href="OrgList.html">Organizations</a>
                     </div>
-                </div>
+                </div> -->
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
@@ -89,7 +95,7 @@
                     <i class="fas fa-solid fa-plus"></i>
                     <span class=" yellow">Requests</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                <!-- <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
@@ -97,7 +103,7 @@
                         <a class="collapse-item" href="utilities-border.html">Organizations</a>
                         
                     </div>
-                </div>
+                </div> -->
             </li>
 
             <!-- Divider -->
@@ -118,27 +124,27 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <a class="collapse-item" href="#">Login</a>
+                        <!-- <a class="collapse-item" href="register.html">Register</a> -->
+                        <a class="collapse-item" href="#">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <a class="collapse-item" href="#">404 Page</a>
+                        <a class="collapse-item" href="#">Blank Page</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span class="yellow">Charts</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-table"></i>
                     <span class="yellow">Tables</span></a>
             </li>
@@ -333,14 +339,14 @@
                         <li class="nav-item dropdown no-arrow"  >
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                                <span class="mr-2 d-none d-lg-inline yellow small" >Sherif Yehia</span>
+                                <span class="mr-2 d-none d-lg-inline yellow small" >Marwa Khaled</span>
                                 <img class="img-profile rounded-circle"
                                     src="../images/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="profileDonor.html">
+                                <a class="dropdown-item" href="profileTeacher.html">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -372,12 +378,12 @@
               <div class="col-md-12">
                 <header class="text-center my-5">
                     <span class="text-muted">Identify Needs, Contribute to Causes</span>
-                    <h1 class="font-weight-bold yellow">Post donation requests</h1>
+                    <h1 class="font-weight-bold yellow">Teaching Requests</h1>
                 </header>
               </div>
             </div>
             <main>
-                <section class="mb-3" style="display: inline-block; width: 30%;">
+                <section class="mb-3" style="display: inline-block; width: 32%;">
                     <label for="subjectFilter" class="mr-2">Subject:</label>
                     <select id="subjectFilter" class="form-control">
                         <option value="">All Subjects</option>
@@ -385,7 +391,7 @@
                         <option value="CS">CS</option>
                     </select>
                 </section>
-                <section class="mb-3" style="display: inline-block; width: 30%;">
+                <section class="mb-3" style="display: inline-block; width: 32%;">
                     <label for="areaFilter" class="mr-2">Area:</label>
                     <select id="areaFilter" class="form-control">
                         <option value="">All Areas</option>
@@ -394,7 +400,7 @@
                         <option value="Nasr City">Nasr City</option>
                     </select>
                 </section>
-                <section class="mb-3" style="display: inline-block; width: 30%;">
+                <section class="mb-3" style="display: inline-block; width: 35%;">
                     <label for="governorateFilter" class="mr-2">Governorate:</label>
                     <select id="governorateFilter" class="form-control">
                         <option value="">All Governorates</option>
@@ -481,6 +487,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const post = [
       { name: 'organization1',  subject: 'Math', area: 'New Cairo', governorate: 'Cairo', NumOfStudents: 10 },
       { name: 'organization2', subject: 'CS', area: 'Nasr City', governorate: 'Cairo', NumOfStudents: 5 },
+        { name: 'organization3', subject: 'Math', area: 'Rehab', governorate: 'Cairo', NumOfStudents: 7 },
+        { name: 'organization4', subject: 'CS', area: 'New Cairo', governorate: 'Cairo', NumOfStudents: 3 },
       // Add more items as needed
   ];
 
@@ -504,7 +512,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   <h5 class="mb-1">${teaching.name}</h5>
                   <p class="text-muted">subject: ${teaching.subject}, area: ${teaching.area}, governorate: ${teaching.governorate}</p>
               </div>
-              <button type="button" class="btn btn-primary modal-success-btn">view details</button>
+              <button type="button" style="color: var(--yellow);" class="btn sidebar-dark modal-success-btn">view details</button>
           </div>
       `;
       listItem.addEventListener("click", function () {
@@ -547,7 +555,8 @@ function displayItemDetails(teaching) {
             </div>
             <div class="modal-footer bg-light">
                 <button type="button" class="btn btn-secondary modal-cancel-btn" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary modal-success-btn">Donate</button>
+                <button type="button" style="color: var(--yellow);" class="btn  modal-success-btn sidebar-dark">Donate</button>
+
             </div>
         </div>
     </div>

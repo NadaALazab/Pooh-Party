@@ -55,7 +55,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="doctor.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span class="yellow">Dashboard</span></a>
             </li>
@@ -68,6 +68,12 @@
                 Interface
             </div>
 
+            <li class="nav-item active">
+                <a class="nav-link" href="OrgList.html">
+                    <i class="fas fa-solid fa-users"></i>
+                    <span class="yellow">View Organization</span></a>
+            </li>
+            <!-- <hr class="sidebar-divider"> -->
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -75,13 +81,13 @@
                     <i class="fas fa-solid fa-users"></i>
                     <span class="yellow">Accounts</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
                         <a class="collapse-item" href="DonorsList1.html">Donors</a>
                         <a class="collapse-item" href="OrgList.html">Organizations</a>
                     </div>
-                </div>
+                </div> -->
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
@@ -91,7 +97,8 @@
                     <i class="fas fa-solid fa-plus"></i>
                     <span class=" yellow">Requests</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                <hr class="sidebar-divider">
+                <!-- <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
@@ -99,11 +106,11 @@
                         <a class="collapse-item" href="utilities-border.html">Organizations</a>
                         
                     </div>
-                </div>
+                </div> -->
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider">  -->
 
             <!-- Heading -->
             <div class="sidebar-heading">
@@ -120,33 +127,33 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <a class="collapse-item" href="#">Home Page</a>
+                        <!-- <a class="collapse-item" href="#">Register</a> -->
+                        <a class="collapse-item" href="#">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <a class="collapse-item" href="#">404 Page</a>
+                        <a class="collapse-item" href="#">Blank Page</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span class="yellow">Charts</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-table"></i>
                     <span class="yellow">Tables</span></a>
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            <!-- <hr class="sidebar-divider d-none d-md-block"> -->
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -335,14 +342,14 @@
                         <li class="nav-item dropdown no-arrow"  >
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                                <span class="mr-2 d-none d-lg-inline yellow small" >Sherif Yehia</span>
+                                <span class="mr-2 d-none d-lg-inline yellow small" >Hassan Wael</span>
                                 <img class="img-profile rounded-circle"
                                     src="../images/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="profileDonor.html">
+                                <a class="dropdown-item" href="profileDoctor.html">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -374,7 +381,7 @@
         <h1 class="yellow font-weight-bold">Medical Cases</h1>
       </header>
       <main>
-        <section class="mb-3" style="display: inline-block; width: 30%;">
+        <section class="mb-3" style="display: inline-block; width: 49%;">
             <label for="specialtyFilter" class="mr-2">Medical Specialty:</label>
             <select id="specialtyFilter" class="form-control">
                 <option value="">All Specialties</option>
@@ -383,7 +390,7 @@
                 <option value="cardiology">Cardiology</option>
             </select>
         </section>
-        <section class="mb-3" style="display: inline-block; width: 30%;">
+        <section class="mb-3" style="display: inline-block; width: 50%;">
             <label for="organizationFilter" class="mr-2">Organization:</label>
             <select id="organizationFilter" class="form-control">
                 <option value="">All Organizations</option>
@@ -392,7 +399,7 @@
                 <option value="organization3">Organization 3</option>
             </select>
         </section>
-        <section class="mb-3" style="display: inline-block; width: 30%;">
+        <section class="mb-3" style="display: inline-block; width: 49%;">
             <label for="areaFilter" class="mr-2">Area:</label>
             <select id="areaFilter" class="form-control">
                 <option value="">All Areas</option>
@@ -401,7 +408,7 @@
                 <option value="area3">Area 3</option>
             </select>
         </section>
-        <section class="mb-3" style="display: inline-block; width: 30%;">
+        <section class="mb-3" style="display: inline-block; width: 50%;">
             <label for="governorateFilter" class="mr-2">Governorate:</label>
             <select id="governorateFilter" class="form-control">
                 <option value="">All Governorates</option>
@@ -556,7 +563,7 @@
                 <h5 class="mb-1">${medicalCase.name}</h5>
                 <p class="text-muted">Age: ${medicalCase.age},   Gender: ${medicalCase.gender},   Weight: ${medicalCase.weight},   Location: ${medicalCase.location},  Address:${medicalCase.address}</p>
             </div>
-            <button type="button" class="btn btn-primary modal-success-btn">view details</button>
+            <button type="button" style="color: var(--yellow);" class="btn sidebar-dark modal-success-btn">view details</button>
           </div>
           `;
       listItem.addEventListener("click", function () {
@@ -594,8 +601,8 @@ function displayItemDetails(medicalCase) {
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110507.97104653851!2d31.342592!3d30.054809599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e21f28cf1d7%3A0x30bcfb14f962d52c!2sBaron%20Empain%20Palace!5e0!3m2!1sen!2seg!4v1715436994495!5m2!1sen!2seg" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </p>
                             <button type="button" class="btn btn-secondary modal-cancel-btn" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-primary modal-success-btn">Donate</button>
-                        </div>
+                            <button type="button" style="color: var(--yellow);" class="btn  modal-success-btn sidebar-dark">Donate</button>
+                       </div>
                     </div>
                 </div>
             </div>

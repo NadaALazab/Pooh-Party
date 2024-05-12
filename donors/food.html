@@ -51,7 +51,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="regular.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span class="yellow">Home</span></a>
+                    <span class="yellow">Dashboard</span></a>
             </li>
 
             <!-- Divider -->
@@ -62,6 +62,12 @@
                 Interface
             </div>
 
+            <li class="nav-item active">
+                <a class="nav-link" href="OrgList.html">
+                    <i class="fas fa-solid fa-users"></i>
+                    <span class="yellow">View Organization</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -69,13 +75,13 @@
                     <i class="fas fa-solid fa-users"></i>
                     <span class="yellow">Accounts</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
                         <a class="collapse-item" href="DonorsList1.html">Donors</a>
                         <a class="collapse-item" href="OrgList.html">Organizations</a>
                     </div>
-                </div>
+                </div> -->
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
@@ -85,7 +91,7 @@
                     <i class="fas fa-solid fa-plus"></i>
                     <span class=" yellow">Requests</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                <!-- <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
@@ -93,7 +99,7 @@
                         <a class="collapse-item" href="utilities-border.html">Organizations</a>
                         
                     </div>
-                </div>
+                </div> -->
             </li>
 
             <!-- Divider -->
@@ -114,27 +120,27 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <a class="collapse-item" href="#">Login</a>
+                        <!-- <a class="collapse-item" href="#">Register</a> -->
+                        <a class="collapse-item" href="#">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <a class="collapse-item" href="#">404 Page</a>
+                        <a class="collapse-item" href="#">Blank Page</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span class="yellow">Charts</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-table"></i>
                     <span class="yellow">Tables</span></a>
             </li>
@@ -370,7 +376,7 @@
                 <h1 class="yellow font-weight-bold">Food donation requests</h1>
               </header>
             </div>
-          </div>
+        </div>
         <main>
             <section class="mb-3">
                 <label for="typeFilter" class="mr-2">Type:</label>
@@ -389,24 +395,6 @@
                 <!-- Item details will be dynamically added here -->
             </section>
     <div class="container"><br>
-    <h1 class="yellow">Transportation Form</h1>
-    <form id="donorForm">
-      <div class="form-group">
-        <label for="transportationType">Transportation Type:</label>
-        <select class="form-control" id="transportationType">
-            <option selected>Choose...</option>
-          <option value="truck">Truck</option>
-          <option value="car">Car</option>
-          <option value="motorcycle">Motorcycle</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="pickupTime">Pickup Time:</label>
-        <input class="form-control" type="time" id="pickupTime">
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    <div id="etaContainer"></div>
   </div>
   <!-- End of Main Content -->
 
@@ -523,7 +511,7 @@
                   <h5 class="mb-1">${food.name}</h5>
                   <p class="text-muted">Type: ${food.type} , quantity:${food.quantity}</p>
               </div>
-              <button type="button" class="btn btn-primary modal-success-btn">view details</button>
+              <button type="button" style="color: var(--yellow);" class="btn sidebar-dark modal-success-btn">view details</button>
           </div>
       `;
       listItem.addEventListener('click', function() {
@@ -556,9 +544,24 @@ function displayItemDetails(food) {
                             <div class="form-group">
                                 <label for="donationQuantity">Donation Quantity:</label>
                                 <input type="number" class="form-control" id="donationQuantity" min="1" max="${food.quantity}" value="1">
+                                <form id="donorForm">
+            <div class="form-group">
+              <label for="transportationType">Transportation Type:</label>
+              <select class="form-control" id="transportationType">
+                <option value="truck">Truck</option>
+                <option value="car">Car</option>
+                <option value="motorcycle">Motorcycle</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pickupTime">Pickup Time:</label>
+              <input class="form-control" type="time" id="pickupTime" />
+            </div>
+          </form>
+          <div id="etaContainer"></div>
                             </div>
                             <button type="button" class="btn btn-secondary modal-cancel-btn" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-primary modal-success-btn">Donate</button>
+                            <button type="button" style="color: var(--yellow);" class="btn  modal-success-btn sidebar-dark">Donate</button>
                         </div>
                     </div>
                 </div>
@@ -581,7 +584,7 @@ function displayItemDetails(food) {
 displayFoodItems();
 typeFilter.addEventListener('change', displayFoodItems);
 function alertAndAssign() {
-        alert("Donation Successful!");
+    alert("Donation Successful! , ETA 5:00 pm");
         window.location.assign("food.html");
       }     
 });
