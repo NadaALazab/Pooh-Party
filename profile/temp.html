@@ -357,6 +357,16 @@
                 </nav>
                 <!-- End of Topbar -->
 
+
+
+
+
+
+
+
+
+
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -366,216 +376,91 @@
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
+                    <section class="form-control padding-mid m-4 w-75 mx-auto">
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputOrganizationName" class="form-label">Organization Name</label>
+                                <input type="text" class="form-control" id="inputOrganizationName" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputFirstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="inputFirstName" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputLastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="inputLastName" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputGender" class="form-label">Gender</label>
+                                <select id="inputGender" class="form-select" required>
+                                    <option selected>Choose...</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="inputLastName" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputLastName" required />
+                            </div>
+                            <div class="col-md-12">
+                                <label for="inputLastName" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="inputLastName" required />
+                            </div>
+                            <div class="col-md-12">
+                                <label for="inputContactNumber" class="form-label">Contact Number</label>
+                                <input type="text" class="form-control" id="inputContactNumber" required />
+                            </div>
 
-                    <section class="h-100 h-custom">
-                
-                        <div class="container py-5 h-100">
-                            <div class="col justify-content-center align-items-center"
-                                style="width: 25%;border-radius: 16px;margin-left: 2px;">
-                                <div style="font-weight: bold;">
-                                    <label class="font-weight-bold mt-3">Donor:</label>
-                                    <a href="profile.html" style="font-weight: 100; text-decoration: underline;"> Sherif Yehia</a>
+                            <div class="col-md-6">
+                                <label for="inputOrganizationType" class="form-label">Organization Type</label>
+                                <input type="text" class="form-control" id="inputOrganizationType" required />
+                            </div>
+                            <div class="col-6">
+                                <label for="inputOrganizationAddress" class="form-label">Organization Address</label>
+                                <input type="text" class="form-control" id="inputOrganizationAddress"
+                                    placeholder="1234 Main St" required />
+                            </div>
+                            <div class="col-6">
+                                <label for="inputOrganizationArea" class="form-label">Organization Area</label>
+                                <input type="text" class="form-control" id="inputOrganizationArea" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputOrganizationGovernorate" class="form-label">Organization
+                                    Governorate</label>
+                                <input type="text" class="form-control" id="inputOrganizationGovernorate" required />
+                            </div>
+                            <div class="col-12">
+                                <label for="inputGoogleMapLocation" class="form-label">Google Map Location</label>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319"
+                                    width="100%" height="200" frameborder="0" style="border: 0"></iframe>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="inputDocumentUpload" class="form-label">Document Upload for Organization
+                                    Verification</label>
+                                <input type="file" class="form-control" id="inputDocumentUpload" required />
+                            </div>
+                            <div class="col-12">
+                                <div class="addmore col-12"></div>
+                                <button type="button" onclick="addNew()" class="mt-2">
+                                    Add New One
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck" required />
+                                    <label class="form-check-label" for="gridCheck">
+                                        Check me out
+                                    </label>
                                 </div>
                             </div>
-                            <div class="row d-flex justify-content-center align-items-center h-100">
-                                <div class="col-12">
-                                    <div class="card card-registration card-registration-2" style="border-radius: 15px;">
-                                        <div class="card-body p-0">
-                                            <div class="row g-0">
-                                                <div class="col-lg-8">
-                                                    <div class="p-5">
-                                                        <div class="d-flex justify-content-between align-items-center mb-5">
-                                                            <h1 class="fw-bold mb-0 text-black">Donated Items</h1>
-                                                            <!-- <h6 class="mb-0 text-muted">11 items</h6> -->
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-3 col-lg-3 col-xl-3">
-                                                                <h6 class="text-muted">Image</h6>
-                                                            </div>
-                                                            <div class="col-md-3 col-lg-3 col-xl-3">
-                                                                <h6 class="text-muted">Type</h6>
-                                                            </div>
-                                                            <div class="col-md-4 col-lg-4 col-xl-4">
-                                                                <h6 class="text-muted">Quantity</h6>
-                                                            </div>
-                                                            <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                <h6 class="text-muted">Size</h6>
-                                                            </div>
-                
-                                                        </div>
-                                                        <hr class="my-4">
-                
-                                                        <div class="row mb-4 d-flex justify-content-between align-items-center">
-                                                            <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp"
-                                                                    class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                                            </div>
-                                                            <div class="col-md-3 col-lg-3 col-xl-3">
-                                                                <h6 class="text-muted">Shirt</h6>
-                                                                <h6 class="text-black mb-0">Cotton T-shirt</h6>
-                                                            </div>
-                                                            <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                                <!-- <button data-mdb-button-init data-mdb-ripple-init
-                                                                    class="btn btn-link px-2"
-                                                                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                                                                    style="text-decoration: none;">
-                                                                    -
-                                                                </button> -->
-                
-                                                                <input id="form1" min="0" name="quantity" value="6" type="number"
-                                                                    class="form-control form-control-sm" readonly />
-                
-                                                                <!-- <button data-mdb-button-init data-mdb-ripple-init
-                                                                    class="btn btn-link px-2"
-                                                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                                                                    style="text-decoration: none;">
-                                                                    +
-                                                                </button> -->
-                                                            </div>
-                                                            <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                                                <h6 class="text-black mb-0">Medium</h6>
-                                                            </div>
-                
-                                                        </div>
-                
-                                                        <hr class="my-4">
-                
-                                                        <div class="row mb-4 d-flex justify-content-between align-items-center">
-                                                            <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img6.webp"
-                                                                    class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                                            </div>
-                                                            <div class="col-md-3 col-lg-3 col-xl-3">
-                                                                <h6 class="text-muted">Shirt</h6>
-                                                                <h6 class="text-black mb-0">Cotton T-shirt</h6>
-                                                            </div>
-                                                            <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                                <!-- <button data-mdb-button-init data-mdb-ripple-init
-                                                                    class="btn btn-link px-2"
-                                                                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                                                                    style="text-decoration: none;">
-                                                                    -
-                                                                </button> -->
-                
-                                                                <input id="form1" min="0" name="quantity" value="1" type="number"
-                                                                    class="form-control form-control-sm" readonly />
-                
-                                                                <!-- <button data-mdb-button-init data-mdb-ripple-init
-                                                                    class="btn btn-link px-2"
-                                                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                                                                    style="text-decoration: none;">
-                                                                    +
-                                                                </button> -->
-                                                            </div>
-                                                            <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                                                <h6 class="text-black mb-0">Medium</h6>
-                                                            </div>
-                
-                                                        </div>
-                
-                                                        <hr class="my-4">
-                
-                                                        <div class="row mb-4 d-flex justify-content-between align-items-center">
-                                                            <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img7.webp"
-                                                                    class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                                            </div>
-                                                            <div class="col-md-3 col-lg-3 col-xl-3">
-                                                                <h6 class="text-muted">Shirt</h6>
-                                                                <h6 class="text-black mb-0">Cotton T-shirt</h6>
-                                                            </div>
-                                                            <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                                <!-- <button data-mdb-button-init data-mdb-ripple-init
-                                                                        class="btn btn-link px-2"
-                                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                                                                        style="text-decoration: none;">
-                                                                        -
-                                                                    </button> -->
-                
-                                                                <input id="form1" min="0" name="quantity" value="4" type="number"
-                                                                    class="form-control form-control-sm" readonly />
-                
-                                                                <!-- <button data-mdb-button-init data-mdb-ripple-init
-                                                                        class="btn btn-link px-2"
-                                                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                                                                        style="text-decoration: none;">
-                                                                        +
-                                                                    </button> -->
-                                                            </div>
-                                                            <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                                                <h6 class="text-black mb-0">Large</h6>
-                                                            </div>
-                
-                                                        </div>
-                
-                                                        <hr class="my-4">
-                
-                                                        <!-- <div class="pt-5">
-                                                            <h6 class="mb-0"><a href="#!" class="text-body"><i
-                                                                        class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a>
-                                                            </h6>
-                                                        </div> -->
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 bg-grey">
-                                                    <div class="p-5">
-                                                        <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
-                                                        <hr class="my-4">
-                
-                                                        <div class="d-flex justify-content-between mb-4">
-                                                            <h5 class="text-uppercase" style="font-weight: bold;">items</h5>
-                                                            <h5 class="text-uppercase" style="font-weight:normal;">11</h5>
-                                                        </div>
-                
-                                                        <h5 class="text-uppercase mb-3">Pickup Address</h5>
-                
-                
-                                                        <div class="mb-5">
-                                                            <div data-mdb-input-init class="form-outline">
-                                                                <input type="text" id="form3Examplea2"
-                                                                    class="form-control form-control-lg" readonly
-                                                                    value="25th El Sharabeya, Cairo, EG" />
-                                                            </div>
-                                                        </div>
-                
-                
-                                                        <h5 class="text-uppercase mb-3">Date and Time Chosen</h5>
-                
-                                                        <div class="mb-5">
-                                                            <div data-mdb-input-init class="form-outline">
-                                                                <input type="text" id="form3Examplea2"
-                                                                    class="form-control form-control-lg" readonly
-                                                                    value="07/09/2023 09:53 PM" />
-                                                            </div>
-                                                        </div>
-                                                        <h5 class="text-uppercase mb-3">Date and Time Fulfilled</h5>
-                                                        <div class="mb-5">
-                                                            <div data-mdb-input-init class="form-outline">
-                                                                <input type="text" id="form3Examplea2"
-                                                                    class="form-control form-control-lg" readonly value=" - " />
-                                                            </div>
-                                                        </div>
-                
-                                                        <hr class="my-4">
-                
-                                                        <div class="d-flex justify-content-between mb-5">
-                                                            <h5 class="text-uppercase">Donation Category</h5>
-                                                            <h5 class="text-uppercase" style="font-weight:normal;">Clothes</h5>
-                                                        </div>
-                
-                                                        <a type="button" data-mdb-button-init data-mdb-ripple-init
-                                                            class="btn btn-dark btn-block btn-lg" data-mdb-ripple-color="dark"
-                                                            href="organization.html">Back
-                                                        </a>
-                
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="col-12">
+                                <button type="button" class="btn btn-primary"
+                                    onclick="redirectToMain()">Register</button>
                             </div>
-                        </div>
+                        </form>
                     </section>
                 </div>
                 <!-- /.container-fluid -->
