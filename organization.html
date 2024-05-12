@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Organization</title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="author" content="TemplatesJungle" />
+  <meta name="keywords" content="Free HTML CSS Website Template for Non-profit Organizations" />
+  <meta name="description" content="Free HTML CSS Website Template for Non-profit Organizations" />
+  <link rel="shortcut icon" type="x-icon" href="images/logo2.png" />
+  <link rel="stylesheet" type="text/css" href="css/vendor.css" />
+  <link href="plugins/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="notification-style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- script
+	================================================== -->
+  <script src="js/modernizr.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
+  <div id="overlayer">
+    <span class="loader">
+      <div class="dot dot-1"></div>
+      <div class="dot dot-2"></div>
+      <div class="dot dot-3"></div>
+    </span>
+  </div>
+
+  <header class="site-header position-fixed py-1 text-white">
+    <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="organization.html"><img src="images/logo4.png" class="logo" width="90"
+            height="90" /></a>
+
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end align-items-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <div class="notification-box clickable">
+                  <div id="bell">
+                    <span class="notification-count">2</span>
+                    <div class="notification-bell">
+                      <span class="bell-top"></span>
+                      <span class="bell-middle"></span>
+                      <span class="bell-bottom"></span>
+                      <span class="bell-rad"></span>
+                    </div>
+                  </div>
+                  <div class="notifications" style="display: none" id="box">
+                    <h2>Notifications - 2</h2>
+                    <div id="item">
+                      <div class="notifications-item" onclick="scrollToTarget('Sponge');">
+                        <img
+                          src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c82dd5b3-b0d8-44e8-b11d-a50e55b7b9de/df88w1u-28c92797-9336-4acc-bc3e-ade5a7c0d290.png/v1/fit/w_828,h_1104/spongebob_png_vector_by_carlosoof10_df88w1u-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTUzNiIsInBhdGgiOiJcL2ZcL2M4MmRkNWIzLWIwZDgtNDRlOC1iMTFkLWE1MGU1NWI3YjlkZVwvZGY4OHcxdS0yOGM5Mjc5Ny05MzM2LTRhY2MtYmMzZS1hZGU1YTdjMGQyOTAucG5nIiwid2lkdGgiOiI8PTExNTEifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.RbNAWRFJen8H8-BsMNetSzlKmqMbGusdF5Q_Fum9js0"
+                          alt="img" />
+                        <div class="text">
+                          <h4>Sponge Bob</h4>
+                          <p>Chose to fulfill clothes donation</p>
+                        </div>
+                        <div class="mt-4">
+                          <a href="pickup.html" id="href1" style="text-decoration: underline">Coordinate pickup</a>
+                        </div>
+                      </div>
+                      <div class="notifications-item" onclick="scrollToTarget('Patrick');">
+                        <img
+                          src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c82dd5b3-b0d8-44e8-b11d-a50e55b7b9de/dfquid8-d90263cc-d78a-46dd-a679-dc8b5213ca70.png/v1/fit/w_728,h_931/st__patrick_by_carlosoof10_dfquid8-375w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTMxIiwicGF0aCI6IlwvZlwvYzgyZGQ1YjMtYjBkOC00NGU4LWIxMWQtYTUwZTU1YjdiOWRlXC9kZnF1aWQ4LWQ5MDI2M2NjLWQ3OGEtNDZkZC1hNjc5LWRjOGI1MjEzY2E3MC5wbmciLCJ3aWR0aCI6Ijw9NzI4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.nskvIUkKExh2-PBM0MvLsNaP_6_g4vS-FwZ2_2O76Ls"
+                          alt="img" />
+                        <div class="text">
+                          <h4>Patrick Star</h4>
+                          <p>Chose to fulfill seafood donation</p>
+                        </div>
+                        <div class="mt-4">
+                          <a href="pickup.html" id="href2" style="text-decoration: underline">Coordinate pickup</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-4" href="#intro">Intro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-4" href="#post">Posts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-4" href="#events">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-4" href="#latest-stories">Stories</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-expanded="false">Pages</a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a href="updateProfile.html" class="dropdown-item">Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="blog.html" class="dropdown-item" href="#scrollspyHeading4">Blog <span
+                        class="badge bg-warning">PRO</span></a>
+                  </li>
+                  <li>
+                    <a href="contact.html" class="dropdown-item" href="#scrollspyHeading5">Contact <span
+                        class="badge bg-warning">PRO</span></a>
+                  </li>
+                  <li>
+                    <a href="single-post.html" class="dropdown-item" href="#scrollspyHeading5">Single <span
+                        class="badge bg-warning">PRO</span></a>
+                  </li>
+                  <li>
+                    <a href="styles.html" class="dropdown-item" href="#scrollspyHeading5">Styles <span
+                        class="badge bg-warning">PRO</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary btn-lg rounded-pill me-4" href="main.html">Log out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="intro" class="padding-large jarallax">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="section-title my-5">
+            <h2 class="text-white display-2">Welcome!</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card-dark" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-body">
+              <h3>Sponsor a child</h3>
+              <p>
+                Nibh urna, nunc molestie mi id lorem. Dui egestas non dum ut
+                risus augue. Arcu eget a donec turpis.
+              </p>
+              <a href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-dark" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-body">
+              <h3>Make Donation</h3>
+              <p>
+                Quisque montes, convallis lectus massa, in enim ut. Eu
+                consequat at dolor tempor.
+              </p>
+              <a href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-dark" data-aos="fade-up" data-aos-delay="600">
+            <div class="card-body">
+              <h3>Start a fundraiser</h3>
+              <p>
+                Lacus vitae mauris morbi molestie vulputate per. Metus
+                sollicitudin urna orci sapien mattis netus lacus.
+              </p>
+              <a href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="images/banner.jpg" class="jarallax-img" />
+  </section>
+
+  <section id="post" class="padding-large">
+    <div class="container">
+      <h2>Submit Donation Posts</h2>
+      <form id="donationForm">
+        <div class="form-group"></div>
+        <div id="donations"></div>
+        <button type="button" class="btn btn-primary mt-2" onclick="addDonation()">
+          Add Donation
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <section id="mission" class="padding-large no-padding-top">
+    <div class="container">
+      <h2>Manage Donation Posts</h2>
+      <div class="btn-group mt-4" style="display: flex; justify-content: flex-end">
+        <div style="display: flex; align-items: center; margin-right: 10px">
+          <span class="rounded-circle d-inline-block mr-4" style="
+                width: 20px;
+                height: 20px;
+                background-color: rgb(187, 223, 255);
+              "></span>
+          <span style="margin-left: 5px">Approved</span>
+        </div>
+        <div style="display: flex; align-items: center; margin-right: 10px">
+          <span class="rounded-circle d-inline-block mr-4" style="
+                width: 20px;
+                height: 20px;
+                background-color: rgb(99, 149, 194);
+              "></span>
+          <span style="margin-left: 5px">Chosen</span>
+        </div>
+        <div style="display: flex; align-items: center">
+          <span class="rounded-circle d-inline-block ml-4"
+            style="width: 20px; height: 20px; background-color: #092035"></span>
+          <span style="margin-left: 5px">Fulfilled</span>
+        </div>
+      </div>
+
+      <div class="card mt-4" style="background-color: rgb(187, 223, 255)">
+        <div class="card-header text-light">Food Donation</div>
+        <div class="card-body">
+          <p class="card-text text-dark" style="text-decoration: underline">
+            Nickelodean Organisation are announcing a new Donor: <br />
+          </p>
+
+          <p style="font-weight: bold; color: #000">
+            WE URGENTLY NEED 5 ACTORS TO PLAY AT THE NEW SPONGEBOB MOVIE
+          </p>
+          <p>
+            1- Squidward <br />
+            2- SpongeBob <br />
+            3- Patrick <br />
+            4- Krabs <br />
+            5- Sandy <br />
+          </p>
+          <a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
+        </div>
+      </div>
+      <div class="card mt-4" style="background-color: rgb(99, 149, 194)" id="Sponge">
+        <div class="card-header text-light">Clothes Donation</div>
+        <div class="card-body">
+          <div style="font-weight: bold">
+            <label class="font-weight-bold mt-3">Donor:</label>
+            <a href="profile.html" style="font-weight: 100; text-decoration: underline">
+              Sponge Bob</a>
+          </div>
+          <div style="font-weight: bold">
+            <label class="font-weight-bold mt-3">Donation ID:</label>
+            <a href="donation.html" style="font-weight: 100; text-decoration: underline">
+              #1F02Janakh387</a>
+          </div>
+          <br />
+          <a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
+          <a class="btn btn-primary" href="pickup.html">Coordinate Pickup & Dropoff</a>
+        </div>
+      </div>
+      <div class="card mt-4" style="background-color: rgb(99, 149, 194)" id="Patrick">
+        <div class="card-header text-light">Seafood Donation</div>
+        <div class="card-body">
+          <a href="profile.html" style="text-decoration: underline">
+            <div style="font-weight: bold">
+              <label class="font-weight-bold mt-3">Donor:</label>
+              <a href="profile.html" style="font-weight: 100; text-decoration: underline">
+                Patrick Star</a>
+            </div>
+            <div style="font-weight: bold">
+              <label class="font-weight-bold mt-3">Donation ID:</label>
+              <a href="donation.html" style="font-weight: 100; text-decoration: underline">
+                #1F02Janakh387</a>
+            </div>
+            <br />
+          </a>
+          <a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
+          <a class="btn btn-primary" href="pickup.html">Coordinate Pickup & Dropoff</a>
+        </div>
+      </div>
+
+      <div class="card mt-4" style="background-color: #092035">
+        <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; left: 95px; top: 14px" width="20" height="20"
+          fill="white" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+        </svg>
+        <div class="card-header text-light">Clothes</div>
+        <div class="card-body">
+          <div style="font-weight: bold; color: wheat">
+            <label class="font-weight-bold mt-3">Donor:</label>
+            <a href="profile.html" style="
+                  font-weight: 100;
+                  text-decoration: underline;
+                  color: white;
+                ">
+              John Smith</a>
+          </div>
+          <div style="font-weight: bold; color: wheat">
+            <label class="font-weight-bold mt-3">Donation ID:</label>
+            <a href="donation.html" style="
+                  font-weight: 100;
+                  text-decoration: underline;
+                  color: white;
+                ">
+              #1F02Janakh387</a>
+          </div>
+          <br />
+          <a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission" class="bg-grey padding-large">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <header class="text-center my-5">
+            <span class="text-muted">know more</span>
+            <h2><strong>About Help Children Organization</strong></h2>
+          </header>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4" data-aos="fade-zoom-in" data-aos-delay="300">
+          <h3>About HCO</h3>
+          <p>
+            Lacus vitae mauris morbi molestie vulputate lorem semper. Metus
+            sollicitudin urna orci sapien mattis netus lacus.
+          </p>
+          <a href="#" class="btn-link">Read more</a>
+        </div>
+        <div class="col-md-4" data-aos="fade-zoom-in" data-aos-delay="600">
+          <h3>About HCO</h3>
+          <p>
+            Lacus vitae mauris morbi molestie vulputate lorem semper. Metus
+            sollicitudin urna orci sapien mattis netus lacus.
+          </p>
+          <a href="#" class="btn-link">Read more</a>
+        </div>
+        <div class="col-md-4" data-aos="fade-zoom-in" data-aos-delay="900">
+          <h3>About HCO</h3>
+          <p>
+            Lacus vitae mauris morbi molestie vulputate lorem semper. Metus
+            sollicitudin urna orci sapien mattis netus lacus.
+          </p>
+          <a href="#" class="btn-link">Read more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events" class="padding-large">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <header class="text-center my-5">
+            <span class="text-muted">Join us</span>
+            <h2><strong>Events & Programs</strong></h2>
+          </header>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <ol class="list-group list-group-flush" data-aos="fade-zoom-in">
+            <li class="list-group-item d-flex justify-content-between align-items-start py-4">
+              <div class="ms-2 me-5 text-uppercase">
+                <span>Sat, Sep 25</span>
+              </div>
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">September Low-Cost Clinic</div>
+                <span class="text-muted">Help Children Save Lives</span>
+              </div>
+              <a href="#" class="btn btn-primary rounded-pill">Learn more</a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start py-4">
+              <div class="ms-2 me-5 text-uppercase">
+                <span>Fri, Oct 01</span>
+              </div>
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">October Free Clinic</div>
+                <span class="text-muted">Help Children Save Lives</span>
+              </div>
+              <a href="#" class="btn btn-primary rounded-pill">Learn more</a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start py-4">
+              <div class="ms-2 me-5 text-uppercase">
+                <span>Fri, Oct 02</span>
+              </div>
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Monthly Dental Checkup</div>
+                <span class="text-muted">Help Children Save Lives</span>
+              </div>
+              <a href="#" class="btn btn-primary rounded-pill">Learn more</a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="latest-stories" class="pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <header class="text-center my-5">
+            <span class="text-muted">Read our</span>
+            <h2><strong>News & Stories</strong></h2>
+          </header>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-evenly">
+        <div class="post-item col">
+          <figure class="zoom-effect">
+            <a href="#" class="zoom-in">
+              <img src="images/post-thumb-1.jpg" alt="stories" class="lgpostImg" />
+            </a>
+          </figure>
+          <a href="single-post.html" class="post-title">Take Your Jeans From Sunday Brunch To A Monday Work Meeting</a>
+        </div>
+        <div class="post-item col">
+          <figure class="zoom-effect">
+            <a href="#" class="zoom-in"><img src="images/post-thumb-2.jpg" alt="stories" class="lgpostImg" /></a>
+          </figure>
+          <a href="single-post.html" class="post-title">How To Wear Your 501 Jeans For Every Occasion</a>
+        </div>
+        <div class="post-item col">
+          <figure class="zoom-effect">
+            <a href="#" class="zoom-in"><img src="images/post-thumb-3.jpg" alt="stories" class="lgpostImg" /></a>
+          </figure>
+          <a href="single-post.html" class="post-title">Going To The Grocery Store Has Never Looked So Good</a>
+        </div>
+        <div class="post-item col">
+          <figure class="zoom-effect">
+            <a href="#" class="zoom-in"><img src="images/post-thumb-4.jpg" alt="stories" class="lgpostImg" /></a>
+          </figure>
+          <a href="single-post.html" class="post-title">Going To The Grocery Store Has Never Looked So Good</a>
+        </div>
+        <div class="post-item col">
+          <figure class="zoom-effect">
+            <a href="#" class="zoom-in"><img src="images/post-thumb-4.jpg" alt="stories" class="lgpostImg" /></a>
+          </figure>
+          <a href="single-post.html" class="post-title">Going To The Grocery Store Has Never Looked So Good</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="donate" class="cta jarallax padding-large text-white">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="section-title justify-content-between col-md-5 mt-5">
+          <header>
+            <h2><strong>Sponsor a Child</strong></h2>
+            <p class="text-white">
+              Nibh urna, nunc molestie mi id lorem. Dui egestas non adipiscing
+              interdum ut risus augue. Arcu eget a donec turpis.
+            </p>
+          </header>
+          <button class="btn btn-primary btn-lg rounded-pill">Donate</button>
+        </div>
+      </div>
+    </div>
+    <img src="images/banner.jpg" class="jarallax-img" />
+  </section>
+
+  <!-- <section id="pickup" class="padding-large no-padding-top">
+		<div class="container">
+			<h2>Coordinate Donation Pickup</h2>
+			<div class="card mt-4 bg-secondary">
+				<div class="card-header">
+				  Toys
+				</div>
+				<div class="card-body">
+				  <h5 class="card-title">Donation details</h5>
+				  <p class="card-text">DEtailssssssss are hereeeeee</p>
+				  <a href="#" class="btn btn-primary">Delete Post</a>
+				</div>
+			</div>
+			<div class="card mt-4 bg-red">
+				<div class="card-header">
+				  Food
+				</div>
+				<div class="card-body">
+				  <h5 class="card-title">Donation details</h5>
+				  <p class="card-text">DEtailssssssss are hereeeeee</p>
+				  <a href="#" class="btn btn-primary">Delete Post</a>
+				</div>
+			</div>
+			<div class="card mt-4 bg-green">
+				<div class="card-header">
+				  Clothes
+				</div>
+				<div class="card-body">
+				  <h5 class="card-title">Donation details</h5>
+				  <p class="card-text">DEtailssssssss are hereeeeee</p>
+				  <a href="#" class="btn btn-primary">Delete Post</a>
+				</div>
+			</div>
+		</div>
+	</section> -->
+
+  <footer class="padding-large text-white bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <img src="images/logo2.png" />
+          <p>
+            <a href="mailto:HandinHand@gmail.com">HandinHand@gmail.com</a><br />
+            15Th Nasr Rd, Cairo, Egypt<br />
+            011-554-8798-6556
+          </p>
+          <ul class="justify-content-start list-unstyled d-flex">
+            <li>
+              <a href="#" class="nav-link"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#" class="nav-link"><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#" class="nav-link"><ion-icon name="logo-skype"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#" class="nav-link"><ion-icon name="logo-pinterest"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#" class="nav-link"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-4 col-md-2">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">Facebook</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">Twitter</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">Instagram</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">Pinterest</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">YouTube</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-4 col-md-2">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-4 col-md-2">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between flex-wrap py-4 my-4 border-top">
+        <p>© 2024 Hand-in-Hand, Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="plugins/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/notification-script.js"></script>
+</body>
+
+<script>
+  var donationDetails = "";
+  var selectedCategory = "";
+  var type = localStorage.getItem("type");
+  var entries = {};
+  function addDonation() {
+    var donationsDiv = document.getElementById("donations");
+
+    var card = document.createElement("div");
+    card.classList.add("card", "mb-4");
+
+    var cardBody = document.createElement("div");
+    cardBody.classList.add("card-body");
+
+    var selectCategory = document.createElement("select");
+    selectCategory.classList.add("form-control", "mb-2");
+    if (type.toLocaleLowerCase() === "school") {
+      selectCategory.innerHTML = `
+		<option value="">Select Category</option>
+        <option value="Toys">Toys</option>
+        <option value="School Supplies">School Supplies</option>
+		<option value="Pro-bono teaching">Pro-bono teaching</option>
+
+    `;
+    }
+    if (type.toLocaleLowerCase() === "hospital") {
+      {
+        selectCategory.innerHTML = `
+		<option value="">Select Category</option>
+        <option value="Medical Supplies">Medical Supplies</option>
+        <option value="Blood Donations">Blood Donations</option>
+		<option value="Pro-bono doctor visits">Pro-bono doctor visits</option>
+
+    `;
+      }
+    }
+    if (type.toLocaleLowerCase() === "orphanage") {
+      {
+        selectCategory.innerHTML = `
+		<option value="">Select Category</option>
+        <option value="Clothes">Clothes</option>
+        <option value="Food">Food</option>        
+        <option value="Toys">Toys</option>
+        <option value="School Supplies">School Supplies</option>
+    `;
+      }
+    }
+
+    cardBody.appendChild(selectCategory);
+    var inputFieldsDiv = document.createElement("div");
+    inputFieldsDiv.id = "inputFieldsDiv";
+    selectCategory.addEventListener("change", function () {
+      selectedCategory = selectCategory.value;
+      inputFieldsDiv.innerHTML = "";
+      if (selectedCategory === "School Supplies") {
+        createInputField("School Name", "text", "schoolName");
+        createInputField("Quantity", "number", "quantityss");
+        createInputField("Type", "text", "type");
+        createFileUploadField("Upload Pictures", "schoolPictures");
+      } else if (selectedCategory === "Medical Supplies") {
+        createInputField("Item Name", "text", "itemName");
+        createInputField("Quantity", "number", "quantityms");
+        createFileUploadField("Upload Pictures", "medicalPictures");
+      } else if (selectedCategory === "Clothes") {
+        createInputField("Size", "text", "size");
+        createFileUploadField("Upload Pictures", "clothesPictures");
+      } else if (selectedCategory === "Toys") {
+        createInputField("Toy Name", "text", "toyName");
+        createInputField("Age Group", "text", "ageGroup");
+        createFileUploadField("Upload Pictures", "toyPictures");
+      } else if (selectedCategory === "Pro-bono teaching") {
+        createInputField("Subject", "text", "subject");
+        createInputField("Grade Level", "text", "gradeLevel");
+        createFileUploadField("Upload Pictures", "teachingPictures");
+      } else if (selectedCategory === "Blood Donations") {
+        createInputField("Blood Type", "text", "bloodType");
+        createInputField("Quantity", "number", "quantitybd");
+        createFileUploadField("Upload Pictures", "bloodPictures");
+      } else if (selectedCategory === "Food") {
+        createInputField("Food Type", "text", "foodType");
+        createInputField("Quantity", "number", "quantityf");
+        createFileUploadField("Upload Pictures", "foodPictures");
+      } else if (selectedCategory === "Pro-bono doctor visits") {
+        createInputField("Doctor Name", "text", "doctorName");
+        createInputField("Specialization", "text", "specialization");
+        createFileUploadField("Upload Pictures", "doctorPictures");
+      }
+    });
+
+    function createInputField(labelText, inputType, id) {
+      var label = document.createElement("label");
+      label.textContent = labelText + ": ";
+
+      var input = document.createElement("input");
+      input.type = labelText;
+      input.classList.add("form-control", "mb-2");
+      input.id = id;
+      inputFieldsDiv.appendChild(label);
+      inputFieldsDiv.appendChild(input);
+    }
+
+    function createFileUploadField(labelText) {
+      var label = document.createElement("label");
+      label.textContent = labelText + ": ";
+      var fileInput = document.createElement("input");
+      fileInput.type = "file";
+      fileInput.classList.add("form-control-file", "mb-2");
+      inputFieldsDiv.appendChild(label);
+      inputFieldsDiv.appendChild(fileInput);
+    }
+    [];
+    cardBody.appendChild(selectCategory);
+    cardBody.appendChild(inputFieldsDiv);
+
+    var submitButton = document.createElement("button");
+    submitButton.type = "button";
+    submitButton.classList.add("btn", "btn-primary", "mr-2");
+    submitButton.textContent = "Submit";
+    submitButton.onclick = function () {
+      if (selectCategory.value == "") {
+        window.alert("Fill in this fields");
+      } else {
+        window.alert("Post is submitted and waiting for approval");
+        inputFieldsDiv.setAttribute("readonly", "readonly");
+        selectCategory.setAttribute("readonly", "readonly");
+        donationDetails = "";
+        if (selectedCategory.toLowerCase() === "school supplies") {
+          donationDetails +=
+            "<strong>School Name:</strong> " +
+            getInputValue("schoolName") +
+            "<br>";
+          donationDetails +=
+            "<strong>Quantity:</strong> " +
+            getInputValue("quantityss") +
+            "<br>";
+          donationDetails +=
+            "<strong>Type:</strong> " + getInputValue("type") + "<br>";
+
+          // Add entries to the entries object
+          entries.schoolName = getInputValue("schoolName");
+          entries.quantityss = getInputValue("quantityss");
+          entries.type = getInputValue("type");
+        } else if (selectedCategory.toLowerCase() === "medical supplies") {
+          donationDetails +=
+            "<strong>Item Name:</strong> " +
+            getInputValue("itemName") +
+            "<br>";
+          donationDetails +=
+            "<strong>Quantity:</strong> " +
+            getInputValue("quantityms") +
+            "<br>";
+
+          // Add entries to the entries object
+          entries.itemName = getInputValue("itemName");
+          entries.quantityms = getInputValue("quantityms");
+        } else if (selectedCategory.toLowerCase() === "clothes") {
+          donationDetails +=
+            "<strong>Size:</strong> " + getInputValue("size") + "<br>";
+
+          // Add entries to the entries object
+          entries.size = getInputValue("size");
+        } else if (selectedCategory.toLowerCase() === "toys") {
+          donationDetails +=
+            "<strong>Toy Name:</strong> " + getInputValue("toyName") + "<br>";
+          donationDetails +=
+            "<strong>Age Group:</strong> " +
+            getInputValue("ageGroup") +
+            "<br>";
+
+          // Add entries to the entries object
+          entries.toyName = getInputValue("toyName");
+          entries.ageGroup = getInputValue("ageGroup");
+        } else if (selectedCategory.toLowerCase() === "pro-bono teaching") {
+          donationDetails +=
+            "<strong>Subject:</strong> " + getInputValue("subject") + "<br>";
+          donationDetails +=
+            "<strong>Grade Level:</strong> " +
+            getInputValue("gradeLevel") +
+            "<br>";
+
+          // Add entries to the entries object
+          entries.subject = getInputValue("subject");
+          entries.gradeLevel = getInputValue("gradeLevel");
+        } else if (selectedCategory.toLowerCase() === "blood donations") {
+          donationDetails +=
+            "<strong>Blood Type:</strong> " +
+            getInputValue("bloodType") +
+            "<br>";
+          donationDetails +=
+            "<strong>Quantity:</strong> " +
+            getInputValue("quantitybd") +
+            "<br>";
+
+          // Add entries to the entries object
+          entries.bloodType = getInputValue("bloodType");
+          entries.quantitybd = getInputValue("quantitybd");
+        } else if (selectedCategory.toLowerCase() === "food") {
+          donationDetails +=
+            "<strong>Food Type:</strong> " +
+            getInputValue("foodType") +
+            "<br>";
+          donationDetails +=
+            "<strong>Quantity:</strong> " +
+            getInputValue("quantityf") +
+            "<br>";
+
+          // Add entries to the entries object
+          entries.foodType = getInputValue("foodType");
+          entries.quantityf = getInputValue("quantityf");
+        } else if (
+          selectedCategory.toLowerCase() === "pro-bono doctor visits"
+        ) {
+          donationDetails +=
+            "<strong>Doctor Name:</strong> " +
+            getInputValue("doctorName") +
+            "<br>";
+          donationDetails +=
+            "<strong>Specialization:</strong> " +
+            getInputValue("specialization") +
+            "<br>";
+
+          // Add entries to the entries object
+          entries.doctorName = getInputValue("doctorName");
+          entries.specialization = getInputValue("specialization");
+        }
+
+        var fileInput = inputFieldsDiv.querySelector("input[type='file']");
+        if (fileInput && fileInput.files.length > 0) {
+          donationDetails += "<strong>Uploaded Pictures:</strong><br>";
+          for (var i = 0; i < fileInput.files.length; i++) {
+            donationDetails +=
+              "<img src='" +
+              URL.createObjectURL(fileInput.files[i]) +
+              "' height='100'><br>";
+            entries.image =
+              URL.createObjectURL(fileInput.files[i]);
+
+          }
+        }
+        function getInputValue(inputId) {
+          var inputField = document.getElementById(inputId.trim()).value;
+          if (inputField != "") {
+            return inputField;
+          }
+          return "";
+        }
+        selectedCategory = selectCategory.value;
+        submitButton.style.display = "none";
+        editButton.style.display = "inline-block";
+        deleteButton.style.display = "inline-block";
+
+        // Transforming the card
+        console.log(card.classList);
+        card.classList.remove("mb-3");
+        card.classList.add("mt-4");
+        card.classList.add("card");
+
+        cardBody.innerHTML = `
+    <div class="card-header">
+        ${selectedCategory}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title text-dark">Donation details</h5>
+        <div class="card-text text-dark">${donationDetails}</div>
+        <div style="display: flex; justify-content: space-between;">
+            <div>
+                <a href="#post" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
+                <a href="#post" class="btn btn-primary" onclick="editPost(selectedCategory, donationDetails)">Edit Post</a>
+            </div>
+            <div>
+                <p>Pending</p>
+            </div>
+        </div>
+    </div>
+`;
+      }
+    };
+
+    cardBody.appendChild(submitButton);
+
+    var editButton = document.createElement("button");
+    editButton.type = "button";
+    editButton.classList.add("btn", "btn-primary", "mr-2");
+    editButton.textContent = "Edit";
+    editButton.style.display = "none";
+    editButton.onclick = function () {
+      input.removeAttribute("readonly");
+      selectCategory.removeAttribute("readonly");
+      input.focus();
+      submitButton.style.display = "inline-block";
+      editButton.style.display = "none";
+      deleteButton.style.display = "none";
+    };
+    cardBody.appendChild(editButton);
+
+    var deleteButton = document.createElement("button");
+    deleteButton.type = "button";
+    deleteButton.classList.add("btn", "btn-danger", "m-2");
+    deleteButton.textContent = "Delete";
+    deleteButton.style.display = "none";
+    deleteButton.onclick = function () {
+      card.parentNode.removeChild(card);
+      window.alert("Post is deleted");
+    };
+
+    cardBody.appendChild(deleteButton);
+
+    card.appendChild(cardBody);
+    donationsDiv.appendChild(card);
+  }
+
+  function editPost(selectedCategory, donationDetails) {
+    var card = event.target.closest(".card");
+    var cardBody = card.querySelector(".card-body");
+    cardBody.innerHTML = "";
+    var selectCategory = document.createElement("select");
+    selectCategory.classList.add("form-control", "mb-2");
+    if (type.toLocaleLowerCase() === "school") {
+      selectCategory.innerHTML = `
+		<option value="">Select Category</option>
+        <option value="Toys">Toys</option>
+        <option value="School Supplies">School Supplies</option>
+		<option value="Pro-bono teaching">Pro-bono teaching</option>
+
+    `;
+    }
+    if (type.toLocaleLowerCase() === "hospital") {
+      {
+        selectCategory.innerHTML = `
+		<option value="">Select Category</option>
+        <option value="Medical Supplies">Medical Supplies</option>
+        <option value="Blood Donations">Blood Donations</option>
+		<option value="Pro-bono doctor visits">Pro-bono doctor visits</option>
+
+    `;
+      }
+    }
+    if (type.toLocaleLowerCase() === "orphanage") {
+      {
+        selectCategory.innerHTML = `
+		<option value="">Select Category</option>
+        <option value="Clothes">Clothes</option>
+        <option value="Food">Food</option>        
+        <option value="Toys">Toys</option>
+        <option value="School Supplies">School Supplies</option>
+    `;
+      }
+    }
+    selectCategory.value = selectedCategory;
+    cardBody.appendChild(selectCategory);
+    var inputFieldsDiv = document.createElement("div");
+    inputFieldsDiv.id = "inputFieldsDiv";
+    selectedCategory = selectCategory.value;
+    inputFieldsDiv.innerHTML = "";
+    if (selectedCategory === "School Supplies") {
+      createInputField("School Name", "text", "schoolName");
+      createInputField("Quantity", "number", "quantityss");
+      createInputField("Type", "text", "type");
+      createFileUploadField("Upload Pictures", "schoolPictures");
+    } else if (selectedCategory === "Medical Supplies") {
+      createInputField("Item Name", "text", "itemName");
+      createInputField("Quantity", "number", "quantityms");
+      createFileUploadField("Upload Pictures", "medicalPictures");
+    } else if (selectedCategory === "Clothes") {
+      createInputField("Size", "text", "size");
+      createFileUploadField("Upload Pictures", "clothesPictures");
+    } else if (selectedCategory === "Toys") {
+      createInputField("Toy Name", "text", "toyName");
+      createInputField("Age Group", "text", "ageGroup");
+      createFileUploadField("Upload Pictures", "toyPictures");
+    } else if (selectedCategory === "Pro-bono teaching") {
+      createInputField("Subject", "text", "subject");
+      createInputField("Grade Level", "text", "gradeLevel");
+      createFileUploadField("Upload Pictures", "teachingPictures");
+    } else if (selectedCategory === "Blood Donations") {
+      createInputField("Blood Type", "text", "bloodType");
+      createInputField("Quantity", "number", "quantitybd");
+      createFileUploadField("Upload Pictures", "bloodPictures");
+    } else if (selectedCategory === "Food") {
+      createInputField("Food Type", "text", "foodType");
+      createInputField("Quantity", "number", "quantityf");
+      createFileUploadField("Upload Pictures", "foodPictures");
+    } else if (selectedCategory === "Pro-bono doctor visits") {
+      createInputField("Doctor Name", "text", "doctorName");
+      createInputField("Specialization", "text", "specialization");
+      createFileUploadField("Upload Pictures", "doctorPictures");
+    }
+    selectCategory.addEventListener("change", function () {
+      selectedCategory = selectCategory.value;
+      inputFieldsDiv.innerHTML = "";
+      if (selectedCategory === "School Supplies") {
+        createInputField("School Name", "text", "schoolName");
+        createInputField("Quantity", "number", "quantityss");
+        createInputField("Type", "text", "type");
+        createFileUploadField("Upload Pictures", "schoolPictures");
+      } else if (selectedCategory === "Medical Supplies") {
+        createInputField("Item Name", "text", "itemName");
+        createInputField("Quantity", "number", "quantityms");
+        createFileUploadField("Upload Pictures", "medicalPictures");
+      } else if (selectedCategory === "Clothes") {
+        createInputField("Size", "text", "size");
+        createFileUploadField("Upload Pictures", "clothesPictures");
+      } else if (selectedCategory === "Toys") {
+        createInputField("Toy Name", "text", "toyName");
+        createInputField("Age Group", "text", "ageGroup");
+        createFileUploadField("Upload Pictures", "toyPictures");
+      } else if (selectedCategory === "Pro-bono teaching") {
+        createInputField("Subject", "text", "subject");
+        createInputField("Grade Level", "text", "gradeLevel");
+        createFileUploadField("Upload Pictures", "teachingPictures");
+      } else if (selectedCategory === "Blood Donations") {
+        createInputField("Blood Type", "text", "bloodType");
+        createInputField("Quantity", "number", "quantitybd");
+        createFileUploadField("Upload Pictures", "bloodPictures");
+      } else if (selectedCategory === "Food") {
+        createInputField("Food Type", "text", "foodType");
+        createInputField("Quantity", "number", "quantityf");
+        createFileUploadField("Upload Pictures", "foodPictures");
+      } else if (selectedCategory === "Pro-bono doctor visits") {
+        createInputField("Doctor Name", "text", "doctorName");
+        createInputField("Specialization", "text", "specialization");
+        createFileUploadField("Upload Pictures", "doctorPictures");
+      }
+    });
+
+
+    function createInputField(labelText, inputType, id) {
+      var label = document.createElement("label");
+      label.textContent = labelText + ": ";
+
+      var input = document.createElement("input");
+      input.type = labelText;
+      input.classList.add("form-control", "mb-2");
+      input.id = id;
+      if (entries[id])
+        input.placeholder = entries[id];
+
+      inputFieldsDiv.appendChild(label);
+      inputFieldsDiv.appendChild(input);
+    }
+
+    function createFileUploadField(labelText) {
+      var label = document.createElement("label");
+      label.textContent = labelText + ": ";
+      var fileInput = document.createElement("input");
+      fileInput.type = "file";
+      fileInput.classList.add("form-control-file", "mb-2");
+      var image = document.createElement("img");
+      image.src = entries.image;
+      image.alt = "Pre-selected Image";
+      image.height = 100;
+      image.classList.add("mb-2");
+      inputFieldsDiv.appendChild(image);
+
+      inputFieldsDiv.appendChild(label);
+      inputFieldsDiv.appendChild(fileInput);
+    }
+    [];
+    cardBody.appendChild(selectCategory);
+    cardBody.appendChild(inputFieldsDiv);
+
+    var submitButton = document.createElement("button");
+    submitButton.type = "button";
+    submitButton.classList.add("btn", "btn-primary", "mr-2");
+    submitButton.textContent = "Submit";
+    submitButton.onclick = function () {
+      if (selectCategory.value == "") {
+        window.alert("Fill in this fields");
+      } else {
+        window.alert("Post is submitted and waiting for approval");
+        inputFieldsDiv.setAttribute("readonly", "readonly");
+        selectCategory.setAttribute("readonly", "readonly");
+        donationDetails = "";
+        if (selectedCategory.toLowerCase() === "school supplies") {
+          donationDetails +=
+            "<strong>School Name:</strong> " +
+            getInputValue("schoolName") +
+            "<br>";
+          donationDetails +=
+            "<strong>Quantity:</strong> " +
+            getInputValue("quantityss") +
+            "<br>";
+          donationDetails +=
+            "<strong>Type:</strong> " + getInputValue("type") + "<br>";
+
+          // Add entries to the entries object
+          entries.schoolName = getInputValue("schoolName");
+          entries.quantityss = getInputValue("quantityss");
+          entries.type = getInputValue("type");
+        } else if (selectedCategory.toLowerCase() === "medical supplies") {
+          donationDetails +=
+            "<strong>Item Name:</strong> " +
+            getInputValue("itemName") +
+            "<br>";
+          donationDetails +=
+            "<strong>Quantity:</strong> " +
+            getInputValue("quantityms") +
+            "<br>";
+
+          // Add entries to the entries object
+          entries.itemName = getInputValue("itemName");
+          entries.quantityms = getInputValue("quantityms");
+        } else if (selectedCategory.toLowerCase() === "clothes") {
+          donationDetails +=
+            "<strong>Size:</strong> " + getInputValue("size") + "<br>";
+
+          // Add entries to the entries object
+          entries.size = getInputValue("size");
+        } else if (selectedCategory.toLowerCase() === "toys") {
+          donationDetails +=
+            "<strong>Toy Name:</strong> " + getInputValue("toyName") + "<br>";
+          donationDetails +=
+            "<strong>Age Group:</strong> " +
+            getInputValue("ageGroup") +
+            "<br>";
+
+          // Add entries to the entries object
+          entries.toyName = getInputValue("toyName");
+          entries.ageGroup = getInputValue("ageGroup");
+        } else if (selectedCategory.toLowerCase() === "pro-bono teaching") {
+          donationDetails +=
+            "<strong>Subject:</strong> " + getInputValue("subject") + "<br>";
+          donationDetails +=
+            "<strong>Grade Level:</strong> " +
+            getInputValue("gradeLevel") +
+            "<br>";
+
+          // Add entries to the entries object
+          entries.subject = getInputValue("subject");
+          entries.gradeLevel = getInputValue("gradeLevel");
+        } else if (selectedCategory.toLowerCase() === "blood donations") {
+          donationDetails +=
+            "<strong>Blood Type:</strong> " +
+            getInputValue("bloodType") +
+            "<br>";
+          donationDetails +=
+            "<strong>Quantity:</strong> " +
+            getInputValue("quantitybd") +
+            "<br>";
+
+          // Add entries to the entries object
+          entries.bloodType = getInputValue("bloodType");
+          entries.quantitybd = getInputValue("quantitybd");
+        } else if (selectedCategory.toLowerCase() === "food") {
+          donationDetails +=
+            "<strong>Food Type:</strong> " +
+            getInputValue("foodType") +
+            "<br>";
+          donationDetails +=
+            "<strong>Quantity:</strong> " +
+            getInputValue("quantityf") +
+            "<br>";
+
+          // Add entries to the entries object
+          entries.foodType = getInputValue("foodType");
+          entries.quantityf = getInputValue("quantityf");
+        } else if (
+          selectedCategory.toLowerCase() === "pro-bono doctor visits"
+        ) {
+          donationDetails +=
+            "<strong>Doctor Name:</strong> " +
+            getInputValue("doctorName") +
+            "<br>";
+          donationDetails +=
+            "<strong>Specialization:</strong> " +
+            getInputValue("specialization") +
+            "<br>";
+
+          // Add entries to the entries object
+          entries.doctorName = getInputValue("doctorName");
+          entries.specialization = getInputValue("specialization");
+        }
+
+        var fileInput = inputFieldsDiv.querySelector("input[type='file']");
+        if (fileInput && fileInput.files.length > 0) {
+          donationDetails += "<strong>Uploaded Pictures:</strong><br>";
+          for (var i = 0; i < fileInput.files.length; i++) {
+            donationDetails +=
+              "<img src='" +
+              URL.createObjectURL(fileInput.files[i]) +
+              "' height='100'><br>";
+            entries.image =
+              URL.createObjectURL(fileInput.files[i]);
+
+          }
+        }
+        function getInputValue(inputId) {
+          var inputField = document.getElementById(inputId.trim()).value;
+          if (inputField != "") {
+            return inputField;
+          }
+          return "";
+        }
+        selectedCategory = selectCategory.value;
+        submitButton.style.display = "none";
+        editButton.style.display = "inline-block";
+        deleteButton.style.display = "inline-block";
+
+        // Transforming the card
+        console.log(card.classList);
+        card.classList.remove("mb-3");
+        card.classList.add("mt-4");
+        card.classList.add("card");
+
+        cardBody.innerHTML = `
+    <div class="card-header">
+        ${selectedCategory}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title text-dark">Donation details</h5>
+        <div class="card-text text-dark">${donationDetails}</div>
+        <div style="display: flex; justify-content: space-between;">
+            <div>
+                <a href="#post" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
+                <a href="#post" class="btn btn-primary" onclick="editPost(selectedCategory, donationDetails)">Edit Post</a>
+            </div>
+            <div>
+                <p>Pending</p>
+            </div>
+        </div>
+    </div>
+`;
+      }
+    };
+
+    cardBody.appendChild(submitButton);
+    var editButton = document.createElement("button");
+    editButton.type = "button";
+    editButton.classList.add("btn", "btn-primary", "mr-2");
+    editButton.textContent = "Edit";
+    editButton.style.display = "none";
+    editButton.onclick = function () {
+      input.removeAttribute("readonly");
+      selectCategory.removeAttribute("readonly");
+      input.focus();
+      submitButton.style.display = "inline-block";
+      editButton.style.display = "none";
+      deleteButton.style.display = "none";
+    };
+    cardBody.appendChild(editButton);
+
+    var deleteButton = document.createElement("button");
+    deleteButton.type = "button";
+    deleteButton.classList.add("btn", "btn-danger", "m-2");
+    deleteButton.textContent = "Delete";
+    deleteButton.style.display = "none";
+    deleteButton.onclick = function () {
+      card.parentNode.removeChild(card);
+      window.alert("Post is deleted");
+    };
+
+    cardBody.appendChild(deleteButton);
+
+    card.appendChild(cardBody);
+    //donationsDiv.appendChild(card);
+  }
+
+  function deletePost() {
+    var card = event.target.closest(".card");
+
+    if (card) {
+      card.remove();
+      window.alert("Post is deleted");
+    }
+  }
+</script>
+
+</html>

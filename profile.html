@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Profile</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="TemplatesJungle">
+    <meta name="keywords" content="Free HTML CSS Website Template for Non-profit Organizations">
+    <meta name="description" content="Free HTML CSS Website Template for Non-profit Organizations">
+    <link rel="shortcut icon" type="x-icon" href="images/logo2.png">
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+    <link href="plugins/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="notification-style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- script
+	================================================== -->
+    <script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+    <div id="overlayer">
+        <span class="loader">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+        </span>
+    </div>
+    <section style="background-color: #092035">
+        <header class="py-1 text-white" style="background-color: #092035">
+            <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="organization.html"><img src="images/logo4.png" class="logo" width="90"
+                            height="90" /></a>
+                    <h2 class="text-White fs-3 mr-4">John's Profile</h2>
+                    <div class="notification-box clickable">
+                        <div id="bell">
+                            <span class="notification-count">2</span>
+                            <div class="notification-bell">
+                                <span class="bell-top"></span>
+                                <span class="bell-middle"></span>
+                                <span class="bell-bottom"></span>
+                                <span class="bell-rad"></span>
+
+                            </div>
+                        </div>
+                        <div class="notifications" style="display: none;" id="box">
+                            <h2>Notifications - 2</h2>
+                            <div id="item">
+                                <div class="notifications-item"> <img
+                                        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c82dd5b3-b0d8-44e8-b11d-a50e55b7b9de/df88w1u-28c92797-9336-4acc-bc3e-ade5a7c0d290.png/v1/fit/w_828,h_1104/spongebob_png_vector_by_carlosoof10_df88w1u-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTUzNiIsInBhdGgiOiJcL2ZcL2M4MmRkNWIzLWIwZDgtNDRlOC1iMTFkLWE1MGU1NWI3YjlkZVwvZGY4OHcxdS0yOGM5Mjc5Ny05MzM2LTRhY2MtYmMzZS1hZGU1YTdjMGQyOTAucG5nIiwid2lkdGgiOiI8PTExNTEifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.RbNAWRFJen8H8-BsMNetSzlKmqMbGusdF5Q_Fum9js0"
+                                        alt="img">
+                                    <div class="text">
+                                        <h4>Sponge Bob</h4>
+                                        <p>Chose to fulfill clothes donation</p>
+                                    </div>
+                                    <div class="mt-4 ">
+                                        <a href="pickup.html" style="text-decoration: underline;">Coordinate pickup</a>
+                                    </div>
+
+
+                                </div>
+                                <div class="notifications-item"> <img
+                                        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c82dd5b3-b0d8-44e8-b11d-a50e55b7b9de/dfquid8-d90263cc-d78a-46dd-a679-dc8b5213ca70.png/v1/fit/w_728,h_931/st__patrick_by_carlosoof10_dfquid8-375w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTMxIiwicGF0aCI6IlwvZlwvYzgyZGQ1YjMtYjBkOC00NGU4LWIxMWQtYTUwZTU1YjdiOWRlXC9kZnF1aWQ4LWQ5MDI2M2NjLWQ3OGEtNDZkZC1hNjc5LWRjOGI1MjEzY2E3MC5wbmciLCJ3aWR0aCI6Ijw9NzI4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.nskvIUkKExh2-PBM0MvLsNaP_6_g4vS-FwZ2_2O76Ls"
+                                        alt="img">
+                                    <div class="text">
+                                        <h4>Patrick Star</h4>
+                                        <p>Chose to fulfill seafood donation</p>
+                                    </div>
+                                    <div class="mt-4">
+                                        <a href="pickup.html" style="text-decoration: underline;">Coordinate pickup</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container py-5">
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+                                alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                            <h5 class="my-3">John Smith</h5>
+                            <p class="text-muted mb-1">Full Stack Developer</p>
+                            <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                    class="btn btn-primary">Contact</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Full Name</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">Johnatan Smith</p>
+                                </div>
+
+                            </div>
+
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Email</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">example@example.com</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Contact Number</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">(097) 234-5678</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Address</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Role</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0">Teacher</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Documents</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="text-muted mb-0" style="text-decoration: underline; cursor: pointer;">teaching-cert.pdf</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <p class="mb-4">Donations
+                                History
+                            </p>
+                            <div class="card-body">
+                                <canvas id="chLine" width="800" height="600"></canvas>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <p class="mb-4">Donations
+                                Types
+                            </p>
+                            <div class="card-body">
+                                <canvas id="chBar" width="800" height="600"></canvas>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+</body>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="plugins/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+<script src="js/notification-script.js"></script>
+<script>
+    (function ($) {
+
+        var initJarallax = function () {
+            jarallax(document.querySelectorAll(".jarallax"));
+
+            jarallax(document.querySelectorAll(".jarallax-keep-img"), {
+                keepImg: true,
+            });
+        };
+        $(document).ready(function () {
+            // preloader
+            $(window).load(function () {
+                $("#overlayer").fadeOut("slow");
+                $("body").addClass("loaded");
+            });
+
+            initJarallax();
+
+            // Animate on Scroll
+            AOS.init({
+                duration: 600,
+                once: true,
+            });
+        });
+    })(jQuery);
+    function addNew() {
+        // Create a new file input element
+        var newInput = document.createElement("input");
+        newInput.type = "file";
+        newInput.className = "form-control";
+        newInput.required = true;
+
+        // Create a new div to contain the file input
+        var newDiv = document.createElement("div");
+
+        // Check if the container already has elements
+        var container = document.querySelector(".addmore");
+        if (container.children.length > 0) {
+            newDiv.className = "col-12 mt-3"; // Add margin-top if container already has elements
+        } else {
+            newDiv.className = "col-12"; // Otherwise, keep it without margin-top
+        }
+
+        newDiv.appendChild(newInput);
+
+        // Append the new div to the parent container
+        container.appendChild(newDiv);
+    }
+    function redirectToMain() {
+        window.location.href = "./main.html";
+    }
+</script>
+<script>
+    /* chart.js chart examples */
+
+    // chart colors
+    var colors = ['#007bff', '#28a745', '#333333', '#c3e6cb', '#dc3545', '#6c757d'];
+
+    /* large line chart */
+    var chLine = document.getElementById("chLine");
+    var chartData = {
+        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        datasets: [
+            {
+                data: [3, 1, 1, 0, 5, 7, 3, 0, 0, 0, 2, 4],
+                backgroundColor: colors[3],
+                borderColor: colors[1],
+                borderWidth: 4,
+                pointBackgroundColor: colors[1]
+            }]
+    };
+    if (chLine) {
+        new Chart(chLine, {
+            type: 'line',
+            data: chartData,
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: false
+                        }
+                    }]
+                },
+                legend: {
+                    display: false
+                },
+                responsive: true
+            }
+        });
+    }
+
+    /* large pie/donut chart */
+    var chPie = document.getElementById("chPie");
+    if (chPie) {
+        new Chart(chPie, {
+            type: 'pie',
+            data: {
+                labels: ['Desktop', 'Phone', 'Tablet', 'Unknown'],
+                datasets: [
+                    {
+                        backgroundColor: [colors[1], colors[0], colors[2], colors[5]],
+                        borderWidth: 0,
+                        data: [50, 40, 15, 5]
+                    }
+                ]
+            },
+            plugins: [{
+                beforeDraw: function (chart) {
+                    var width = chart.chart.width,
+                        height = chart.chart.height,
+                        ctx = chart.chart.ctx;
+                    ctx.restore();
+                    var fontSize = (height / 70).toFixed(2);
+                    ctx.font = fontSize + "em sans-serif";
+                    ctx.textBaseline = "middle";
+                    var text = chart.config.data.datasets[0].data[0] + "%",
+                        textX = Math.round((width - ctx.measureText(text).width) / 2),
+                        textY = height / 2;
+                    ctx.fillText(text, textX, textY);
+                    ctx.save();
+                }
+            }],
+            options: { layout: { padding: 0 }, legend: { display: false }, cutoutPercentage: 80 }
+        });
+    }
+
+    /* bar chart */
+    var chBar = document.getElementById("chBar");
+    if (chBar) {
+        new Chart(chBar, {
+            type: 'bar',
+            data: {
+                labels: ["Clothes", "Food", "Toys", "Medical Supplies", "School Supplies", "Blood Donations"],
+                datasets: [{
+                    data: [4, 4, 0, 0, 10, 2],
+                    backgroundColor: colors[0]
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [{
+                        barPercentage: 0.4,
+                        categoryPercentage: 0.5
+                    }]
+                }
+            }
+        });
+    }
+
+    /* 3 donut charts */
+    var donutOptions = {
+        cutoutPercentage: 85,
+        legend: { position: 'bottom', padding: 5, labels: { pointStyle: 'circle', usePointStyle: true } }
+    };
+
+    // donut 1
+    var chDonutData1 = {
+        labels: ['Bootstrap', 'Popper', 'Other'],
+        datasets: [
+            {
+                backgroundColor: colors.slice(0, 3),
+                borderWidth: 0,
+                data: [74, 11, 40]
+            }
+        ]
+    };
+
+    var chDonut1 = document.getElementById("chDonut1");
+    if (chDonut1) {
+        new Chart(chDonut1, {
+            type: 'pie',
+            data: chDonutData1,
+            options: donutOptions
+        });
+    }
+
+    // donut 2
+    var chDonutData2 = {
+        labels: ['Wips', 'Pops', 'Dags'],
+        datasets: [
+            {
+                backgroundColor: colors.slice(0, 3),
+                borderWidth: 0,
+                data: [40, 45, 30]
+            }
+        ]
+    };
+    var chDonut2 = document.getElementById("chDonut2");
+    if (chDonut2) {
+        new Chart(chDonut2, {
+            type: 'pie',
+            data: chDonutData2,
+            options: donutOptions
+        });
+    }
+
+    // donut 3
+    var chDonutData3 = {
+        labels: ['Angular', 'React', 'Other'],
+        datasets: [
+            {
+                backgroundColor: colors.slice(0, 3),
+                borderWidth: 0,
+                data: [21, 45, 55, 33]
+            }
+        ]
+    };
+    var chDonut3 = document.getElementById("chDonut3");
+    if (chDonut3) {
+        new Chart(chDonut3, {
+            type: 'pie',
+            data: chDonutData3,
+            options: donutOptions
+        });
+    }
+
+    /* 3 line charts */
+    var lineOptions = {
+        legend: { display: false },
+        tooltips: { interest: false, bodyFontSize: 11, titleFontSize: 11 },
+        scales: {
+            xAxes: [
+                {
+                    ticks: {
+                        display: false
+                    },
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
+                    }
+                }
+            ],
+            yAxes: [{ display: false }]
+        },
+        layout: {
+            padding: {
+                left: 6,
+                right: 6,
+                top: 4,
+                bottom: 6
+            }
+        }
+    };
+
+    var chLine1 = document.getElementById("chLine1");
+    if (chLine1) {
+        new Chart(chLine1, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [
+                    {
+                        backgroundColor: '#ffffff',
+                        borderColor: '#ffffff',
+                        data: [10, 11, 4, 11, 4],
+                        fill: false
+                    }
+                ]
+            },
+            options: lineOptions
+        });
+    }
+    var chLine2 = document.getElementById("chLine2");
+    if (chLine2) {
+        new Chart(chLine2, {
+            type: 'line',
+            data: {
+                labels: ['A', 'B', 'C', 'D', 'E'],
+                datasets: [
+                    {
+                        backgroundColor: '#ffffff',
+                        borderColor: '#ffffff',
+                        data: [4, 5, 7, 13, 12],
+                        fill: false
+                    }
+                ]
+            },
+            options: lineOptions
+        });
+    }
+
+    var chLine3 = document.getElementById("chLine3");
+    if (chLine3) {
+        new Chart(chLine3, {
+            type: 'line',
+            data: {
+                labels: ['Pos', 'Neg', 'Nue', 'Other', 'Unknown'],
+                datasets: [
+                    {
+                        backgroundColor: '#ffffff',
+                        borderColor: '#ffffff',
+                        data: [13, 15, 10, 9, 14],
+                        fill: false
+                    }
+                ]
+            },
+            options: lineOptions
+        });
+    }
+</script>
+</body>
+
+</html>
