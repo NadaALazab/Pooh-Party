@@ -350,6 +350,8 @@
       -webkit-animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
       animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
     }
+
+  
     .sidebar.toggled .nav-item .collapse .collapse-inner {
       box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
       border-radius: 0.35rem;
@@ -3564,8 +3566,8 @@
   }
   
   .bg-gradient-primary {
-    background-color: #4e73df;
-    background-image: linear-gradient(180deg, #092035 2%, #224abe 100%);
+    background-color: #092035;
+    background-image:#092035 ;
     background-size: cover;
   }
   
@@ -3911,7 +3913,12 @@
     border-bottom: 1px solid #e3e6f0;
     line-height: 1.3rem;
   }
-  
+  .yellow{
+    color: #F4BE37;
+  }
+  .bar{
+    background-color: #092035;
+  }
   .topbar .dropdown-list .dropdown-item .dropdown-list-image {
     position: relative;
     height: 2.5rem;

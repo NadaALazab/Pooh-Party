@@ -28,6 +28,8 @@ function accept(acceptID,rejectID,profileID){
     profile.hidden= false;
        
 }
+
+
 const tt = document.querySelector(".number");
 
 
@@ -41,18 +43,13 @@ function eraseAll(){
 var checkboxes = document.querySelectorAll("input[type = 'checkbox']");
 
 
-function counter(organizations){
+function counter(x){
      let counter = 0;
-     var s = document.querySelectorAll('.card').hidden;
+    // var s = document.querySelectorAll('.card:hidden');
+     
 
-     organizations.forEach(function(organization){
-        
-       
-        if(!organization.hidden)
-        counter++   ;
-      });
-
-      tt.innerText = "(" +counter+")";
+     
+      tt.innerText = "(" +x+")";
 
 
 }
@@ -70,8 +67,44 @@ function counter(organizations){
 }
 function isAllNotChecked(){
     let count = 0;
-    checkboxes.forEach(function(organization){
-         if(organization.checked){
+    checkboxes.forEach(function(checkbox){
+         if(checkbox.checked){
+            count++;
+         }
+    });
+  return count;
+
+
+}
+function isTypeNotChecked(){
+    let count = 0;
+    var cc = document.querySelectorAll(".type:checked");
+    cc.forEach(function(checkbox){
+         if(checkbox.checked){
+            count++;
+         }
+    });
+  return count;
+
+
+}
+function isAreaNotChecked(){
+    let count = 0;
+    var cc = document.querySelectorAll(".area:checked");
+    cc.forEach(function(checkbox){
+         if(checkbox.checked){
+            count++;
+         }
+    });
+  return count;
+
+
+}
+function isArNotChecked(){
+    let count = 0;
+    var cc = document.querySelectorAll(".ar:checked");
+    cc.forEach(function(checkbox){
+         if(checkbox.checked){
             count++;
          }
     });
@@ -85,62 +118,141 @@ function showAll(){
     organizations.forEach(function(organization){
           organization.hidden = false;
     });
-    counter(organizations);
+    tt.innerText = "(" +6+")";
     
 }
+
+      
 function showOrhide(filter){
+    var x = 0;
+
+    var organizations = document.querySelectorAll(".card");
+
     if(isAllNotChecked()==0){
         showAll();
         
     }
     else{
-    var x = getNotHidden();
-    var organizations = document.querySelectorAll(".card");
-          var check = document.getElementById(filter);
-          console.log(check.checked);
-          if(!check.checked){
-            organizations = document.querySelectorAll("."+filter);
-            console.log(organizations);
-            organizations.forEach(function(organization){
-                organization.hidden = true;
-                x--;
-            })
-            tt.innerText = x;
-          }
-          else{
-          
+        var cc = document.querySelectorAll(".area:checked");
         organizations.forEach(function(organization){
             organization.hidden = true;
-            x--;
+            
         })
-       
- 
-        checkboxes.forEach(function(checkbox){
 
-            
-           if(checkbox.checked){
-            var ch = checkbox.id;
-        
-            organizations.forEach(function(organization){
-            
-                if(organization.classList.contains(ch) || organization.classList.contains(filter)){
+        cc.forEach(function(checkbox){
+              
+             organizations.forEach(function(organization){
+                var id = checkbox.id;
+                if(organization.classList.contains(id)){
                     organization.hidden = false;
-                    x++; 
-                }
-          
+                    x++;
+                  }
+              
+
+             });
+
+
+
         });
-        tt.innerText = x;
-    
-        }
+
+
+       if(isAreaNotChecked()!=0){
+        var ccType = document.querySelectorAll(".type:checked");
+        ccType.forEach(function(checkbox){
+              
+            organizations.forEach(function(organization){
+               var id = checkbox.id;
+               if(!organization.hidden &  !organization.classList.contains(id)){
+                   organization.hidden = true;
+                   x--;
+                 }
+             
+
+            });
+
+
+
+       });
+
+
         
-      
-    
-
-    });
-    counter(organizations);
-          }
+            
         }
-    
+        else{
+            var ccT = document.querySelectorAll(".type:checked");
+        organizations.forEach(function(organization){
+            organization.hidden = true;
+            
+        })
+
+        ccT.forEach(function(checkbox){
+              
+             organizations.forEach(function(organization){
+                var id = checkbox.id;
+                if(organization.classList.contains(id)){
+                    organization.hidden = false;
+                    x++;
+                  }
+              
+
+             });
+
+
+
+        });
+        }
+      
+        if(isArNotChecked()!=0){
+    if(isAreaNotChecked()!=0 | isTypeNotChecked()!=0){
+        var ccAR = document.querySelectorAll(".ar:checked");
+        ccAR.forEach(function(checkbox){
+              
+            organizations.forEach(function(organization){
+               var id = checkbox.id;
+               console.log(id);
+               if(!organization.hidden &  !organization.classList.contains(id)){
+                   organization.hidden = true;
+                   x--;
+                 }
+             
+
+            });
+
+
+
+       });
+
+
+        
+            
+        }
+        else{
+            var ccAR = document.querySelectorAll(".ar:checked");
+        organizations.forEach(function(organization){
+            organization.hidden = true;
+            
+        })
+
+        ccAR.forEach(function(checkbox){
+              
+             organizations.forEach(function(organization){
+                var id = checkbox.id;
+                if(organization.classList.contains(id)){
+                    organization.hidden = false;
+                    x++;
+                  }
+              
+
+             });
+
+
+
+        });
+    }
+        
+        }
+        counter(x);
+    }
+
 }
-
-
+        
