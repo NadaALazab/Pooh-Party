@@ -287,8 +287,7 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Coordinate pickup</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+
                     </div>
 
                     <div class="container" style="width:absolute;">
@@ -363,14 +362,14 @@
                         <!-- Buttons -->
                         <div class="row mt-3 mb-4">
                             <div class="col">
-                                <a type="button" href="organization.html" class="btn btn-danger w-100"
-                                    style="background-color: #F4BE37;border-color: #F4BE37;color: #092035;font-weight:bolder;">Send
+                                <a type="button" class="btn btn-danger w-100"
+                                    style="background-color: #F4BE37;border-color: #F4BE37;color: #092035;font-weight:bolder;"onclick="SendToDrivers()">Send
                                     to
                                     Drivers</a>
                             </div>
                             <div class="col">
-                                <a type="button" href="organization.html" class="btn btn-danger w-100"
-                                    style="background-color: #092035;border-color: #092035;color: white; ">Send "Out of
+                                <a type="button" class="btn btn-danger w-100"
+                                    style="background-color: #092035;border-color: #092035;color: white; " onclick="OutOfRange()">Send "Out of
                                     Range" Message
                                     to
                                     Donor</a>
@@ -440,6 +439,16 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+    <script>
+         function OutOfRange() {
+            window.alert("Message Sent!");
+            window.location.href = "OrgProfile.html";
+        }
+        function SendToDrivers() {
+            window.alert("Message sent to Drivers!");
+            window.location.href = "OrgProfile.html";
+        }
+    </script>
     <script>
         (function ($) {
 

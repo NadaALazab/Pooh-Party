@@ -391,7 +391,7 @@
                             </div>
                             
                             <div class="col-12">
-                                <button type="button" class="btn btn-primary" onclick="redirectToMain()">Save Changes</button>
+                                <button type="button" class="btn btn-primary" onclick="redirectToHome()">Save Changes</button>
                                 <button type="button" class="btn btn-primary bg-danger" onclick="deleteprofile()">Delete Account</button>
                 
                             </div>
@@ -509,14 +509,15 @@
             // Append the new div to the parent container
             container.appendChild(newDiv);
         }
-        function redirectToMain() {
+        function redirectToHome() {
+            window.alert("Changes Saved!");
             var value = document.getElementById("inputOrganizationType").value;
             localStorage.setItem("type", value);
-            window.location.href = "./main.html";
+            window.location.href = "OrgProfile.html";
         }
         function deleteprofile() {
             window.alert("Profile Deleted Successfully");
-            window.location.href = "./main.html";
+            window.location.href = "../main.html";
         }
     </script>
 
