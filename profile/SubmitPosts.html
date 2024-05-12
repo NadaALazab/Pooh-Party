@@ -45,7 +45,7 @@
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #092035;">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center " href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center " href="./OrgProfile.html">
                 <div class="sidebar-brand-icon pt-5  pb-2">
                     <img src="../images/logo3.png" class="logo" width="90" height="90" />
                 </div>
@@ -300,12 +300,6 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Register</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
                     <section id="post" class="padding-large">
                         <div class="container">
                           <h2>Submit Donation Posts</h2>
@@ -313,6 +307,7 @@
                             <div class="form-group"></div>
                             <div id="donations"></div>
                             <button
+                            style="background-color: #092035 ; color: #F4BE37;"
                               type="button"
                               class="btn btn-primary mt-2"
                               onclick="addDonation()"
@@ -503,6 +498,7 @@
           submitButton.type = "button";
           submitButton.classList.add("btn", "btn-primary", "mr-2");
           submitButton.textContent = "Submit";
+          submitButton.style="background-color: #092035 ; color: #F4BE37;"
           submitButton.onclick = function () {
             if (selectCategory.value == "") {
               window.alert("Fill in this fields");
@@ -618,7 +614,7 @@
                   donationDetails +=
                     "<img src='" +
                     URL.createObjectURL(fileInput.files[i]) +
-                    "' height='100'><br>";
+                    "' height='100' class='mt-4 mb-4'><br>";
                   entries.image=
                     URL.createObjectURL(fileInput.files[i]) ;
                     
@@ -635,7 +631,8 @@
               submitButton.style.display = "none";
               editButton.style.display = "inline-block";
               deleteButton.style.display = "inline-block";
-    
+              editButton.style="background-color: #092035 ; color: #F4BE37;"
+              
               // Transforming the card
               console.log(card.classList);
               card.classList.remove("mb-3");
@@ -651,8 +648,10 @@
             <div class="card-text text-dark">${donationDetails}</div>
             <div style="display: flex; justify-content: space-between;">
                 <div>
-                    <a href="#post" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
-                    <a href="#post" class="btn btn-primary" onclick="editPost(selectedCategory, donationDetails)">Edit Post</a>
+                  <a href="#post" style="background-color: #092035 ; color: #F4BE37;"
+ class="btn btn-primary" onclick="editPost(selectedCategory, donationDetails)">Edit Post</a>
+                  <a href="#post" class="btn btn-primary bg-danger" onclick="deletePost()">Delete Post</a>
+                    
                 </div>
                 <div>
                     <p>Pending</p>
@@ -850,6 +849,8 @@
           submitButton.type = "button";
           submitButton.classList.add("btn", "btn-primary", "mr-2");
           submitButton.textContent = "Submit";
+          submitButton.style="background-color: #092035 ; color: #F4BE37;"
+
           submitButton.onclick = function () {
             if (selectCategory.value == "") {
               window.alert("Fill in this fields");
@@ -965,7 +966,7 @@
                   donationDetails +=
                     "<img src='" +
                     URL.createObjectURL(fileInput.files[i]) +
-                    "' height='100'><br>";
+                    "' height='100' class='mt-3 mb-3'><br>";
                   entries.image=
                     URL.createObjectURL(fileInput.files[i]) ;
                     
@@ -998,8 +999,10 @@
             <div class="card-text text-dark">${donationDetails}</div>
             <div style="display: flex; justify-content: space-between;">
                 <div>
-                    <a href="#post" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
-                    <a href="#post" class="btn btn-primary" onclick="editPost(selectedCategory, donationDetails)">Edit Post</a>
+                  <a href="#post" style="background-color: #092035 ; color: #F4BE37;"
+ class="btn btn-primary" onclick="editPost(selectedCategory, donationDetails)">Edit Post</a>
+                    <a href="#post" class="btn btn-primary bg-danger" onclick="deletePost()">Delete Post</a>
+                    
                 </div>
                 <div>
                     <p>Pending</p>

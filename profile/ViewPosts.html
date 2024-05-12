@@ -40,7 +40,7 @@
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #092035;">
 
           <!-- Sidebar - Brand -->
-          <a class="sidebar-brand d-flex align-items-center justify-content-center " href="index.html">
+          <a class="sidebar-brand d-flex align-items-center justify-content-center " href="./OrgProfile.html">
               <div class="sidebar-brand-icon pt-5  pb-2">
                   <img src="../images/logo3.png" class="logo" width="90" height="90" />
               </div>
@@ -68,7 +68,7 @@
           <!-- Nav Item - Pages Collapse Menu -->
           <li class="nav-item">
               <a class="nav-link collapsed" href="ViewPosts.html">
-                  <i class="fas fa-solid fa-users"></i>
+                  <i class="fas fa-fw fa-users"></i>
                   <span class="yellow">View Posts</span>
               </a>
           </li>
@@ -298,15 +298,14 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Manage Donation Posts</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+
                     </div>
                     <section id="mission" class="padding-large no-padding-top">
                       <div class="container">
 
                         <div class="btn-group mt-4" style="display: flex; justify-content: flex-end">
                           <div style="display: flex; align-items: center; margin-right: 10px">
-                            <span class="rounded-circle d-inline-block mr-4" style="
+                            <span class="rounded-circle d-inline-block mr-2" style="
                                   width: 20px;
                                   height: 20px;
                                   background-color: rgb(187, 223, 255);
@@ -314,7 +313,7 @@
                             <span style="margin-left: 5px">Approved</span>
                           </div>
                           <div style="display: flex; align-items: center; margin-right: 10px">
-                            <span class="rounded-circle d-inline-block mr-4" style="
+                            <span class="rounded-circle d-inline-block mr-2 ml-2" style="
                                   width: 20px;
                                   height: 20px;
                                   background-color: rgb(99, 149, 194);
@@ -322,13 +321,14 @@
                             <span style="margin-left: 5px">Chosen</span>
                           </div>
                           <div style="display: flex; align-items: center">
-                            <span class="rounded-circle d-inline-block ml-4"
+                            <span class="rounded-circle d-inline-block mr-2 ml-2"
                               style="width: 20px; height: 20px; background-color: #092035"></span>
                             <span style="margin-left: 5px">Fulfilled</span>
                           </div>
                         </div>
                   
-                        <div class="card mt-4" style="background-color: rgb(187, 223, 255);">
+                        <div class="card mt-4" style="background: rgb(7,65,115);
+                        background: linear-gradient(304deg, rgba(7,65,115,1) 20%, rgba(93,235,215,1) 34%, rgba(22,121,171,1) 64%, rgba(197,255,149,1) 100%);">
                           <div class="card-header">Food Donation</div>
                           <div class="card-body">
                             <p class="card-text text-dark" style="text-decoration: underline">
@@ -338,14 +338,14 @@
                             <p style="font-weight: bold; color: #000">
                               WE URGENTLY NEED 5 ACTORS TO PLAY AT THE NEW SPONGEBOB MOVIE
                             </p>
-                            <p>
+                            <p style="color: #eee;">
                               1- Squidward <br />
                               2- SpongeBob <br />
                               3- Patrick <br />
                               4- Krabs <br />
                               5- Sandy <br />
                             </p>
-                            <a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
+                            <a href="#" class="btn btn-primary bg-danger" onclick="deletePost()">Delete Post</a>
                           </div>
                         </div>
                         <div class="card mt-4" style="background-color: rgb(99, 149, 194)" id="Sponge">
@@ -362,8 +362,8 @@
                                 #1F02Janakh387</a>
                             </div>
                             <br />
-                            <a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
-                            <a class="btn btn-primary" href="pickup.html">Coordinate Pickup & Dropoff</a>
+                            <a href="#" class="btn btn-primary bg-danger" onclick="deletePost()">Delete Post</a>
+                            <a class="btn btn-primary" style="background-color: #092035 ; color: #F4BE37;" href="pickup.html">Coordinate Pickup & Dropoff</a>
                           </div>
                         </div>
                         <div class="card mt-4" style="background-color: rgb(99, 149, 194)" id="Patrick">
@@ -377,13 +377,13 @@
                               </div>
                               <div style="font-weight: bold">
                                 <label class="font-weight-bold mt-3">Donation ID:</label>
-                                <a href="donation.html" style="font-weight: 100; text-decoration: underline">
+                                <a href="donation.html"  style="font-weight: 100; text-decoration: underline">
                                   #1F02Janakh387</a>
                               </div>
                               <br />
                             </a>
-                            <a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
-                            <a class="btn btn-primary" href="pickup.html">Coordinate Pickup & Dropoff</a>
+                            <a href="#" class="btn btn-primary bg-danger" onclick="deletePost()">Delete Post</a>
+                            <a class="btn btn-primary" style="background-color: #092035 ; color: #F4BE37;" href="pickup.html">Coordinate Pickup & Dropoff</a>
                           </div>
                         </div>
                   
@@ -398,24 +398,22 @@
                             <div style="font-weight: bold; color: wheat">
                               <label class="font-weight-bold mt-3">Donor:</label>
                               <a href="profile.html" style="
-                                    font-weight: 100;
-                                    text-decoration: underline;
-                                    color: white;
-                                  ">
+                              font-weight: 100;
+                              background-color: #092035 ; color: #F4BE37;
+                            ">
                                 John Smith</a>
                             </div>
                             <div style="font-weight: bold; color: wheat">
                               <label class="font-weight-bold mt-3">Donation ID:</label>
                               <a href="donation.html" style="
                                     font-weight: 100;
-                                    text-decoration: underline;
-                                    color: white;
+                                    background-color: #092035 ; color: #F4BE37;
                                   ">
                                 #1F02Janakh387</a>
                             </div>
                             <br />
-                            <a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
-                            <a href="#" class="btn btn-primary" onclick="Acknowledge()">Acknowledge Donor</a>
+                            <a href="#" class="btn btn-primary bg-danger" onclick="deletePost()">Delete Post</a>
+                            <a href="#" class="btn btn-primary" style="background-color: #092035 ; color: #F4BE37;" onclick="Acknowledge()">Acknowledge Donor</a>
                           </div>
                         </div>
                       </div>

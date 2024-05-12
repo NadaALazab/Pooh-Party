@@ -364,133 +364,234 @@
 
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="row" id="report">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Manage Donation Posts</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
-                    <section id="mission" class="padding-large no-padding-top">
-                      <div class="container">
+                  <div class="col-lg-4">
 
-                        <div class="btn-group mt-4" style="display: flex; justify-content: flex-end">
-                          <div style="display: flex; align-items: center; margin-right: 10px">
-                            <span class="rounded-circle d-inline-block mr-4" style="
-                                  width: 20px;
-                                  height: 20px;
-                                  background-color: rgb(187, 223, 255);
-                                "></span>
-                            <span style="margin-left: 5px">Approved</span>
-                          </div>
-                          <div style="display: flex; align-items: center; margin-right: 10px">
-                            <span class="rounded-circle d-inline-block mr-4" style="
-                                  width: 20px;
-                                  height: 20px;
-                                  background-color: rgb(99, 149, 194);
-                                "></span>
-                            <span style="margin-left: 5px">Chosen</span>
-                          </div>
-                          <div style="display: flex; align-items: center">
-                            <span class="rounded-circle d-inline-block ml-4"
-                              style="width: 20px; height: 20px; background-color: #092035"></span>
-                            <span style="margin-left: 5px">Fulfilled</span>
-                          </div>
-                        </div>
-                  
-                        <div class="card mt-4" style="background-color: rgb(187, 223, 255);">
-                          <div class="card-header">Food Donation</div>
-                          <div class="card-body">
-                            <p class="card-text text-dark" style="text-decoration: underline">
-                              Nickelodean Organisation are announcing a new Donor: <br />
-                            </p>
-                  
-                            <p style="font-weight: bold; color: #000">
-                              WE URGENTLY NEED 5 ACTORS TO PLAY AT THE NEW SPONGEBOB MOVIE
-                            </p>
-                            <p>
-                              1- Squidward <br />
-                              2- SpongeBob <br />
-                              3- Patrick <br />
-                              4- Krabs <br />
-                              5- Sandy <br />
-                            </p>
-                            <a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
-                          </div>
-                        </div>
-                        <div class="card mt-4" style="background-color: rgb(99, 149, 194)" id="Sponge">
-                          <div class="card-header text-light">Clothes Donation</div>
-                          <div class="card-body">
-                            <div style="font-weight: bold">
-                              <label class="font-weight-bold mt-3">Donor:</label>
-                              <a href="profile.html" style="font-weight: 100; text-decoration: underline">
-                                Sponge Bob</a>
-                            </div>
-                            <div style="font-weight: bold">
-                              <label class="font-weight-bold mt-3">Donation ID:</label>
-                              <a href="donation.html" style="font-weight: 100; text-decoration: underline">
-                                #1F02Janakh387</a>
-                            </div>
-                            <br />
-                            <a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
-                            <a class="btn btn-primary" href="pickup.html">Coordinate Pickup & Dropoff</a>
-                          </div>
-                        </div>
-                        <div class="card mt-4" style="background-color: rgb(99, 149, 194)" id="Patrick">
-                          <div class="card-header text-light">Seafood Donation</div>
-                          <div class="card-body">
-                            <a href="profile.html" style="text-decoration: underline">
-                              <div style="font-weight: bold">
-                                <label class="font-weight-bold mt-3">Donor:</label>
-                                <a href="profile.html" style="font-weight: 100; text-decoration: underline">
-                                  Patrick Star</a>
+                      <div class="profile-card-4 z-depth-3">
+
+                          <div class="card">
+
+                              <div class="card-body text-center  rounded-top"
+                                  style="background-color: #092035;">
+                                  <div class="user-box">
+
+                                      <img src="avatar1.png" alt="user avatar">
+                                  </div>
+                                  <h5 class="mb-1 yellow">Sherif Yehia</h5>
+                                  <h6 class="yellow">Mathematics Teacher</h6>
                               </div>
-                              <div style="font-weight: bold">
-                                <label class="font-weight-bold mt-3">Donation ID:</label>
-                                <a href="donation.html" style="font-weight: 100; text-decoration: underline">
-                                  #1F02Janakh387</a>
+                              <div class="card-body">
+                                  <ul class="list-group shadow-none">
+                                      <li class="list-group-item">
+                                          <div class="list-icon">
+                                              <i class="fa fa-phone-square"></i>
+                                          </div>
+                                          <div class="list-details">
+                                              <span>01009988836</span>
+                                              <small>Mobile Number</small>
+                                          </div>
+                                      </li>
+                                      <li class="list-group-item">
+                                          <div class="list-icon">
+                                              <i class="fa fa-envelope"></i>
+                                          </div>
+                                          <div class="list-details">
+                                              <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                      data-cfemail="81e8efe7eec1e4f9e0ecf1ede4afe2eeec">sherif.yehia@gmail.com</a></span>
+                                              <small>Email Address</small>
+                                          </div>
+                                      </li>
+
+                                  </ul>
+                                  <div class="row text-center mt-4">
+                                      <div class="col p-2">
+                                          <h4 class="mb-1 line-height-5">154</h4>
+                                          <small class="mb-0 font-weight-bold">Donations</small>
+                                      </div>
+                                      <div class="col p-2">
+                                          <h4 class="mb-1 line-height-5">8</h4>
+                                          <small class="mb-0 font-weight-bold">Pro-Bono Classes</small>
+                                      </div>
+                                      <div class="col p-2">
+                                          <h4 class="mb-1 line-height-5">5</h4>
+                                          <small class="mb-0 font-weight-bold">Private Tutoring
+                                              Sessions</small>
+                                      </div>
+                                  </div>
                               </div>
-                              <br />
-                            </a>
-                            <a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
-                            <a class="btn btn-primary" href="pickup.html">Coordinate Pickup & Dropoff</a>
+                              <div class="card-footer text-center">
+                                  <a href="javascript:void()"
+                                      class="btn-social btn-facebook waves-effect waves-light m-1"><i
+                                          class="fa fa-facebook"></i></a>
+                                  <a href="javascript:void()"
+                                      class="btn-social btn-google-plus waves-effect waves-light m-1"><i
+                                          class="fa fa-google-plus"></i></a>
+                                  <a href="javascript:void()"
+                                      class="list-inline-item btn-social btn-behance waves-effect waves-light"><i
+                                          class="fa fa-behance"></i></a>
+                                  <a href="javascript:void()"
+                                      class="list-inline-item btn-social btn-dribbble waves-effect waves-light"><i
+                                          class="fa fa-dribbble"></i></a>
+                              </div>
                           </div>
-                        </div>
-                  
-                        <div class="card mt-4" style="background-color: #092035">
-                          <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; left: 95px; top: 14px" width="20" height="20"
-                            fill="white" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                            <path
-                              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                          </svg>
-                          <div class="card-header text-light">Clothes</div>
-                          <div class="card-body">
-                            <div style="font-weight: bold; color: wheat">
-                              <label class="font-weight-bold mt-3">Donor:</label>
-                              <a href="profile.html" style="
-                                    font-weight: 100;
-                                    text-decoration: underline;
-                                    color: white;
-                                  ">
-                                John Smith</a>
-                            </div>
-                            <div style="font-weight: bold; color: wheat">
-                              <label class="font-weight-bold mt-3">Donation ID:</label>
-                              <a href="donation.html" style="
-                                    font-weight: 100;
-                                    text-decoration: underline;
-                                    color: white;
-                                  ">
-                                #1F02Janakh387</a>
-                            </div>
-                            <br />
-                            <a href="#" class="btn btn-primary" onclick="deletePost()">Delete Post</a>
-                          </div>
-                        </div>
                       </div>
-                    </section>
-                </div>
+                  </div>
+                  <div class="col-lg-8">
+                      <div class="card z-depth-3">
+                          <div class="card-body">
+                              <ul class="nav nav-pills nav-pills-primary nav-justified">
+                                  <li class="nav-item">
+                                      <a href="javascript:void();" data-target="#profile" data-toggle="pill"
+                                          class="nav-link active show"><i class="icon-user"></i> <span
+                                              class="hidden-xs">Profile</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a href="javascript:void();" data-target="#messages" data-toggle="pill"
+                                          class="nav-link"><i class="icon-envelope-open"></i> <span
+                                              class="hidden-xs">Location</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a href="javascript:void();" data-target="#edit" data-toggle="pill"
+                                          class="nav-link"><i class="icon-note"></i> <span
+                                              class="hidden-xs">Submissions</span></a>
+                                  </li>
+                              </ul>
+                              <div class="tab-content p-3">
+                                  <div class="tab-pane active show" id="profile">
+                                      <h5 class="mb-3">User Profile</h5>
+                                      <div class="row">
+                                          <div class="col-md-6">
+                                              <h6>About</h6>
+                                              <p>
+                                                  Mathematics Teacher @GUC
+                                              </p>
+                                          </div>
+
+                                          <div class="col-md-12">
+                                              <h5 class="mt-2 mb-3"><span
+                                                      class="fa fa-clock-o ion-clock float-right"></span>
+                                                  Recent
+                                                  Activity
+                                              </h5>
+                                              <table class="table table-hover table-striped">
+                                                  <tbody>
+                                                      <tr>
+                                                          <td>
+                                                              <strong>Sherif</strong> Fulfilled Clothes
+                                                              Donation
+                                                              For
+                                                              <strong>El Omran</strong>
+                                                          </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td>
+                                                              <strong>Sherif</strong> Fulfilled Clothes
+                                                              Donation
+                                                              For
+                                                              <strong>El Ma'moun</strong>
+                                                          </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td>
+                                                              <strong>Sherif</strong> Fulfilled Blood Donation
+                                                              For
+                                                              <strong>El Shefa Hospital</strong>
+                                                          </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td>
+                                                              <strong>Sherif</strong> Chose to fulfill Medical
+                                                              Supplies
+                                                              Donation For
+                                                              <strong>El Mostawsaf</strong>
+                                                          </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td>
+                                                              <strong>Sherif</strong> Fulfilled Blood Donation
+                                                              For
+                                                              <strong>El Shefa Hospital</strong>
+                                                          </td>
+                                                      </tr>
+                                                  </tbody>
+                                              </table>
+                                          </div>
+                                      </div>
+
+                                  </div>
+                                  <div class="tab-pane" id="messages">
+                                      <iframe
+                                          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319"
+                                          width="100%" height="400" frameborder="0"
+                                          style="border: 0"></iframe>
+
+                                  </div>
+                                  <div class="tab-pane" id="edit">
+                                      <form>
+                                          <div class="form-group row">
+                                              <label class="col-lg-3 col-form-label form-control-label">First
+                                                  name</label>
+                                              <div class="col-lg-9">
+                                                  <input class="form-control" type="text" value="Mark"
+                                                      readonly>
+                                              </div>
+                                          </div>
+                                          <div class="form-group row">
+                                              <label class="col-lg-3 col-form-label form-control-label">Last
+                                                  name</label>
+                                              <div class="col-lg-9">
+                                                  <input class="form-control" type="text" value="Jhonsan"
+                                                      readonly>
+                                              </div>
+                                          </div>
+                                          <div class="form-group row">
+                                              <label
+                                                  class="col-lg-3 col-form-label form-control-label">Email</label>
+                                              <div class="col-lg-9">
+                                                  <input class="form-control" type="email"
+                                                      value="mark@example.com" readonly>
+                                              </div>
+                                          </div>
+
+
+                                          <div class="form-group row">
+                                              <label
+                                                  class="col-lg-3 col-form-label form-control-label">Address</label>
+                                              <div class="col-lg-9">
+                                                  <input class="form-control" type="text" value
+                                                      placeholder="Sheikh" readonly>
+                                              </div>
+                                          </div>
+                                          <div class="form-group row">
+                                              <label
+                                                  class="col-lg-3 col-form-label form-control-label"></label>
+                                              <div class="col-lg-6">
+                                                  <input class="form-control" type="text" value
+                                                      placeholder="City" readonly>
+                                              </div>
+                                              <div class="col-lg-3">
+                                                  <input class="form-control" type="text" value
+                                                      placeholder="State" readonly>
+                                              </div>
+                                          </div>
+                                          <div class="form-group row">
+                                              <label
+                                                  class="col-lg-3 col-form-label form-control-label">Username</label>
+                                              <div class="col-lg-9">
+                                                  <input class="form-control" type="text" value="jhonsanmark"
+                                                      readonly>
+                                              </div>
+                                          </div>
+
+
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
                 <!-- /.container-fluid -->
 
             </div>

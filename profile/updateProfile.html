@@ -48,7 +48,7 @@
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #092035;">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center " href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center " href="./OrgProfile.html">
                 <div class="sidebar-brand-icon pt-5  pb-2">
                     <img src="../images/logo3.png" class="logo" width="90" height="90" />
                 </div>
@@ -313,19 +313,19 @@
                         <form class="row g-3">
                             <div class="col-md-6">
                                 <label for="inputOrganizationName" class="form-label">Organization Name</label>
-                                <input type="text" class="form-control" id="inputOrganizationName" placeholder="EL-Resala  " required/>
+                                <input type="text" class="form-control" id="inputOrganizationName" value="EL-Resala  " required/>
                             </div>
                             <div class="col-md-6">
                                 <label for="inputFirstName" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="inputFirstName" placeholder="Ahmed" required />
+                                <input type="text" class="form-control" id="inputFirstName" value="Ahmed" required />
                             </div>
                             <div class="col-md-6">
                                 <label for="inputLastName" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="inputLastName" placeholder="Ahmed" required />
+                                <input type="text" class="form-control" id="inputLastName" value="Ahmed" required />
                             </div>
                             <div class="col-md-6">
                                 <label for="inputGender" class="form-label">Gender</label>
-                                <select id="inputGender" class="form-select " aria-placeholder="Male" required>
+                                <select id="inputGender" class="form-select "  required>
                                     <option >Choose...</option>
                                     <option selected>Male</option>
                                     <option>Female</option>
@@ -333,7 +333,7 @@
                             </div>
                             <div class="col-md-12">
                                 <label for="inputLastName" class="form-label">Email</label>
-                                <input type="email"  class="form-control" id="inputLastName"  required/>
+                                <input type="email"  class="form-control" id="inputLastName" value="ahmed@gmail.com"  required/>
                             </div>
                             <div class="col-md-6">
                                 <label for="inputLastName" class="form-label">Old Password</label>
@@ -345,7 +345,7 @@
                             </div>
                             <div class="col-md-12">
                                 <label for="inputContactNumber" class="form-label">Contact Number</label>
-                                <input type="text" class="form-control" id="inputContactNumber" placeholder="+201097219721" required />
+                                <input type="text" class="form-control" id="inputContactNumber" value="+201097219721" required />
                             </div>
                 
                             <div class="col-md-6">
@@ -360,16 +360,16 @@
                             </div>
                             <div class="col-6">
                                 <label for="inputOrganizationAddress" class="form-label">Organization Address</label>
-                                <input type="text" class="form-control" id="inputOrganizationAddress" placeholder="1234 Main St"
+                                <input type="text" class="form-control" id="inputOrganizationAddress" value="1234 Main St"
                                     required />
                             </div>
                             <div class="col-6">
                                 <label for="inputOrganizationArea" class="form-label">Organization Area</label>
-                                <input type="text" class="form-control" id="inputOrganizationArea" placeholder="New Cairo" required />
+                                <input type="text" class="form-control" id="inputOrganizationArea" value="New Cairo" required />
                             </div>
                             <div class="col-md-6">
                                 <label for="inputOrganizationGovernorate" class="form-label">Organization Governorate</label>
-                                <input type="text" class="form-control" id="inputOrganizationGovernorate" placeholder="Cairo" required />
+                                <input type="text" class="form-control" id="inputOrganizationGovernorate" value="Cairo" required />
                             </div>
                             <div class="col-12">
                                 <label for="inputGoogleMapLocation" class="form-label">Google Map Location</label>
@@ -381,11 +381,11 @@
                             <div class="col-12">
                                 <label for="inputDocumentUpload" class="form-label">Document Upload for Organization
                                     Verification</label>
-                                <input type="file" class="form-control" id="inputDocumentUpload" required />
+                                <input type="file"  class="form-control" id="inputDocumentUpload"  />
                             </div>
                             <div class="col-12">
                                 <div class="addmore col-12"></div>
-                                <button type="button" onclick="addNew()" class="mt-4 mb-4">
+                                <button type="button" onclick="addNew()" class="mt-2">
                                     Add New One
                                 </button>
                             </div>
@@ -509,16 +509,32 @@
             // Append the new div to the parent container
             container.appendChild(newDiv);
         }
+       
         function redirectToHome() {
-            window.alert("Changes Saved!");
-            var value = document.getElementById("inputOrganizationType").value;
-            localStorage.setItem("type", value);
-            window.location.href = "OrgProfile.html";
+            if (validateForm()) {
+                alert("Changed successful!");
+                var value = document.getElementById("inputOrganizationType").value;
+                localStorage.setItem("type", value);
+                window.location.href = "./OrgProfile.html";
+            } else {
+                alert("Please fill in all fields.");
+            }
         }
+        function validateForm() {
+            var inputs = document.querySelectorAll('input, select');
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].hasAttribute('required') && inputs[i].value.trim() === '') {
+                    return false; ty
+                }
+            }
+            return true; 
+        }
+        
         function deleteprofile() {
             window.alert("Profile Deleted Successfully");
             window.location.href = "../main.html";
         }
+        
     </script>
 
 

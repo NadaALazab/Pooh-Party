@@ -18,6 +18,7 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <!-- Custom styles for this template-->
 
@@ -43,7 +44,7 @@
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #092035;">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center " href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center " href="./OrgProfile.html">
                 <div class="sidebar-brand-icon pt-5  pb-2">
                     <img src="../images/logo3.png" class="logo" width="90" height="90" />
                 </div>
@@ -286,7 +287,7 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container-fluid" id="report">
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -299,8 +300,8 @@
                             <div class="col-lg-3">
                                 <div class="card mb-4">
                                     <div class="card-body text-center">
-                                        <img src="img/undraw_profile.svg"
-                                            alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                                        <img src="./img/avatar4.png" alt="avatar" class="rounded-circle img-fluid"
+                                            style="width: 150px;">
                                         <h5 class="my-3">Resala Organisation</h5>
                                         <p class="text-muted mb-1">Type: Clothes Donation Organisation</p>
 
@@ -355,8 +356,9 @@
                                                 <p class="mb-0">Documents</p>
                                             </div>
                                             <div class="col-sm-7">
-                                                <p class="text-muted mb-0"
-                                                    style="text-decoration: underline; cursor: pointer;" onclick="DownloadDoc()">
+                                                <p class="text-muted mb-0" id="download1"
+                                                    style="text-decoration: underline; cursor: pointer;"
+                                                    onclick="DownloadDoc()">
                                                     verification-cert.pdf</p>
                                             </div>
                                         </div>
@@ -515,8 +517,17 @@
         function redirectToMain() {
             window.location.href = "./main.html";
         }
-        function DownloadDoc(){
+        function DownloadDoc() {
             window.alert("Downloading Document!")
+        }
+        window.onload = function () {
+
+            document.getElementById("download1").addEventListener("click", () => {
+                const subm = document.getElementById("report");
+
+                html2pdf().from(subm).save();
+            })
+
         }
     </script>
     <script>

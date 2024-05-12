@@ -189,12 +189,30 @@
             // Append the new div to the parent container
             container.appendChild(newDiv);
         }
+       
         function redirectToMain() {
-            var value = document.getElementById("inputOrganizationType").value;
-            localStorage.setItem("type", value);
-            window.location.href = "./main.html";
+            if (validateForm()) {
+                alert("Registration successful!");
+                var value = document.getElementById("inputOrganizationType").value;
+                localStorage.setItem("type", value);
+                window.location.href = "./main.html";
+            } else {
+                alert("Please fill in all fields.");
+            }
         }
+        function validateForm() {
+            var inputs = document.querySelectorAll('input, select');
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].hasAttribute('required') && inputs[i].value.trim() === '') {
+                    return false; ty
+                }
+            }
+            return true; 
+        }
+        
     </script>
+  
+    
 </body>
 
 </html>
