@@ -1,3 +1,0 @@
-# Pooh-Party
-
-SE Project

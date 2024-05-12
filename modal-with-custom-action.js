@@ -20,7 +20,7 @@ function login(usern,password){
  else
    if(username.slice(-12) =='organization'){
      alert(username+" Successfully logged in");
-   window.location.assign("profile/OrgProfile.html");
+   window.location.assign("Organisation/profile/OrgProfile.html");
    }
  else{
    alert(username +" Successfully logined");
