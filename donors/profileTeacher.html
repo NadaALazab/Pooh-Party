@@ -572,7 +572,7 @@
                     <img src="../Admin/img/avatar3.png" alt="user avatar" />
                   </div>
                   <h4 class="mb-1 yellow">Marwa Khaled</h4>
-                  <h7 class="yellow">Donar Profile</h7>
+                  <h7 class="yellow">Teacher Profile</h7>
                 </div>
                 <div class="card-body">
                   <ul class="list-group shadow-none">
@@ -883,7 +883,7 @@
                           <button type="button" class="btn btn-primary"
                             style="background-color: #092035; color: #f4be37" onclick="SaveChanges()">Save
                             Changes</button>
-                          <a type="button" class="btn btn-primary bg-danger" href="../main.html">Delete Account</a>
+                          <button type="button" class="btn btn-danger" onclick="Delete()">Delete Account</button>
                         </div>
                       </div>
                     </form>
@@ -908,6 +908,10 @@
       function SaveChanges() {
         window.alert("Changes have been saved!");
         window.location.href = "profileTeacher.html";
+      }
+      function Delete(){
+        window.alert("Account Deleted!");
+        window.location.href = "../main.html";
       }
     </script>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
