@@ -517,7 +517,7 @@
       <!-- Heading -->
       <div class="sidebar-heading">Interface</div>
       <li class="nav-item active">
-        <a class="nav-link" href="orgList.html">
+        <a class="nav-link" href="orgListT.html">
           <i class="fas fa-solid fa-users"></i>
           <span class="yellow" style="text-decoration:none ;">View Organization</span></a>
       </li>
@@ -637,6 +637,11 @@
                   <a href="javascript:void()"
                     class="list-inline-item btn-social btn-dribbble waves-effect waves-light"><i
                       class="fa fa-dribbble"></i></a>
+
+                  <!-- Button at the bottom center -->
+                  <div class="text-center mb-4">
+                    <a class="btn btn-lg btn-primary" href="../main.html">Logout</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -876,9 +881,9 @@
                         <label class="col-lg-3 col-form-label form-control-label"></label>
                         <div class="col-lg-9">
                           <button type="button" class="btn btn-primary"
-                            style="background-color: #092035; color: #f4be37" onclick="SaveChanges()">Save Changes</button>
-                            <a type="button" class="btn btn-primary bg-danger"
-                             href="../main.html">Delete Account</a>
+                            style="background-color: #092035; color: #f4be37" onclick="SaveChanges()">Save
+                            Changes</button>
+                          <a type="button" class="btn btn-primary bg-danger" href="../main.html">Delete Account</a>
                         </div>
                       </div>
                     </form>
@@ -900,7 +905,7 @@
       </div>
     </div>
     <script>
-      function SaveChanges(){
+      function SaveChanges() {
         window.alert("Changes have been saved!");
         window.location.href = "profileTeacher.html";
       }
