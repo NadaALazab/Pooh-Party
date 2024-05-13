@@ -26,16 +26,16 @@ function login(usern,password){
  else{
     if(username.toLowerCase()=='doctor'){
    alert(username +" Successfully logined");
-   window.location.assign("donors/doctor.html");
+   window.location.assign("donors/profileDoctor.html");
  }
  
  else if(username.toLowerCase()=='teacher'){
   alert(username +" Successfully logined");
-  window.location.assign("donors/teacher.html");
+  window.location.assign("donors/profileTeacher.html");
 }
 else{
   alert(username +" Successfully logined");
-  window.location.assign("donors/regular.html");
+  window.location.assign("donors/profileDonor.html");
 }
 
 

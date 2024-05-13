@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" type="x-icon" href="../images/logo2.png" />
-    <title>Toy Donation Requests</title>
+    <title>Food Donation Requests</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link
@@ -24,17 +24,13 @@
       .sidebar-dark {
         background-color: #092035;
       }
-      .yellow{
-            color: #F4BE37;
-        }
     </style>
 
     <!-- Google Maps JavaScript API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 </head>
 <body id="page-top">
-
-<!-- Page Wrapper -->
+    <!-- Page Wrapper -->
     <div id="wrapper" style="background-color:  #092035;">
 
         <!-- Sidebar -->
@@ -71,8 +67,6 @@
                     <i class="fas fa-solid fa-users"></i>
                     <span class="yellow">View Organization</span></a>
             </li>
-
-            <!-- Heading -->
             <div class="sidebar-heading">
                 Donations
             </div>
@@ -82,7 +76,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span class="yellow">Donations</span>
+                    <span class="yellow">Donations Requests</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -90,6 +84,8 @@
                         <a class="collapse-item" href="toys.html">Toys</a>
                         <!-- <a class="collapse-item" href="register.html">Register</a> -->
                         <a class="collapse-item" href="school supplies.html">School Supplies</a>
+                        <a class="collapse-item" href="food.html">Food Suppliers</a>
+                        <a class="collapse-item" href="clothes.html">Clothes Suppliers</a>
                         <div class="collapse-divider"></div>
                      
                         <a class="collapse-item" href="medical supplies.html">Medical Supplies</a>
@@ -97,9 +93,6 @@
                     </div>
                 </div>
             </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -171,7 +164,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw " style="color:white;"></i>
                                 <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">1+</span>
+                                <span class="badge badge-danger badge-counter">1</span>
                             </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -212,7 +205,6 @@
                                         Spending Alert: We've noticed unusually high spending for your account.
                                     </div>
                                 </a> -->
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
                         </li>
 
@@ -320,7 +312,7 @@
                 </nav>
                 <!-- End of Topbar -->
 
-            <!-- Begin Page Content -->
+           <!-- Begin Page Content -->
     <div class="container">
         <div class="container">
             <div class="row">
@@ -416,8 +408,7 @@
     </div>
 
 
-  <!-- Include Bootstrap JS and your custom script -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
   <script>
     // JavaScript logic goes here
     document.getElementById("donorForm").addEventListener("submit", function(event) {
@@ -442,23 +433,7 @@
       // ...
     });
   </script>
-       <!-- Bootstrap JS and jQuery -->
-       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-       <!-- Custom scripts for all pages-->
-       <script src="../Admin/js/sb-admin-2.min.js"></script>
-   
-       <!-- Bootstrap core JavaScript-->
-       <script src="../Admin/vendor/jquery/jquery.min.js"></script>
-       <script src="../Admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-   
-       <!-- Core plugin JavaScript-->
-       <script src="../Admin/vendor/jquery-easing/jquery.easing.min.js"></script>
-       
-       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -530,7 +505,7 @@ function displayItemDetails(toy) {
                     <img src="${toy.image}" alt="${toy.name}" width="100">
                     <div class="form-group">
                         <label for="donationQuantity">Donation Quantity:</label>
-                        <input type="number" class="form-control" id="donationQuantity" min="1" max="${toy.quantity}" value="1">
+                        <input type="number" class="form-control" id="donationQuantity" min="1" max="${toy.quantity}" value="1" required>
                         <form id="donorForm">
             <div class="form-group">
               <label for="transportationType">Transportation Type:</label>
@@ -542,7 +517,7 @@ function displayItemDetails(toy) {
             </div>
             <div class="form-group">
               <label for="pickupTime">Pickup Time:</label>
-              <input class="form-control" type="time" id="pickupTime" />
+              <input class="form-control" type="time" id="pickupTime"/>
             </div>
           </form>
           <div id="etaContainer"></div>
@@ -590,6 +565,20 @@ categoryFilter.addEventListener("change", displayToysItems);
         window.location.assign("toys.html");
       }
     </script>
-
 </body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
+<!-- Custom scripts for all pages-->
+<script src="../Admin/js/sb-admin-2.min.js"></script>
+
+<!-- Bootstrap core JavaScript-->
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Include Bootstrap JS and your custom script -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </html>

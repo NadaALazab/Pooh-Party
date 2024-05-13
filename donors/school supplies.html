@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" type="x-icon" href="../images/logo2.png" />
-    <title>School Supplies Donation Requests</title>
+    <title>Food Donation Requests</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link
@@ -30,14 +30,14 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 </head>
 <body id="page-top">
-  <!-- Page Wrapper -->
+    <!-- Page Wrapper -->
     <div id="wrapper" style="background-color:  #092035;">
 
         <!-- Sidebar -->
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #092035;">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center " href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center " href="profileDonor.html">
                 <div class="sidebar-brand-icon pt-5  pb-2">
                     <img src="../images/logo3.png" class="logo" width="90" height="90" />
                 </div>
@@ -49,9 +49,9 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="regular.html">
+                <a class="nav-link" href="profileDonor.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span class="yellow">Dashboard</span></a>
+                    <span class="yellow">Home</span></a>
             </li>
 
             <!-- Divider -->
@@ -67,9 +67,7 @@
                     <i class="fas fa-solid fa-users"></i>
                     <span class="yellow">View Organization</span></a>
             </li>
-
-             <!-- Heading -->
-             <div class="sidebar-heading">
+            <div class="sidebar-heading">
                 Donations
             </div>
 
@@ -86,6 +84,8 @@
                         <a class="collapse-item" href="toys.html">Toys</a>
                         <!-- <a class="collapse-item" href="register.html">Register</a> -->
                         <a class="collapse-item" href="school supplies.html">School Supplies</a>
+                        <a class="collapse-item" href="food.html">Food Suppliers</a>
+                        <a class="collapse-item" href="clothes.html">Clothes Suppliers</a>
                         <div class="collapse-divider"></div>
                      
                         <a class="collapse-item" href="medical supplies.html">Medical Supplies</a>
@@ -93,13 +93,6 @@
                     </div>
                 </div>
             </li>
-
-            
-           
-
-           
-
-           
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -166,13 +159,13 @@
                         </li>
 
                         <!-- Nav Item - Alerts -->
-                         <li class="nav-item dropdown no-arrow mx-1"> 
+                        <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle " href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw " style="color:white;"></i> 
+                                <i class="fas fa-bell fa-fw " style="color:white;"></i>
                                 <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">1+</span> 
-                            </a> 
+                                <span class="badge badge-danger badge-counter">1</span>
+                            </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="alertsDropdown">
@@ -189,7 +182,7 @@
                                         <div class="small text-gray-500">May 12, 2024</div>
                                         <span class="font-weight-bold">Your donation has arrived!</span>
                                     </div>
-                                </a> 
+                                </a>
                                 <!-- <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="mr-3">
                                         <div class="icon-circle bg-success">
@@ -212,7 +205,6 @@
                                         Spending Alert: We've noticed unusually high spending for your account.
                                     </div>
                                 </a> -->
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
                         </li>
 
@@ -282,7 +274,7 @@
                             </div>
                         </li> -->
 
-                        <div class="topbar-divider d-none d-sm-block"></div> 
+                        <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow"  >
@@ -320,234 +312,243 @@
                 </nav>
                 <!-- End of Topbar -->
 
-            <!-- Begin Page Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-              <header class="text-center my-5">
-                <span class="text-muted">Identify Needs, Contribute to Causes</span>
-                <h1 class="yellow font-weight-bold">School supplies donations requests</h1>
-              </header>
-            </div>
-        </div>
-        <main>
-            <section class="mb-3">
-                <label for="typeFilter" class="mr-2">Type:</label>
-                <select id="typeFilter" class="form-control">
-                    <option value="">All Types</option>
-                    <option value="books">Books</option>
-                    <option value="stationary">Stationary</option>
-                </select>
-            </section>
-            <section id="schoolSuppliesList" class="mb-3">
-                <!-- School supplies items will be dynamically added here -->
-            </section>
-            <section id="itemDetails" class="mb-3">
-                <!-- Item details will be dynamically added here -->
-            </section>
-            <div class="container">
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Hand x Hand 2024</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn  sidebar-dark" style="color: var(--yellow);" href="../main.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-        </main>
-    </div>
+          
 
   
-  <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="../Admin/js/sb-admin-2.min.js"></script>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+ 
     
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-   
-    document.getElementById("donorForm").addEventListener("submit", function(event) {
-      event.preventDefault();
+ <!-- Begin Page Content -->
+ <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <header class="text-center my-5">
+            <span class="text-muted">Identify Needs, Contribute to Causes</span>
+            <h1 class="yellow font-weight-bold">School supplies donations requests</h1>
+          </header>
+        </div>
+    </div>
+    <main>
+        <section class="mb-3">
+            <label for="typeFilter" class="mr-2">Type:</label>
+            <select id="typeFilter" class="form-control">
+                <option value="">All Types</option>
+                <option value="books">Books</option>
+                <option value="stationary">Stationary</option>
+            </select>
+        </section>
+        <section id="schoolSuppliesList" class="mb-3">
+            <!-- School supplies items will be dynamically added here -->
+        </section>
+        <section id="itemDetails" class="mb-3">
+            <!-- Item details will be dynamically added here -->
+        </section>
+        <div class="container">
+        </div>
+        <!-- End of Main Content -->
 
-      var transportationType = document.getElementById("transportationType").value;
-      var pickupTime = document.getElementById("pickupTime").value;
-      var eta = new Date();
-      eta.setMinutes(eta.getMinutes() + 30);
-      var etaContainer = document.getElementById("etaContainer");
-      etaContainer.innerHTML = "ETA: " + eta.toLocaleTimeString();
-    });
-  </script>
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Hand x Hand 2024</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn  sidebar-dark" style="color: var(--yellow);" href="../main.html">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+</div>
+
+
+<script>
+
+document.getElementById("donorForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  var transportationType = document.getElementById("transportationType").value;
+  var pickupTime = document.getElementById("pickupTime").value;
+  var eta = new Date();
+  eta.setMinutes(eta.getMinutes() + 30);
+  var etaContainer = document.getElementById("etaContainer");
+  etaContainer.innerHTML = "ETA: " + eta.toLocaleTimeString();
+});
+</script>
 </body>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // JavaScript functionality will go here
+
+<script>
+    // JavaScript functionality will go here
 
 document.addEventListener('DOMContentLoaded', function() {
-  const schoolSuppliesList = document.getElementById('schoolSuppliesList');
-  const itemDetails = document.getElementById('itemDetails');
-  const typeFilter = document.getElementById('typeFilter');
+const schoolSuppliesList = document.getElementById('schoolSuppliesList');
+const itemDetails = document.getElementById('itemDetails');
+const typeFilter = document.getElementById('typeFilter');
 
-  // Example data, replace with actual data from your database
-  const supplies = [
-      { name: 'Math Book', type: 'books', author: 'John Doe', language: 'English', edition: '1st', summary: 'Basic math concepts', image: '../images/math book.jpg', quantity: 10 },
-      { name: 'Pencil Set', type: 'stationary',amount: 100,image:'../images/pencil set.jpg',quantity: 5 },
-      // Add more items as needed
-  ];
+// Example data, replace with actual data from your database
+const supplies = [
+  { name: 'Math Book', type: 'books', author: 'John Doe', language: 'English', edition: '1st', summary: 'Basic math concepts', image: '../images/math book.jpg', quantity: 10 },
+  { name: 'Pencil Set', type: 'stationary',amount: 100,image:'../images/pencil set.jpg',quantity: 5 },
+  // Add more items as needed
+];
 
-  function displaySchoolSuppliesItems() {
-  schoolSuppliesList.innerHTML = ""; // Clear the list
-  const selectedType = typeFilter.value;
+function displaySchoolSuppliesItems() {
+schoolSuppliesList.innerHTML = ""; // Clear the list
+const selectedType = typeFilter.value;
 
-  supplies.forEach((supply) => {
-    if (selectedType === "" || supply.type === selectedType) {
-      const listItem = document.createElement("li");
-      listItem.className = "list-group-item";
-      listItem.innerHTML = `
-          <div class="d-flex justify-content-between">
-              <div>
-                  <h5 class="mb-1">${supply.name}</h5>
-                  <p class="text-muted">Type: ${supply.type}</p>
-                  ${supply.type === "books" ? `<p>Author: ${supply.author}, Language: ${supply.language}, Edition: ${supply.edition}</p>` : ""}
-                  ${supply.type === "books" ? `<img src="${supply.image}" alt="${supply.name}" width="25">` : ""}
-              </div>
-              <button type="button" style="color: var(--yellow);" class="btn sidebar-dark modal-success-btn">view details</button>
+supplies.forEach((supply) => {
+if (selectedType === "" || supply.type === selectedType) {
+  const listItem = document.createElement("li");
+  listItem.className = "list-group-item";
+  listItem.innerHTML = `
+      <div class="d-flex justify-content-between">
+          <div>
+              <h5 class="mb-1">${supply.name}</h5>
+              <p class="text-muted">Type: ${supply.type}</p>
+              ${supply.type === "books" ? `<p>Author: ${supply.author}, Language: ${supply.language}, Edition: ${supply.edition}</p>` : ""}
+              ${supply.type === "books" ? `<img src="${supply.image}" alt="${supply.name}" width="25">` : ""}
           </div>
-      `;
-      listItem.addEventListener("click", function () {
-        displayItemDetails(supply);
-      });
-      schoolSuppliesList.appendChild(listItem);
-    }
+          <button type="button" style="color: var(--yellow);" class="btn sidebar-dark modal-success-btn">view details</button>
+      </div>
+  `;
+  listItem.addEventListener("click", function () {
+    displayItemDetails(supply);
   });
+  schoolSuppliesList.appendChild(listItem);
+}
+});
 }
 
 function displayItemDetails(supply) {
-  var modalWrap = document.getElementById("modalWrap");
+var modalWrap = document.getElementById("modalWrap");
 
-  if (modalWrap !== null) {
-    modalWrap.remove();
-  }
+if (modalWrap !== null) {
+modalWrap.remove();
+}
 
-  modalWrap = document.createElement("div");
-  modalWrap.className = "modal fade";
-  modalWrap.id = "modalWrap";
-  modalWrap.innerHTML = `
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header bg-light">
-                <h5 class="modal-title">School supply Details</h5>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <h5 class="card-title">${supply.name}</h5>
-                    <p class="card-text">Type: ${supply.type}</p>
-                    ${supply.type === "books" ? `<p>Author: ${supply.author}, Language: ${supply.language}, Edition: ${supply.edition}</p>` : ""}
-                    ${supply.type === "books" ? `<img src="${supply.image}" alt="${supply.name}" width="100">` : ""}
-                    <div class="form-group">
-                        <label for="donationQuantity">Donation Quantity:</label>
-                        <input type="number" class="form-control" id="donationQuantity" min="1" max="${supply.quantity}" value="1">
-                        <form id="donorForm">
-            <div class="form-group">
-              <label for="transportationType">Transportation Type:</label>
-              <select class="form-control" id="transportationType">
-                <option value="truck">Truck</option>
-                <option value="car">Car</option>
-                <option value="motorcycle">Motorcycle</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="pickupTime">Pickup Time:</label>
-              <input class="form-control" type="time" id="pickupTime" />
-            </div>
-          </form>
-          <div id="etaContainer"></div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer bg-light">
-                <button type="button" class="btn btn-secondary modal-cancel-btn" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" style="color: var(--yellow);" class="btn  modal-success-btn sidebar-dark">Donate</button>
-            </div>
+modalWrap = document.createElement("div");
+modalWrap.className = "modal fade";
+modalWrap.id = "modalWrap";
+modalWrap.innerHTML = `
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header bg-light">
+            <h5 class="modal-title">School supply Details</h5>
+        </div>
+        <div class="modal-body">
+            <form>
+                <h5 class="card-title">${supply.name}</h5>
+                <p class="card-text">Type: ${supply.type}</p>
+                ${supply.type === "books" ? `<p>Author: ${supply.author}, Language: ${supply.language}, Edition: ${supply.edition}</p>` : ""}
+                ${supply.type === "books" ? `<img src="${supply.image}" alt="${supply.name}" width="100">` : ""}
+                <div class="form-group">
+                    <label for="donationQuantity">Donation Quantity:</label>
+                    <input type="number" class="form-control" id="donationQuantity" min="1" max="${supply.quantity}" value="1">
+                    <form id="donorForm">
+        <div class="form-group">
+          <label for="transportationType">Transportation Type:</label>
+          <select class="form-control" id="transportationType">
+            <option value="truck">Truck</option>
+            <option value="car">Car</option>
+            <option value="motorcycle">Motorcycle</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="pickupTime">Pickup Time:</label>
+          <input class="form-control" type="time" id="pickupTime" />
+        </div>
+      </form>
+      <div id="etaContainer"></div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer bg-light">
+            <button type="button" class="btn btn-secondary modal-cancel-btn" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" style="color: var(--yellow);" class="btn  modal-success-btn sidebar-dark">Donate</button>
         </div>
     </div>
-  `;
-  modalWrap.querySelector(".modal-success-btn").onclick = () =>
-            alertAndAssign();
-          modalWrap.querySelector(".modal-cancel-btn").onclick = () =>
-            window.location.assign("school supplies.html");
+</div>
+`;
+modalWrap.querySelector(".modal-success-btn").onclick = () =>
+        alertAndAssign();
+      modalWrap.querySelector(".modal-cancel-btn").onclick = () =>
+        window.location.assign("school supplies.html");
 
 
-  document.body.appendChild(modalWrap);
+document.body.appendChild(modalWrap);
 
-  var modal = new bootstrap.Modal(modalWrap);
-  modal.show();
+var modal = new bootstrap.Modal(modalWrap);
+modal.show();
 }
 
 function donateSupply(maxQuantity) {
-  const donationQuantity = parseInt(document.getElementById("donationQuantity").value);
+const donationQuantity = parseInt(document.getElementById("donationQuantity").value);
 
-  if (donationQuantity > maxQuantity) {
-    alert("Invalid donation quantity. Please enter a value within the available range.");
-    return;
-  }
+if (donationQuantity > maxQuantity) {
+alert("Invalid donation quantity. Please enter a value within the available range.");
+return;
+}
 
-  // Perform the donation logic here
-  // ...
+// Perform the donation logic here
+// ...
 
-  alert("Donation Successful! , ETA 3:45 pm");
-  window.location.reload(); // Refresh the page or perform any other action after successful donation
+alert("Donation Successful! , ETA 3:45 pm");
+window.location.reload(); // Refresh the page or perform any other action after successful donation
 }
 
 displaySchoolSuppliesItems();
 typeFilter.addEventListener("change", displaySchoolSuppliesItems);
 })
 function alertAndAssign() {
-        alert("Donation Successful! , ETA 3:45 pm");
-        window.location.assign("school supplies.html");
-      }
+    alert("Donation Successful! , ETA 3:45 pm");
+    window.location.assign("school supplies.html");
+  }
 </script>
+    
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
+<!-- Custom scripts for all pages-->
+<script src="../Admin/js/sb-admin-2.min.js"></script>
+
+<!-- Bootstrap core JavaScript-->
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Include Bootstrap JS and your custom script -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -576,7 +576,7 @@
                     <img src="../Admin/img/avatar2.png" alt="user avatar" />
                   </div>
                   <h4 class="mb-1 yellow">Hassan Wael</h4>
-                  <h7 class="yellow">Donar Profile</h7>
+                  <h7 class="yellow">Donor Profile</h7>
                 </div>
                 <div class="card-body">
                   <ul class="list-group shadow-none">
@@ -991,17 +991,10 @@
                           class="col-lg-3 col-form-label form-control-label"
                         ></label>
                         <div class="col-lg-9">
-                            <input
-                            type="button"
-                            class="btn btn-secondary"
-                            value="Cancel"
-                          />
-                          <input
-                            type="button"
-                            class="btn btn-primary"
-                            style="background-color: #092035; color: #f4be37"
-                            value="Save Changes"
-                          />
+                          <button type="button" class="btn btn-primary"
+                            style="background-color: #092035; color: #f4be37" onclick="SaveChanges()">Save Changes</button>
+                            <a type="button" class="btn btn-primary bg-danger"
+                             href="../main.html">Delete Account</a>
                         </div>
                       </div>
                     </form>
@@ -1022,7 +1015,12 @@
         <!-- End of Footer -->
       </div>
     </div>
-
+    <script>
+      function SaveChanges(){
+        window.alert("Changes have been saved!");
+        window.location.href = "profileDoctor.html";
+      }
+    </script>
     <script
       data-cfasync="false"
       src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"

@@ -92,7 +92,6 @@
             <option selected>Choose...</option>
             <option>Male</option>
             <option>Female</option>
-            <option>Other</option>
           </select>
         </div>
 
@@ -221,7 +220,7 @@
               required
             />
             <label class="form-check-label" for="gridCheck">
-              Remeber me
+              Remember me
             </label>
           </div>
           <br>
@@ -290,15 +289,15 @@
         switch (value) {
             case "Doctor":
                 alert(value + " Successfully registered"); // Assuming you have a page named clothes.html
-                redirectUrl = "donors/doctor.html";
+                redirectUrl = "donors/profileDoctor.html";
                 break;
             case "Regular Donor":
                 alert(value + " Successfully registered");
-                redirectUrl = "donors/regular.html"; // Assuming you have a page named toys.html
+                redirectUrl = "donors/profileDonor.html"; // Assuming you have a page named toys.html
                 break;
             case "Teacher":
                 alert(value + " Successfully registered");
-                redirectUrl = "donors/teacher.html"; // Assuming you have a page named food.html
+                redirectUrl = "donors/profileTeacher.html"; // Assuming you have a page named food.html
                 break;
             default:
                 alert("Enter Valid data");
